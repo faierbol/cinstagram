@@ -9,3 +9,23 @@
     Author: Demir Antay (@demirantay) -- demir99antay@gmail.com
 
 '''
+
+# core python modules
+
+from flask import Flask, request, render_template, redirect, session
+
+# my own modules
+
+
+# Configuration
+app = Flask(
+    __name__,
+    static_folder="./static",
+    template_folder="./templates"
+)
+
+app.secret_key = "change this in production"
+
+
+
+# URLS
