@@ -44,10 +44,7 @@ def index():
 
 
 # Programming Panel url paths
-app.add_url_rule(
-    '/programmer_panel/login', 'programmer_panel_login',
-    programmer_panel_login, methods=['POST', 'GET']
-)
+app.add_url_rule('/programmer_panel/login', 'programmer_panel_login',programmer_panel_login, methods=['POST', 'GET'])
 app.add_url_rule('/programmer_panel/signup', 'programmer_panel_signup', programmer_panel_signup)
 app.add_url_rule('/programmer_panel/dashboard', 'programmer_panel_dashboard', programmer_panel_dashboard)
 

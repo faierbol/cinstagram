@@ -10,6 +10,10 @@ def programmer_panel_signup():
     '''
 
     # process the signup form
+    if request.method == "POST":
+        print(request.form['username'])
+        print(request.form['password'])
+        print(request.form['key'])
 
     data = {
 

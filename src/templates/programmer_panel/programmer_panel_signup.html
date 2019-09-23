@@ -1,20 +1,30 @@
 {% extends 'base.html' %}
 
 {% block css_links %}
-
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/programmer_panel/programmer_panel.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/programmer_panel/responsive_desktop.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/programmer_panel/responsive_lgdesktop.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/programmer_panel/responsive_phone.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/programmer_panel/responsive_tablet.css') }}" />
 {% endblock %}
 
 {% block content %}
 
-<h1>Programmer Panel Signup</h1>
+<div id="programmer_signup_container">
 
-<!-- Login Form -->
-<form action="" method="POST">
-    <input type="text" placeholder="username" name="username" />
-    <input type="password" placeholder="password" name="password" />
-    <input type="password" placeholder ="key" name="key" />
-    <input type="submit" value="login" name="submit_button" />
-</form>
+  <h1>Programmer Panel Signup</h1>
 
-<p>Already have an account? <a href="">Login</a></p>
+  <!-- Signup Form -->
+  <div id="programmer_signup_form">
+    <form action="{{ url_for('programmer_panel_signup') }}" method="POST">
+        <input type="text" placeholder="username" name="username" />
+        <input type="password" placeholder="password" name="password" />
+        <input type="password" placeholder ="key" name="key" />
+        <input type="submit" value="signup" name="submit_button" id="signup_submit_button" />
+    </form>
+  </div>
+
+  <p>Already have an account? <a href="">Login</a></p>
+
+</div>
 {% endblock %}
