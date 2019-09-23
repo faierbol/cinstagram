@@ -33,35 +33,35 @@
 
 - `version 1.10.0`: basic home page
 
-- `version 1.11.0`: Add all of the above to
+- `version 1.11.0`: secure all of the above to
 
-- `version 1.12.0`: Improve configuration
+- `version 1.12.0`: Improve configuration (seperate it to its own module)
 
-- `version 1.13.0`: improve url pathing system
+- `version 1.13.0`: improve url pathing system (seperate it to its own module)
 
-- `version 1.14.0`: improve signup sys fully
+- `version 1.14.0`: improve signup sys fully (seperate it to its own module)
 
-- `version 1.15.0`: improve the login sys fully
+- `version 1.15.0`: improve the login sys fully (seperate it to its own module)
 
-- `version 1.16.0`: improve user settings syss fully
+- `version 1.16.0`: improve user settings sys (seperate it to its own module)
 
-- `version 1.17.0`: improve subreddit page fully
+- `version 1.17.0`: improve subreddit page (seperate it to its own module)
 
-- `version 1.18.0`: improve posting sys fully
+- `version 1.18.0`: improve posting sys fully (seperate it to its own module)
 
-- `version 1.19.0`: improve profile page fully
+- `version 1.19.0`: improve profile page fully (seperate it to its own module)
 
-- `version 1.20.0`: improve home page fully
+- `version 1.20.0`: improve home page fully (seperate it to its own module)
 
-- `version 1.21.0`: improve the menu fully
+- `version 1.21.0`: improve the menu fully (seperate it to its own module)
 
-- `version 1.22.0`: improve the search algorithm and the hot, top ... etc.
+- `version 1.22.0`: improve the search algorithm and the hot, top ... etc. (seperate it to its own module)
 
-- `version 1.23.0`: improve admin panel fully add the features above
+- `version 1.23.0`: improve admin panel fully add the features above (seperate it to its own module)
 
-- `version 1.24.0`: improve programmer panel fully
+- `version 1.24.0`: improve programmer panel fully (seperate it to its own module)
 
-- `version 1.25.0`: secure all of the features above
+- `version 1.25.0`: secure all of the features above 
 
 - `version 1.26.0`: now the fun stuff begins once you think you cloned most of
   of the feautres you will create bots and try to create millions of request traffic
