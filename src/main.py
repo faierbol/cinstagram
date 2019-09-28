@@ -15,12 +15,13 @@
 from flask import Flask, request, render_template, redirect, session
 from flask_sqlalchemy import SQLAlchemy
 
-# views for url pathing
+# Part: Programmer Panel
 '''
 from programmer_panel_app.views import programmer_panel_login
 from programmer_panel_app.views import programmer_panel_signup
 from programmer_panel_app.views import programmer_panel_dashboard
 '''
+# models will be here too
 
 
 #######################################################################
@@ -33,23 +34,36 @@ app.config["secret_key"] = "change-this-in-production"
 app.config["debug"] = True
 app.config["host"] = "127.0.0.1"
 app.config["port"] = 5000
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///test.db"
 
 
 #######################################################################
-#                           ORM                                       #
+#  ORM (module these into the models.py part of the modules)          #
 #######################################################################
+# app-ORM configs
+postgresql_URI = "postgresql://demir@localhost:5432/ceddit"
+app.config['SQLALCHEMY_DATABASE_URI'] = postgresql_URI
 db = SQLAlchemy(app)
 
 
-class programmers(db.Model):
+class Programmer(db.Model):
+    __tablename__ = "programmer"
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(50), unique=True, nullable=False)
     key = db.Column(db.String(10))
 
+    def __init__(self, username, password, key):
+        self.username = username
+        self.password = password
+        self.key = key
+
     def __str__(self):
         return "id: " + str(self.id) + " | username: " + str(self.username)
+
+
+# Create your tables
+db.create_all()
+db.session.commit()
 
 
 #######################################################################
@@ -69,18 +83,36 @@ def programmer_panel_signup():
 
     # process the signup form
     if request.method == "POST":
-        print(request.form['username'])
-        print(request.form['password'])
-        print(request.form['key'])
+        username = request.form['username']
+        password = request.form['password']
+        key = request.form['key']
+        new_programmer = Programmer(username, password, key)
+        db.session.add(new_programmer)
+        db.session.commit()
+
+        return redirect
 
     data = {
-
+        # ...
     }
     return render_template(
         'programmer_panel/programmer_panel_signup.html', data=data
     )
 
 
-# RUNNING THE APPLICATION
+@app.route('/programmer_panel/login', methods=['POST', 'GET'])
+def programmer_panel_login():
+    '''
+        programmer panel login: is where the login gate is located
+    '''
+
+    # process the login form
+
+    data = {
+
+    }
+    return "login gate"
+
+# RUNNING THE APPLICATION ##################################################
 if __name__ == "__main__":
     app.run()
