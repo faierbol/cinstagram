@@ -10,9 +10,9 @@
 
 '''
 
-# core python modules
+import psycopg2
 
-from flask import Flask, request, render_template, redirect, session
+from flask import Flask, request, render_template, redirect, session, url_for
 from flask_sqlalchemy import SQLAlchemy
 
 # Part: Programmer Panel
@@ -80,17 +80,20 @@ def programmer_panel_signup():
         programmer panel signup: is the view where a new programmer to the
         company can signup their accounts
     '''
+    invalid_credentials = False
 
     # process the signup form
     if request.method == "POST":
         username = request.form['username']
         password = request.form['password']
         key = request.form['key']
+        # check if the programmer already exists if not create new one
+        print(Programmer.query.filter_by(username=username).first().exists())
         new_programmer = Programmer(username, password, key)
         db.session.add(new_programmer)
         db.session.commit()
 
-        return redirect
+        return redirect(url_for('programmer_panel_login'))
 
     data = {
         # ...
@@ -111,8 +114,11 @@ def programmer_panel_login():
     data = {
 
     }
-    return "login gate"
+    return "login gate is here"
+
 
 # RUNNING THE APPLICATION ##################################################
 if __name__ == "__main__":
-    app.run()
+    app.run(
+        debug=True
+    )
