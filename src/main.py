@@ -24,7 +24,7 @@ from flask_migrate import Migrate
 #                       self functions                                #
 #######################################################################
 def generate_random_key():
-    return str(''.join(random.SystemRandom().choice(string.ascii_uppercase + string.digits) for _ in range(15)))
+    return str(''.join(random.SystemRandom().choice(string.ascii_uppercase + string.digits) for _ in range(20)))
 
 
 
@@ -65,7 +65,7 @@ class Programmer(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(50), unique=False, nullable=False)
-    key = db.Column(db.String(16))
+    key = db.Column(db.String(20))
 
     def __init__(self, username, password, key):
         self.username = username
@@ -104,24 +104,22 @@ def programmer_panel_signup():
         password = request.form['password']
         key = generate_random_key()
 
-        # check if any of the inputs a
-
-        # check if the programmer already exists if not create new one
-        if Programmer.query.filter_by(username=username).first() is None:
-            # User does not exists
-            new_programmer = Programmer(username, password, key)
-            db.session.add(new_programmer)
-            db.session.commit()
-            return redirect(url_for('programmer_panel_login'))
+        # check if any of the input is empty
+        if bool(username) is False or bool(username.strip()) is False or \
+           bool(password) is False or bool(password.strip()) is False:
+            empty_credentials = True
         else:
-            # User exists
-            invalid_credentials = True
-
-    '''
-    elif bool(username.strip()) is False or bool(username) is False:
-        # check if there are any empty credentials
-        empty_credentials = True
-    '''
+            # If it is not empty check if the username exists, if it does
+            # do not create a new user
+            if Programmer.query.filter_by(username=username).first() is None:
+                # User does not exists
+                new_programmer = Programmer(username, password, key)
+                db.session.add(new_programmer)
+                db.session.commit()
+                return redirect(url_for('programmer_panel_login'))
+            else:
+                # User exists
+                invalid_credentials = True
 
     data = {
         "invalid_credentials": invalid_credentials,
@@ -139,6 +137,8 @@ def programmer_panel_login():
     '''
 
     # process the login form
+    #db.session.query(Programmer).delete()
+    #db.session.commit()
 
     data = {
 
