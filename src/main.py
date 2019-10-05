@@ -11,10 +11,22 @@
 '''
 
 import psycopg2
+import string
+import random
+
 
 from flask import Flask, request, render_template, redirect, session, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+
+
+#######################################################################
+#                       self functions                                #
+#######################################################################
+def generate_random_key():
+    return str(''.join(random.SystemRandom().choice(string.ascii_uppercase + string.digits) for _ in range(15)))
+
+
 
 # Part: Programmer Panel
 '''
@@ -53,7 +65,7 @@ class Programmer(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(50), unique=False, nullable=False)
-    key = db.Column(db.String(10))
+    key = db.Column(db.String(16))
 
     def __init__(self, username, password, key):
         self.username = username
@@ -64,9 +76,9 @@ class Programmer(db.Model):
         return "id: " + str(self.id) + " | username: " + str(self.username)
 
 
-# Create your tables
-db.create_all()
-db.session.commit()
+# Create your tables -note : this is deprecated since now i am using f-migrate
+# db.create_all()
+# db.session.commit()
 
 
 #######################################################################
@@ -90,7 +102,9 @@ def programmer_panel_signup():
     if request.method == "POST":
         username = request.form['username']
         password = request.form['password']
-        key = request.form['key']
+        key = generate_random_key()
+
+        # check if any of the inputs a
 
         # check if the programmer already exists if not create new one
         if Programmer.query.filter_by(username=username).first() is None:
@@ -99,13 +113,15 @@ def programmer_panel_signup():
             db.session.add(new_programmer)
             db.session.commit()
             return redirect(url_for('programmer_panel_login'))
-        elif bool(username.strip()) is False or bool(password.strip()) is False:
-            # check if there are any empty credentials
-            empty_credentials = True
-            print("there are empty inputs")
         else:
             # User exists
             invalid_credentials = True
+
+    '''
+    elif bool(username.strip()) is False or bool(username) is False:
+        # check if there are any empty credentials
+        empty_credentials = True
+    '''
 
     data = {
         "invalid_credentials": invalid_credentials,
