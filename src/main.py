@@ -14,6 +14,7 @@ import psycopg2
 
 from flask import Flask, request, render_template, redirect, session, url_for
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
 # Part: Programmer Panel
 '''
@@ -42,14 +43,16 @@ app.config["port"] = 5000
 # app-ORM configs
 postgresql_URI = "postgresql://demir@localhost:5432/ceddit"
 app.config['SQLALCHEMY_DATABASE_URI'] = postgresql_URI
+
 db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 
 
 class Programmer(db.Model):
     __tablename__ = "programmer"
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100), unique=True, nullable=False)
-    password = db.Column(db.String(50), unique=True, nullable=False)
+    password = db.Column(db.String(50), unique=False, nullable=False)
     key = db.Column(db.String(10))
 
     def __init__(self, username, password, key):
@@ -81,22 +84,32 @@ def programmer_panel_signup():
         company can signup their accounts
     '''
     invalid_credentials = False
+    empty_credentials = False
 
     # process the signup form
     if request.method == "POST":
         username = request.form['username']
         password = request.form['password']
         key = request.form['key']
-        # check if the programmer already exists if not create new one
-        print(Programmer.query.filter_by(username=username).first().exists())
-        new_programmer = Programmer(username, password, key)
-        db.session.add(new_programmer)
-        db.session.commit()
 
-        return redirect(url_for('programmer_panel_login'))
+        # check if the programmer already exists if not create new one
+        if Programmer.query.filter_by(username=username).first() is None:
+            # User does not exists
+            new_programmer = Programmer(username, password, key)
+            db.session.add(new_programmer)
+            db.session.commit()
+            return redirect(url_for('programmer_panel_login'))
+        elif bool(username.strip()) is False or bool(password.strip()) is False:
+            # check if there are any empty credentials
+            empty_credentials = True
+            print("there are empty inputs")
+        else:
+            # User exists
+            invalid_credentials = True
 
     data = {
-        # ...
+        "invalid_credentials": invalid_credentials,
+        "empty_credentials": empty_credentials,
     }
     return render_template(
         'programmer_panel/programmer_panel_signup.html', data=data

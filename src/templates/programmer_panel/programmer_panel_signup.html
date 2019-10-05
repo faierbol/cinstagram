@@ -12,6 +12,15 @@
 
 <div id="programmer_signup_container">
 
+  {% if data.invalid_credentials == True %}
+    <h1 style="color:red;">This username or password already exists</h1>
+  {% endif %}
+
+  {% if data.empty_credentials == True %}
+    <h1 style="color:red;">You cannot enter empty input</h1>
+  {% endif %}
+
+
   <h1>Programmer Panel Signup</h1>
 
   <!-- Signup Form -->
@@ -24,7 +33,7 @@
     </form>
   </div>
 
-  <p>Already have an account? <a href="">Login</a></p>
+  <p>Already have an account? <a href="{{ url_for('programmer_panel_login') }}">Login</a></p>
 
 </div>
 {% endblock %}
