@@ -81,6 +81,11 @@ class Programmer(db.Model):
 # db.session.commit()
 
 
+# process the login form
+#db.session.query(Programmer).delete()
+#db.session.commit()
+
+
 #######################################################################
 #  URL Paths  (change these views in to their own modules later on)   #
 #######################################################################
@@ -135,15 +140,27 @@ def programmer_panel_login():
     '''
         programmer panel login: is where the login gate is located
     '''
+    invalid_credentials = False
 
-    # process the login form
-    #db.session.query(Programmer).delete()
-    #db.session.commit()
+    # Processing the Login Form
+    if request.method == "POST":
+        username = request.form["username"]
+        password = request.form["password"]
+        key = request.form["key"]
+        # check if the user exists, with the given input
+        if Programmer.query.filter_by(username=username, password=password, key=key) is None:
+            # User does not exists therefore inputs are given wrong creds
+            invalid_credentials = True
+        else:
+            pass # login
+
 
     data = {
-
+        "invalid_credentials": invalid_credentials,
     }
-    return "login gate is here"
+    return render_template(
+        'programmer_panel/programmer_panel_login.html', data=data
+    )
 
 
 # RUNNING THE APPLICATION ##################################################
