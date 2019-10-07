@@ -76,6 +76,22 @@ class Programmer(db.Model):
         return "id: " + str(self.id) + " | username: " + str(self.username)
 
 
+class Admin(db.Model):
+    __tablename__ = "admin"
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(100), unique=True, nullable=False)
+    password = db.Column(db.String(50), unique=False, nullable=False)
+    key = db.Column(db.String(20))
+
+    def __init__(self, username, password, key):
+        self.username = username
+        self.password = password
+        self.key = key
+
+    def __str__(self):
+        return "id: " + str(self.id) + " | username: " + str(self.username)
+
+
 # Create your tables -note : this is deprecated since now i am using f-migrate
 # db.create_all()
 # db.session.commit()
@@ -103,6 +119,9 @@ def programmer_panel_signup():
         programmer panel signup: is the view where a new programmer to the
         company can signup their accounts
     '''
+    # Deleting any sessions regarding any type of users
+    session.pop("programmer_username", None)
+
     invalid_credentials = False
     empty_credentials = False
 
@@ -176,12 +195,28 @@ def programmer_panel_index():
         of the parts of the application.
     '''
 
+    # Admin-user CRUD operations
+    # if request.POST.get('desk_create_button'):
+
     data = {
 
     }
     return render_template(
         'programmer_panel/programmer_panel_index.html', data=data
     )
+
+
+@app.route("/programmer_panel/create/admin", methods=['POST', 'GET'])
+def programmer_panel_create_admin():
+    '''
+
+    '''
+
+    data = {
+
+    }
+    return 'programmer panel create admin'
+
 
 
 # RUNNING THE APPLICATION ##################################################
