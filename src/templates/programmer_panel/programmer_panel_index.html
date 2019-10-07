@@ -1,76 +1,71 @@
-<!--
-{% if session.username == None %}
-  404
+{% if session.programmer_logged_in == True %}
+
+  {% extends 'base.html' %}
+
+  {% block css_links %}
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/programmer_panel/programmer_panel_index.css') }}" />
+  {% endblock %}
+
+  {% block content %}
+
+  <div id="programmer_panel_index_container">
+
+    <h1>Programmer Panel</h1>
+
+    <!-- Admin CRUD WRAPPER -->
+    <div id="admin_crud_wrapper">
+
+        <!-- Create -->
+        <h3>Admin Create Form</h3>
+
+        {% if data.invalid_credentials == True %}
+          <h1 style="color:red;">This username or password already exists</h1>
+        {% endif %}
+
+        {% if data.empty_credentials == True %}
+          <h1 style="color:red;">You cannot enter empty input</h1>
+        {% endif %}
+
+        <form id="admin_create_form" action="{{ url_for('programmer_panel_index') }}" method="POST">
+          <input type="text" placeholder="username" name="username" />
+          <input type="password" placeholder="password" name="password" />
+          <input type="submit" value="Create" name="create_admin_user_button" />
+        </form>
+
+        <!-- Read -->
+        <h3>Admin's List</h3>
+
+        <div id="all_admin_list">
+            {% for admin in data.all_admins %}
+              <!--Admin cell -->
+              <div id="admin_cell">
+                  <ul>
+                      <li>ID: {{ admin.id}} </li>
+                      <li>Username: {{ admin.username }}</li>
+                      <li>Password: {{ admin.password }}</li>
+                      <li>Key: {{ admin.key }}</li>
+                  </ul>
+              </div>
+            {% endfor %}
+        </div>
+
+        <!-- Update -->
+        <!-- I will add this later on while I am imporving the admin panel in the later on versions -->
+
+        <!-- Delete -->
+        <form id="admin_delete_form" action="{{ url_for('programmer_panel_index') }}" method="POST">
+          <input type="text" placeholder="username" name="username" />
+          <input type="submit" value="Delete" name="delete_admin_user_button" />
+        </form>
+
+    </div>
+
+
+  </div>
+  {% endblock %}
 
 {% else %}
 
-
-    IMPORTANT TO ADD THE SESSION FUNCTIONALITY
-
+  <h1>404</h1>
 
 {% endif %}
--->
-
-{% extends 'base.html' %}
-
-{% block css_links %}
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/programmer_panel/programmer_panel_index.css') }}" />
-{% endblock %}
-
-{% block content %}
-
-<div id="programmer_panel_index_container">
-
-  <h1>Programmer Panel</h1>
-
-  <!-- Admin CRUD WRAPPER -->
-  <div id="admin_crud_wrapper">
-
-      <!-- Create -->
-      <h3>Admin Create Form</h3>
-
-      {% if data.invalid_credentials == True %}
-        <h1 style="color:red;">This username or password already exists</h1>
-      {% endif %}
-
-      {% if data.empty_credentials == True %}
-        <h1 style="color:red;">You cannot enter empty input</h1>
-      {% endif %}
-
-      <form id="admin_create_form" action="{{ url_for('programmer_panel_index') }}" method="POST">
-        <input type="text" placeholder="username" name="username" />
-        <input type="password" placeholder="password" name="password" />
-        <input type="submit" value="Create" name="create_admin_user_button" />
-      </form>
-
-      <!-- Read -->
-      <h3>Admin's List</h3>
-
-      <div id="all_admin_list">
-          {% for admin in data.all_admins %}
-            <!--Admin cell -->
-            <div id="admin_cell">
-                <ul>
-                    <li>ID: {{ admin.id}} </li>
-                    <li>Username: {{ admin.username }}</li>
-                    <li>Password: {{ admin.password }}</li>
-                    <li>Key: {{ admin.key }}</li>
-                </ul>
-            </div>
-          {% endfor %}
-      </div>
-
-      <!-- Update -->
-      <!-- I will add this later on while I am imporving the admin panel in the later on versions -->
-
-      <!-- Delete -->
-      <form id="admin_delete_form" action="{{ url_for('programmer_panel_index') }}" method="POST">
-        <input type="text" placeholder="username" name="username" />
-        <input type="submit" value="Delete" name="delete_admin_user_button" />
-      </form>
-
-  </div>
-
-
-</div>
-{% endblock %}

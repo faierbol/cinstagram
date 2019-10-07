@@ -33,7 +33,7 @@
 
 - `version 1.10.0`: basic home page
 
-- `version 1.11.0`: secure all of the above to
+- `version 1.11.0`: secure all of the above (password hashing, key verification, form tokens csrf ... etc.)
 
 - `version 1.12.0`: Improve configuration (seperate it to its own module)
 

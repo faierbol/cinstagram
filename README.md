@@ -1,2 +1,3 @@
 # ceddit
-reddit clone 
+
+I will add this later on

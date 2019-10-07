@@ -43,10 +43,10 @@ from programmer_panel_app.views import programmer_panel_dashboard
 app = Flask(__name__)
 app.config["static_folder"] = "./static"
 app.config["template_folder"] = "./templates"
-app.config["secret_key"] = "change-this-in-production"
-app.config["debug"] = True
-app.config["host"] = "127.0.0.1"
-app.config["port"] = 5000
+app.secret_key = "changeThisInProduction"
+app.debug = True
+app.host = "127.0.0.1"
+app.port = 5000
 
 
 #######################################################################
@@ -109,6 +109,7 @@ class Admin(db.Model):
 def index():
     # delete all sessions regarding to the admin or programer (super-users)
     session.pop("programmer_username", None)
+    session.pop('programmer_logged_in', None)
 
     return "index page"
 
@@ -121,6 +122,8 @@ def programmer_panel_signup():
     '''
     # Deleting any sessions regarding any type of users
     session.pop("programmer_username", None)
+    session.pop('programmer_logged_in', None)
+
 
     invalid_credentials = False
     empty_credentials = False
@@ -162,6 +165,10 @@ def programmer_panel_login():
     '''
         programmer panel login: is where the login gate is located
     '''
+    # Deleting any sessions regarding any type of users
+    session.pop("programmer_username", None)
+    session.pop('programmer_logged_in', None)
+
     invalid_credentials = False
 
     # Processing the Login Form
@@ -178,6 +185,7 @@ def programmer_panel_login():
         else:
             # edit the session to the user logged in
             session['programmer_username'] = username
+            session['programmer_logged_in'] = True
             return redirect(url_for("programmer_panel_index"))
 
     data = {
