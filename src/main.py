@@ -82,8 +82,8 @@ class Programmer(db.Model):
 
 
 # process the login form
-#db.session.query(Programmer).delete()
-#db.session.commit()
+# db.session.query(Programmer).delete()
+# db.session.commit()
 
 
 #######################################################################
@@ -91,7 +91,10 @@ class Programmer(db.Model):
 #######################################################################
 @app.route("/")
 def index():
-    return "hello"
+    # delete all sessions regarding to the admin or programer (super-users)
+    session.pop("programmer_username", None)
+
+    return "index page"
 
 
 @app.route('/programmer_panel/signup', methods=['POST', 'GET'])
@@ -148,18 +151,36 @@ def programmer_panel_login():
         password = request.form["password"]
         key = request.form["key"]
         # check if the user exists, with the given input
-        if Programmer.query.filter_by(username=username, password=password, key=key) is None:
+        if Programmer.query.filter_by(
+            username=username, password=password, key=key
+        ).first() is None:
             # User does not exists therefore inputs are given wrong creds
             invalid_credentials = True
         else:
-            pass # login
-
+            # edit the session to the user logged in
+            session['programmer_username'] = username
+            return redirect(url_for("programmer_panel_index"))
 
     data = {
         "invalid_credentials": invalid_credentials,
     }
     return render_template(
         'programmer_panel/programmer_panel_login.html', data=data
+    )
+
+
+@app.route('/programmer_panel/index', methods=['POST', 'GET'])
+def programmer_panel_index():
+    '''
+        programmer panel index: is where the programmer sees a overview of all
+        of the parts of the application.
+    '''
+
+    data = {
+
+    }
+    return render_template(
+        'programmer_panel/programmer_panel_index.html', data=data
     )
 
 

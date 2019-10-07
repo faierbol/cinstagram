@@ -8,11 +8,12 @@
 
 <div id="programmer_login_container">
 
-  <!--
+
   {% if data.invalid_credentials == True %}
-    <h1 style="color:red;">This username or password already exists</h1>
+    <h1 style="color:red;">Wrong credentials!</h1>
   {% endif %}
 
+  <!--
   {% if data.empty_credentials == True %}
     <h1 style="color:red;">You cannot enter empty input</h1>
   {% endif %}
@@ -26,7 +27,7 @@
         <input type="text" placeholder="username" name="username" />
         <input type="password" placeholder="password" name="password" />
         <input type="password" placeholder="key" name="key" />
-        <input type="submit" value="signup" name="submit_button" id="signup_submit_button" />
+        <input type="submit" value="login" name="submit_button" id="login_submit_button" />
     </form>
   </div>
 
