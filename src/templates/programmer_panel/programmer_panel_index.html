@@ -12,16 +12,26 @@
 
   <!-- Admin CRUD WRAPPER -->
   <div id="admin_crud_wrapper">
+
       <!-- Create -->
       <h3>Admin Create Form</h3>
-      <form id="admin_create_form">
+
+      {% if data.invalid_credentials == True %}
+        <h1 style="color:red;">This username or password already exists</h1>
+      {% endif %}
+
+      {% if data.empty_credentials == True %}
+        <h1 style="color:red;">You cannot enter empty input</h1>
+      {% endif %}
+
+      <form id="admin_create_form" action="{{ url_for('programmer_panel_index') }}" method="POST">
         <input type="text" placeholder="username" name="username" />
         <input type="password" placeholder="password" name="password" />
-        <input type="password" placeholder="key" name="key" />
-        <input type="submit" value="Create" name="create_admin_user_form_submit_btn" />
+        <input type="submit" value="Create" name="create_admin_user_button" />
       </form>
 
       <!-- Read -->
+
 
 
       <!-- Update -->

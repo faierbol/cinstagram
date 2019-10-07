@@ -194,29 +194,44 @@ def programmer_panel_index():
         programmer panel index: is where the programmer sees a overview of all
         of the parts of the application.
     '''
+    invalid_credentials = False
+    empty_credentials = False
 
     # Admin-user CRUD operations
-    # if request.POST.get('desk_create_button'):
+    # Create
+    if request.form.get('create_admin_user_button'):
+        username = request.form["username"]
+        password = request.form["password"]
+        key = generate_random_key()
+        # check if any of the input is empty
+        if bool(username) is False or bool(username.strip()) is False or \
+           bool(password) is False or bool(password.strip()) is False:
+            empty_credentials = True
+        else:
+            # If it is not empty check if the username exists, if it does
+            # do not create a new user
+            if Admin.query.filter_by(username=username).first() is None:
+                # User does not exists
+                new_admin = Admin(username, password, key)
+                db.session.add(new_admin)
+                db.session.commit()
+                return redirect(url_for('programmer_panel_index'))
+            else:
+                # User exists
+                invalid_credentials = True
+    # Read
+
+    # Update
+
+    # Delete
 
     data = {
-
+        "invalid_credentials": invalid_credentials,
+        "empty_credentials": empty_credentials,
     }
     return render_template(
         'programmer_panel/programmer_panel_index.html', data=data
     )
-
-
-@app.route("/programmer_panel/create/admin", methods=['POST', 'GET'])
-def programmer_panel_create_admin():
-    '''
-
-    '''
-
-    data = {
-
-    }
-    return 'programmer panel create admin'
-
 
 
 # RUNNING THE APPLICATION ##################################################
