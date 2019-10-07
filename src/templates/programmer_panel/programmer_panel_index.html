@@ -1,3 +1,16 @@
+<!--
+{% if session.username == None %}
+  404
+
+{% else %}
+
+
+    IMPORTANT TO ADD THE SESSION FUNCTIONALITY
+
+
+{% endif %}
+-->
+
 {% extends 'base.html' %}
 
 {% block css_links %}
@@ -31,13 +44,30 @@
       </form>
 
       <!-- Read -->
+      <h3>Admin's List</h3>
 
-
+      <div id="all_admin_list">
+          {% for admin in data.all_admins %}
+            <!--Admin cell -->
+            <div id="admin_cell">
+                <ul>
+                    <li>ID: {{ admin.id}} </li>
+                    <li>Username: {{ admin.username }}</li>
+                    <li>Password: {{ admin.password }}</li>
+                    <li>Key: {{ admin.key }}</li>
+                </ul>
+            </div>
+          {% endfor %}
+      </div>
 
       <!-- Update -->
-
+      <!-- I will add this later on while I am imporving the admin panel in the later on versions -->
 
       <!-- Delete -->
+      <form id="admin_delete_form" action="{{ url_for('programmer_panel_index') }}" method="POST">
+        <input type="text" placeholder="username" name="username" />
+        <input type="submit" value="Delete" name="delete_admin_user_button" />
+      </form>
 
   </div>
 

@@ -59,9 +59,9 @@
 
 - `version 1.23.0`: improve admin panel fully add the features above (seperate it to its own module)
 
-- `version 1.24.0`: improve programmer panel fully (seperate it to its own module)
+- `version 1.24.0`: improve programmer panel fully (seperate it to its own module) (viewing the site data with graphs ... etc.)
 
-- `version 1.25.0`: secure all of the features above 
+- `version 1.25.0`: secure all of the features above
 
 - `version 1.26.0`: now the fun stuff begins once you think you cloned most of
   of the feautres you will create bots and try to create millions of request traffic

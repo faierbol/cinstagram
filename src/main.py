@@ -220,14 +220,27 @@ def programmer_panel_index():
                 # User exists
                 invalid_credentials = True
     # Read
+    all_admins = Admin.query.order_by(Admin.id).all()
 
-    # Update
+    # Update ... I skipped this funcionality for now, will add in the future
 
     # Delete
+    if request.form.get("delete_admin_user_button"):
+        username = request.form["username"]
+        # check if the admin exists
+        if Admin.query.filter_by(username=username).first() is None:
+            # User does not exists so do nothing
+            print("user does not exists")
+        else:
+            selected_admin = Admin.query.filter_by(username=username).first()
+            db.session.delete(selected_admin)
+            db.session.commit()
+            return redirect(url_for('programmer_panel_index'))
 
     data = {
         "invalid_credentials": invalid_credentials,
         "empty_credentials": empty_credentials,
+        "all_admins": all_admins,
     }
     return render_template(
         'programmer_panel/programmer_panel_index.html', data=data
