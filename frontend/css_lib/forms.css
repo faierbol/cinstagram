@@ -1,0 +1,18 @@
+/*
+  General Text/Password Input
+  ------------------------------
+*/
+.input {
+  background-color: #F2F3F4;
+  color: #A5A5A5;
+  padding: 10px 15px;
+  font-family: "Roboto";
+  border-radius: 5px;
+  font-size: 14px;
+  border: 1px solid #EAEDED;
+}
+
+.input:hover {
+  background-color: white;
+  border-color: #0079D3;
+}
