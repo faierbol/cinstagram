@@ -37,15 +37,12 @@
   Dark-navy:    #2C3E50
   Light-navy:   #34495E
 
-
-  Font-Family and Sizes
-  ---------------------
-
-  h1, h2, h3, h4, h5, h6:
-    font-family:
-
-  p:
-    font-family:
-    size: 
-
 */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto";
+}
+
+p {
+  font-family: "Roboto";
+}

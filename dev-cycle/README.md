@@ -15,8 +15,6 @@
 
 - `verion 1.1.0`: Basic Programmer Panel (key verification)
 
-- `version 1.2.0`: Create all of the necessary front-end code of the site
-
 - `version 1.3.0`: Basic Configuration
 
 - `version 1.4.0`: Basic URL Pathing system
