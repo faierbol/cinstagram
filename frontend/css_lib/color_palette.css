@@ -1,0 +1,18 @@
+/*
+
+  CSS-Lib
+  -------
+
+  Desc: This package contains the css code that will be used all the time inside
+        the application. Specific modifications to the side will be done inisde
+        a seperate file that conatins the name of the modified file such as:
+        if there is a modified specific css just for the home page the file
+        will be added to home_page/home_page.css and not in this css_lib dir.
+
+
+  Color Pallette
+  --------------
+
+  
+
+*/

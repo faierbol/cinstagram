@@ -43,28 +43,43 @@
 
 - `version 1.15.0`: improve the login sys fully (seperate it to its own module)
 
-- `version 1.16.0`: improve user settings sys (seperate it to its own module)
+- `version 1.16.0`: improve help center fully
 
-- `version 1.17.0`: improve subreddit page (seperate it to its own module)
+- `version 1.17.0`: finish the footer's section on the right navbar mostly static
 
-- `version 1.18.0`: improve posting sys fully (seperate it to its own module)
+- `version 1.18.0`: Do all of the user profile logic
 
-- `version 1.19.0`: improve profile page fully (seperate it to its own module)
+- `version 1.19.0`: Do all of the post creation logic
 
-- `version 1.20.0`: improve home page fully (seperate it to its own module)
+- `version 1.20.0`: Finish all user-messages logic
 
-- `version 1.21.0`: improve the menu fully (seperate it to its own module)
+- `version 1.21.0`: Finish all user-chat logic
 
-- `version 1.22.0`: improve the search algorithm and the hot, top ... etc. (seperate it to its own module)
+- `version 1.22.0`: Finish all of the subreddit logic
 
-- `version 1.23.0`: improve admin panel (there is nothing to improve since I didnt build anything but you get the idea finish a admin panel product fully) fully add the features above (seperate it to its own module)
+- `version 1.23.0`: Finish all of the user-mod-subreddit logic
 
-- `version 1.24.0`: improve programmer panel fully (seperate it to its own module) (viewing the site data with graphs ... etc.)
+- `version 1.24.0`: Finish all top growing communities logic
 
-- `version 1.25.0`: secure all of the features above
+- `version 1.25.0`: Finish all Home page logic
 
-- `version 1.26.0`: now the fun stuff begins once you think you cloned most of
+- `version 1.26.0`: Finish all of the navbar logic
+
+- `version 1.27.0`: finish  all of the search logic
+
+- `version 1.28.0`: improve the search algorithm and the hot, top ... etc. (seperate it to its own module)
+
+- `version 1.29.0`: improve admin panel (there is nothing to improve since I didnt build anything but you get the idea finish a admin panel product fully) fully add the features above (seperate it to its own module)
+
+- `version 1.30.0`: improve programmer panel fully (seperate it to its own module) (viewing the site data with graphs ... etc.)
+
+- `version 1.31.0`: secure all of the features above
+
+- `version 1.32.1`: Add bots to every single crud app that you have within the site
+  For example create a bot that updates the blog of the site in every week, a bot to createa an announcment on the official reddits subreddit in every 10 days, and finally create user bots ...etc
+
+- `version 1.33.0`: now the fun stuff begins once you think you cloned most of
   of the feautres you will create bots and try to create millions of request traffic
   over the course of month. Try to scale your site ... etc. hard and complex part begins here
 
-- `version 1.27.0`: Learn about deployment etc.
+- `version 1.34.0`: Learn about deployment etc.
