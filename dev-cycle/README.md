@@ -15,7 +15,7 @@
 
 - `verion 1.1.0`: Basic Programmer Panel (key verification)
 
-- `version 1.2.0`: Basic Admin Panel (key verification)
+- `version 1.2.0`: Create all of the necessary front-end code of the site
 
 - `version 1.3.0`: Basic Configuration
 
@@ -57,7 +57,7 @@
 
 - `version 1.22.0`: improve the search algorithm and the hot, top ... etc. (seperate it to its own module)
 
-- `version 1.23.0`: improve admin panel fully add the features above (seperate it to its own module)
+- `version 1.23.0`: improve admin panel (there is nothing to improve since I didnt build anything but you get the idea finish a admin panel product fully) fully add the features above (seperate it to its own module)
 
 - `version 1.24.0`: improve programmer panel fully (seperate it to its own module) (viewing the site data with graphs ... etc.)
 
