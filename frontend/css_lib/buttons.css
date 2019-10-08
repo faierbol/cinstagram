@@ -1,3 +1,86 @@
 /*
-  This module contains the neccessary css code for the sites buttons
+  Button Sizes
+  ------------------------------
 */
+.btn_small {
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  font-family: "Roboto";
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid black;
+}
+.btn_small:hover {
+  opacity: 0.5;
+}
+
+.btn_small_white_bg {
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  font-family: "Roboto";
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid black;
+}
+.btn_small_white_bg:hover {
+  opacity: 0.5;
+}
+
+.btn_medium {
+  background-color: white;
+  color: black;
+  padding: 11px 30px;
+  font-family: "Roboto";
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  border: 1px solid black;
+}
+.btn_medium:hover {
+  opacity: 0.5;
+}
+
+.btn_large {
+  background-color: white;
+  color: black;
+  padding: 12px 120px;
+  font-family: "Roboto";
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  border: 1px solid black;
+}
+.btn_large:hover {
+  opacity: 0.5;
+}
+
+
+/*
+  Button Colors
+  ------------------------------
+*/
+.btn_blue {
+  background-color: #0079D3;
+  color: white;
+  border-color: #0079D3;
+}
+
+.btn_white {
+  background-color: white;
+  color: #0079D3;
+  border-color: #0079D3;
+}
+
+.btn_grey {
+  background-color: #DAE0E6;
+  color: #0079D3;
+  border-color: #DAE0E6;
+}

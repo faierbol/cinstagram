@@ -1,13 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto";
+}
+
+p {
+  font-family: "Roboto";
+}
+
+.help_center_container {
+  background-color: lightgrey;
+  height: auto;
+  width: 100%;
+  padding: 0px;
+}
+
 /*
   Ceddit-Help top navbar
   --------------------------------------
 */
 .ceddit_help_topnav {
-
+  height: 50px;
+  border: 0px solid transparent;
+  top: 0;
+  left: 0;
+  padding: 10px 0px;
+  background-color: white;
+  width: 100%;
+  margin-bottom: 0px;
 }
 
 .ceddit_help_topnav_logo {
-
+  background-image: url("../../branding/ceddit_text.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 45px;
+  margin-left: 140px;
 }
 
 
@@ -15,13 +46,42 @@
   Banner
   --------------------------------------
 */
+.ceddit_help_banner {
+  height: 200px;
+  width: 100%;
+  background-color: #E74C3C;
+  margin-top: 0px;
+  text-align: center;
+}
 
+.ceddit_help_banner_header {
+  margin-top: 0px;
+  color: white;
+  font-weight: 100;
+  padding-top: 80px;
+}
 
 
 /*
   Topic overview cards
   --------------------------------------
 */
+.ceddit_help_overview_cards_container {
+  background-color: white;
+  width: 950px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.ceddit_help_overview_topic_card {
+  width: 40%;
+  height: 290px;
+  margin: 5px 10px;
+  background-color: green;
+  display: inline-block;
+}
 
 
 /*
