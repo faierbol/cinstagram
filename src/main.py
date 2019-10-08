@@ -47,6 +47,7 @@ app.config["static_folder"] = "./static"
 app.config["template_folder"] = "./templates"
 app.secret_key = "changeThisInProduction"
 app.config["DEBUG"] = True
+app.config["FLASK_ENV"] = "development"
 
 #######################################################################
 #  ORM (module these into the models.py part of the modules)          #
