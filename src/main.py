@@ -1,47 +1,39 @@
-'''
+#
+#    Title: Ceddit
+#
+#    Desc: This project is just a reddit clone. The reason I am not putting a
+#          MIT license on the source code is because this is just an educational
+#          project for me and I want it to stay it that way.
+#
+#    Author: Demir Antay (@demirantay) -- demir99antay@gmail.com
+#
 
-    Title: Ceddit
-
-    Desc: This project is just a reddit clone. The reason I am not putting a
-          MIT license on the source code is because this is just an educational
-          project for me and I want it to stay it that way.
-
-    Author: Demir Antay (@demirantay) -- demir99antay@gmail.com
-
-'''
 
 import psycopg2
 import string
 import random
 
-# Configurations
-#from config import development_config
-
 from flask import Flask, request, render_template, redirect, session, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
+from config import development_config
 
-#######################################################################
-#                       self functions                                #
-#######################################################################
-def generate_random_key():
-    return str(''.join(random.SystemRandom().choice(string.ascii_uppercase + string.digits) for _ in range(20)))
+# Modelss
+from models import Programmer, Admin
 
-
-
-# Part: Programmer Panel
 '''
+# Programmer Panel
 from programmer_panel_app.views import programmer_panel_login
 from programmer_panel_app.views import programmer_panel_signup
-from programmer_panel_app.views import programmer_panel_dashboard
+from programmer_panel_app.views import programmer_panel_index
 '''
 # models will be here too
 
 
-#######################################################################
-#                       Configuration                                 #
-#######################################################################
+# Configuration
+# -------------------------------
+# This is where the application's configuration settings's (dict key's) are set
 app = Flask(__name__)
 app.config["static_folder"] = "./static"
 app.config["template_folder"] = "./templates"
@@ -49,52 +41,17 @@ app.secret_key = "changeThisInProduction"
 app.config["DEBUG"] = True
 app.config["FLASK_ENV"] = "development"
 
-#######################################################################
-#  ORM (module these into the models.py part of the modules)          #
-#######################################################################
-# app-ORM configs
+# Database configs
 postgresql_URI = "postgresql://demir@localhost:5432/ceddit"
 app.config['SQLALCHEMY_DATABASE_URI'] = postgresql_URI
 
+# SQLAlchemy and Migrate(alembic) configs
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 
-class Programmer(db.Model):
-    __tablename__ = "programmer"
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(100), unique=True, nullable=False)
-    password = db.Column(db.String(50), unique=False, nullable=False)
-    key = db.Column(db.String(20))
-
-    def __init__(self, username, password, key):
-        self.username = username
-        self.password = password
-        self.key = key
-
-    def __str__(self):
-        return "id: " + str(self.id) + " | username: " + str(self.username)
-
-
-class Admin(db.Model):
-    __tablename__ = "admin"
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(100), unique=True, nullable=False)
-    password = db.Column(db.String(50), unique=False, nullable=False)
-    key = db.Column(db.String(20))
-
-    def __init__(self, username, password, key):
-        self.username = username
-        self.password = password
-        self.key = key
-
-    def __str__(self):
-        return "id: " + str(self.id) + " | username: " + str(self.username)
-
-
-#######################################################################
-#  URL Paths  (change these views in to their own modules later on)   #
-#######################################################################
+# URL PATHS OF THE APPLICATION
+# -------------------------------
 @app.route("/")
 def index():
     # delete all sessions regarding to the admin or programer (super-users)
@@ -102,6 +59,16 @@ def index():
     session.pop('programmer_logged_in', None)
 
     return "index page"
+
+
+def generate_random_key():
+    return str(
+        ''.join(
+            random.SystemRandom().choice(
+                string.ascii_uppercase + string.digits
+            ) for _ in range(20)
+        )
+    )
 
 
 @app.route('/programmer_panel/signup', methods=['POST', 'GET'])
@@ -113,7 +80,6 @@ def programmer_panel_signup():
     # Deleting any sessions regarding any type of users
     session.pop("programmer_username", None)
     session.pop('programmer_logged_in', None)
-
 
     invalid_credentials = False
     empty_credentials = False
@@ -245,6 +211,42 @@ def programmer_panel_index():
     )
 
 
-# RUNNING THE APPLICATION ##################################################
-#if __name__ == "__main__":
+'''
+@app.route('/programmer_panel/signup', methods=['POST', 'GET'])
+def programmer_panel_signup():
+    programmer_panel_signup()
+
+
+@app.route('/programmer_panel/login', methods=['POST', 'GET'])
+def programmer_panel_login():
+    programmer_panel_login()
+
+
+@app.route('/programmer_panel/index', methods=['POST', 'GET'])
+def programmer_panel_index():
+    programmer_panel_index()
+
+
+
+# Programmer Panel: Signup View
+app.add_url_rule(
+    '/programmer_panel/signup', 'programmer_panel_signup',
+    programmer_panel_signup, methods=['POST', 'GET']
+)
+
+# Programmer Panel: Login View
+app.add_url_rule(
+    '/programmer_panel/login', 'programmer_panel_login',
+    programmer_panel_login, methods=['POST', 'GET']
+)
+
+# Programmer Panel: Index View
+app.add_url_rule(
+    '/programmer_panel/index', 'programmer_panel_index',
+    programmer_panel_index, methods=['POST', 'GET']
+)
+
+'''
+
+# if __name__ == "__main__":
 #    app.run()
