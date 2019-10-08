@@ -14,6 +14,8 @@ import psycopg2
 import string
 import random
 
+# Configurations
+#from config import development_config
 
 from flask import Flask, request, render_template, redirect, session, url_for
 from flask_sqlalchemy import SQLAlchemy
@@ -44,10 +46,7 @@ app = Flask(__name__)
 app.config["static_folder"] = "./static"
 app.config["template_folder"] = "./templates"
 app.secret_key = "changeThisInProduction"
-app.debug = True
-app.host = "127.0.0.1"
-app.port = 5000
-
+app.config["DEBUG"] = True
 
 #######################################################################
 #  ORM (module these into the models.py part of the modules)          #
@@ -90,16 +89,6 @@ class Admin(db.Model):
 
     def __str__(self):
         return "id: " + str(self.id) + " | username: " + str(self.username)
-
-
-# Create your tables -note : this is deprecated since now i am using f-migrate
-# db.create_all()
-# db.session.commit()
-
-
-# process the login form
-# db.session.query(Programmer).delete()
-# db.session.commit()
 
 
 #######################################################################
@@ -256,7 +245,5 @@ def programmer_panel_index():
 
 
 # RUNNING THE APPLICATION ##################################################
-if __name__ == "__main__":
-    app.run(
-        debug=True
-    )
+#if __name__ == "__main__":
+#    app.run()

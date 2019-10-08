@@ -13,71 +13,71 @@
 
 # `Planning`
 
-- `verion 1.1.0`: Basic Programmer Panel (key verification)
+- [x] Basic Programmer Panel (key verification)
 
-- `version 1.3.0`: Basic Configuration
+- [x]  Basic Configuration
 
-- `version 1.4.0`: Basic URL Pathing system
+- [ ]  Basic URL Pathing system
 
-- `version 1.5.0`: Basic Signup system
+- [ ]  Basic Signup system
 
-- `version 1.6.0`: basic login sys
+- [ ]  basic login sys
 
-- `version 1.7.0`: basic user settings
+- [ ]  basic user settings
 
-- `version 1.9.0`: basic subreddit page
+- [ ]  basic subreddit page
 
-- `version 1.8.0`: basic post page and profile
+- [ ] basic post page and profile
 
-- `version 1.10.0`: basic home page
+- [ ] basic home page
 
-- `version 1.11.0`: secure all of the above (password hashing, key verification, form tokens csrf ... etc.)
+- [ ]  secure all of the above (password hashing, key verification, form tokens csrf ... etc.)
 
-- `version 1.12.0`: Improve configuration (seperate it to its own module)
+- [ ] Improve configuration (seperate it to its own module)
 
-- `version 1.13.0`: improve url pathing system (seperate it to its own module)
+- [ ]  improve url pathing system (seperate it to its own module)
 
-- `version 1.14.0`: improve signup sys fully (seperate it to its own module)
+- [ ] improve signup sys fully (seperate it to its own module)
 
-- `version 1.15.0`: improve the login sys fully (seperate it to its own module)
+- [ ] improve the login sys fully (seperate it to its own module)
 
-- `version 1.16.0`: improve help center fully
+- [ ] improve help center fully
 
-- `version 1.17.0`: finish the footer's section on the right navbar mostly static
+- [ ]  finish the footer's section on the right navbar mostly static
 
-- `version 1.18.0`: Do all of the user profile logic
+- [ ]  Do all of the user profile logic
 
-- `version 1.19.0`: Do all of the post creation logic
+- [ ]  Do all of the post creation logic
 
-- `version 1.20.0`: Finish all user-messages logic
+- [ ] Finish all user-messages logic
 
-- `version 1.21.0`: Finish all user-chat logic
+- [ ]  Finish all user-chat logic
 
-- `version 1.22.0`: Finish all of the subreddit logic
+- [ ] Finish all of the subreddit logic
 
-- `version 1.23.0`: Finish all of the user-mod-subreddit logic
+- [ ] Finish all of the user-mod-subreddit logic
 
-- `version 1.24.0`: Finish all top growing communities logic
+- [ ]  Finish all top growing communities logic
 
-- `version 1.25.0`: Finish all Home page logic
+- [ ]  Finish all Home page logic
 
-- `version 1.26.0`: Finish all of the navbar logic
+- [ ] Finish all of the navbar logic
 
-- `version 1.27.0`: finish  all of the search logic
+- [ ] finish  all of the search logic
 
-- `version 1.28.0`: improve the search algorithm and the hot, top ... etc. (seperate it to its own module)
+- [ ] improve the search algorithm and the hot, top ... etc. (seperate it to its own module)
 
-- `version 1.29.0`: improve admin panel (there is nothing to improve since I didnt build anything but you get the idea finish a admin panel product fully) fully add the features above (seperate it to its own module)
+- [ ] improve admin panel (there is nothing to improve since I didnt build anything but you get the idea finish a admin panel product fully) fully add the features above (seperate it to its own module)
 
-- `version 1.30.0`: improve programmer panel fully (seperate it to its own module) (viewing the site data with graphs ... etc.)
+- [ ] improve programmer panel fully (seperate it to its own module) (viewing the site data with graphs ... etc.)
 
-- `version 1.31.0`: secure all of the features above
+- [ ] secure all of the features above
 
-- `version 1.32.1`: Add bots to every single crud app that you have within the site
+- [ ] Add bots to every single crud app that you have within the site
   For example create a bot that updates the blog of the site in every week, a bot to createa an announcment on the official reddits subreddit in every 10 days, and finally create user bots ...etc
 
-- `version 1.33.0`: now the fun stuff begins once you think you cloned most of
+- [ ] now the fun stuff begins once you think you cloned most of
   of the feautres you will create bots and try to create millions of request traffic
   over the course of month. Try to scale your site ... etc. hard and complex part begins here
 
-- `version 1.34.0`: Learn about deployment etc.
+- [ ] Learn about deployment etc.
