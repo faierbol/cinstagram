@@ -12,9 +12,6 @@
   <meta name="description" content="Reddit clone built with flask python and nginx" />
   <meta name="author" content="demir antay, Demir Antay, @demirantay" />
 
-  <!-- FAVICON -->
-  <link rel="icon" href="{{ url_for('static', filename='branding/ceddit_logo.png') }}"  />
-
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -25,20 +22,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- MY CSS LINKS -->
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}" />
+  <link rel="stylesheet" type="text/css" href="" />
 
-  <!-- specific css links -->
-  {% block css_links %}
-
-  {% endblock %}
 
 </head>
 
   <body>
 
-    {% block content %}
+    <div id="help_center_container">
+        <!-- top navbar -->
+        <div class="ceddit_help_topnav">
+          <a href=""><div class="ceddit_help_topnav_logo"></div></a>
+        </div>
 
-    {% endblock %}
+        <!-- Banner -->
+
+        <!-- Overview of the topics -->
+
+        <!-- Final contact&support linking help -->
+
+        <!-- Footer -->
+    </div>
 
   </body>
 </html>
