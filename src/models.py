@@ -1,3 +1,6 @@
+from .main import db
+
+
 class Programmer(db.Model):
     __tablename__ = "programmer"
     id = db.Column(db.Integer, primary_key=True)
