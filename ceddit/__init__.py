@@ -17,9 +17,6 @@ from flask_migrate import Migrate
 from .programmer_panel.views import programmer_panel
 
 app = Flask(__name__)
-# SQLAlchemy and Migrate(alembic) configs
-db = SQLAlchemy(app)
-migrate = Migrate(app, db)
 
 app.config["static_folder"] = "./static"
 app.config["template_folder"] = "./templates"
@@ -29,6 +26,10 @@ app.debug = True
 # Database configs
 postgresql_URI = "postgresql://demir@localhost:5432/ceddit"
 app.config['SQLALCHEMY_DATABASE_URI'] = postgresql_URI
+
+# SQLAlchemy and Migrate(alembic) configs
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 
 
 # Programmer Panel
