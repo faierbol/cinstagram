@@ -56,7 +56,7 @@ def programmer_panel_signup():
                 new_programmer = Programmer(username, password, key)
                 db.session.add(new_programmer)
                 db.session.commit()
-                return redirect(url_for('programmer_panel_login'))
+                return redirect(url_for('programmer_panel.programmer_panel_login'))
             else:
                 # User exists
                 invalid_credentials = True
@@ -96,7 +96,7 @@ def programmer_panel_login():
             # edit the session to the user logged in
             session['programmer_username'] = username
             session['programmer_logged_in'] = True
-            return redirect(url_for("programmer_panel_index"))
+            return redirect(url_for("programmer_panel.programmer_panel_index"))
 
     data = {
         "invalid_credentials": invalid_credentials,
@@ -133,7 +133,7 @@ def programmer_panel_index():
                 new_admin = Admin(username, password, key)
                 db.session.add(new_admin)
                 db.session.commit()
-                return redirect(url_for('programmer_panel_index'))
+                return redirect(url_for('programmer_panel.programmer_panel_index'))
             else:
                 # User exists
                 invalid_credentials = True
@@ -153,7 +153,7 @@ def programmer_panel_index():
             selected_admin = Admin.query.filter_by(username=username).first()
             db.session.delete(selected_admin)
             db.session.commit()
-            return redirect(url_for('programmer_panel_index'))
+            return redirect(url_for('programmer_panel.programmer_panel_index'))
 
     data = {
         "invalid_credentials": invalid_credentials,
