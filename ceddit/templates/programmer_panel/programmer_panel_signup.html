@@ -21,14 +21,14 @@
 
   <!-- Signup Form -->
   <div id="programmer_signup_form">
-    <form action="{{ url_for('programmer_panel_signup') }}" method="POST">
+    <form action="{{ url_for('programmer_panel.programmer_panel_signup') }}" method="POST">
         <input type="text" placeholder="username" name="username" />
         <input type="password" placeholder="password" name="password" />
         <input type="submit" value="signup" name="submit_button" id="signup_submit_button" />
     </form>
   </div>
 
-  <p>Already have an account? <a href="{{ url_for('programmer_panel_login') }}">Login</a></p>
+  <p>Already have an account? <a href="{{ url_for('programmer_panel.programmer_panel_login') }}">Login</a></p>
 
 </div>
 {% endblock %}

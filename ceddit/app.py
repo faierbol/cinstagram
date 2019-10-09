@@ -29,8 +29,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = postgresql_URI
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
+# Url blueprint imports
 from .programmer_panel.views import programmer_panel
-
 
 # Programmer Panel
 # ----------------
@@ -39,6 +39,7 @@ from .programmer_panel.views import programmer_panel
 # for the programmers(super-users) of the site, yes the "admin" is a superuser
 # too but admin mostly deals with the content of the site, where the programm-
 # -ers deal with site-realibity, graphs of the bandwith usage, ... etc.
+
 app.register_blueprint(programmer_panel)
 
 
