@@ -1,4 +1,4 @@
-from ..__init__ import db
+from ..app import db
 
 
 # Programmer Model

@@ -6,7 +6,7 @@ from flask import Flask, request, render_template, redirect, session, \
                   url_for, Blueprint
 
 from .models import Programmer, Admin
-from ..__init__ import db
+from ..app import app, db
 
 
 # Blue prints
