@@ -17,7 +17,7 @@
 
 - [x]  Basic Configuration
 
-- [ ]  Basic URL Pathing system
+- [x]  Basic URL Pathing system
 
 - [ ]  Basic Signup system
 
