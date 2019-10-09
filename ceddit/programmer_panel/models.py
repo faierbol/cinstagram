@@ -1,6 +1,11 @@
-from .main import db
+from .__init__ import db
 
 
+# Programmer Model
+# ----------------
+# This model contains the neccessary data regarding the Programmer Model which
+# is a super-user that overseas every action and every data that is happening
+# on the site.
 class Programmer(db.Model):
     __tablename__ = "programmer"
     id = db.Column(db.Integer, primary_key=True)
@@ -17,6 +22,9 @@ class Programmer(db.Model):
         return "id: " + str(self.id) + " | username: " + str(self.username)
 
 
+# Admin Model
+# ----------------
+# ...
 class Admin(db.Model):
     __tablename__ = "admin"
     id = db.Column(db.Integer, primary_key=True)
