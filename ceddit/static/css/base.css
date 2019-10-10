@@ -1,16 +1,53 @@
 /*
-  Color Palette
-  -------------
-  
+
+  CSS-Lib
+  -------
+
+  Desc: This package contains the css code that will be used all the time inside
+        the application. Specific modifications to the side will be done inisde
+        a seperate file that conatins the name of the modified file such as:
+        if there is a modified specific css just for the home page the file
+        will be added to home_page/home_page.css and not in this css_lib dir.
+
+
+  Color Pallette
+  --------------
+
+  Dark-red:     #C0392B
+  Light-red:    #E74C3C
+
+  Dark-purple:  #8E44AD
+  Light-purple: #9B59B6
+
+  Dark-blue:    #2980B9
+  Light-blue:   #3498DB
+
+  Dark-green:   #27AE60
+  Light-green:  #2ECC71
+
+  Dark-yellow:  #F1C40F
+  Light-yellow: #F7DC6F
+
+  Dark-orange:  #E67E22
+  Light-orange: #F39C12
+
+  Dark-grey:    #7F8C8D
+  Light-grey:   #CACFD2
+
+  Dark-navy:    #2C3E50
+  Light-navy:   #34495E
 
 */
 
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto";
 }
 
-/* Signup Fonts */
+p {
+  font-family: "Roboto";
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}

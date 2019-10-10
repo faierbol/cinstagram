@@ -1,0 +1,18 @@
+# Discuss
+# ----------
+- This is the basic signup system for the end user (customer)
+
+# Design
+# ----------
+
+- This applicaiton will (version) just add `signup` sys to the authentication
+
+# Plan
+# ----------
+
+- [ ] signup sys html, css, js
+- [ ] signup sys, models
+- [ ] signup sys - views
+- [ ] signup sys - url pathing
+- [ ] test the code
+- [ ] document the version

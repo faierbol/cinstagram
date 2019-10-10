@@ -14,6 +14,8 @@ from flask import Flask, request, render_template, redirect, session, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
+# the app is defined above url blueprint imports in order
+# to avoid circular imports
 app = Flask(__name__)
 
 app.config["static_folder"] = "./static"
@@ -32,6 +34,7 @@ migrate = Migrate(app, db)
 
 # Url blueprint imports
 from .programmer_panel.views import programmer_panel
+from .authentication.views import authentication
 
 
 # Programmer Panel
@@ -42,6 +45,13 @@ from .programmer_panel.views import programmer_panel
 # too but admin mostly deals with the content of the site, where the programm-
 # -ers deal with site-realibity, graphs of the bandwith usage, ... etc.
 app.register_blueprint(programmer_panel)
+
+
+# Authentication
+# ----------------
+# These blueprints contains the user authentication system for the end users
+# of the site such as the "average joe" and not admin, top tier user ... etc.
+app.register_blueprint(authentication)
 
 
 @app.route("/")
