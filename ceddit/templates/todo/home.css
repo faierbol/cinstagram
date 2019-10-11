@@ -8,21 +8,23 @@ p, h1, h2, h3, h4, h5, h6, button, a, li, span, i, b {
 }
 
 .container {
-  background-color: #CACFD2;
+  background-color: #DAE0E6;
   height: 100vh;
   width: 100%;
 }
+
+/* TOP MENU NAVBAR -------------------------------------------------------- */
 
 .top-navbar {
   background-color: white;
   height: 50px;
   width: 100%;
 
-  border-bottom: lightgrey;
+  border-bottom: 1px solid #F2F4F4;
 
 }
 
-.top-navbar button, input, img, a {
+.top-navbar form, button, input, img, a {
   display: inline-block;
   vertical-align: top;
 }
@@ -36,7 +38,66 @@ p, h1, h2, h3, h4, h5, h6, button, a, li, span, i, b {
 }
 
 .feed-filter-dropdown {
+  text-decoration: none;
+  font-size: 18px;
+  background-color: white;
+  height: 28px;
+  margin-top: 9px;
+  border-radius: 5px;
+  padding-top: 5px; /*this deltes 5px of the height if you delete this readd that 5px to the height */
+  margin-left: 30px;
+  width: 260px;
+  border: 1px solid white;
+  margin-right: 15px;
+}
 
+.feed-filter-dropdown:hover {
+  border-color: lightgrey;
+}
+
+.feed-filter-dropdown-icon {
+  margin-left: 10px;
+}
+
+.feed-filter-dropdown-arrow {
+  float: right;
+  margin-right: 20px !important;
+color: grey !important;
+}
+
+
+.feed-filter-dropdown span {
+  color: #0074c6;
+  margin-right: 5px;
+}
+
+.search-form {
+
+}
+
+.search-form button {
+  background-color: #F8F9F9;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #E5E8E8;
+  border-right-color: transparent;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-right: -4px;
+  margin-top: 5px;
+  color: #CACFD2;
+}
+
+.search-form input {
+  background-color: #F8F9F9;
+  font-size: 16px;
+  padding: 11px 0px 10px 0px;
+  border: 1px solid #E5E8E8;
+  border-left-color: transparent;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 250px;
+  margin-top: 5px;
 }
 
 .feed-changer-btn {
@@ -58,7 +119,7 @@ p, h1, h2, h3, h4, h5, h6, button, a, li, span, i, b {
 .login-btn {
   float: right;
   font-size: 14px;
-  padding: 8px 15px;
+  padding: 8px 20px;
   color: #0074c6;
   background-color: white;
   border-radius: 5px;
@@ -76,7 +137,7 @@ p, h1, h2, h3, h4, h5, h6, button, a, li, span, i, b {
 .signup-btn {
   float: right;
   font-size: 14px;
-  padding: 8px 15px;
+  padding: 8px 20px;
   color: white;
   background-color: #0074c6;
   border-radius: 5px;
@@ -94,9 +155,28 @@ p, h1, h2, h3, h4, h5, h6, button, a, li, span, i, b {
 .user-dropdown-btn {
   float: right;
   margin-right: 15px;
+  color: grey;
+  border: 1px solid lightgrey;
+  padding: 8px 20px;
+  font-size: 16px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 6px;
+  text-decoration: none;
 }
 
-.user-dowpdown-btn span {
-  margin-right: 15px;
+/* SORT & VIEW FILTERS ---------------------------------------------------- */
 
+.sort-view-and-filter-bar {
+  background-color: white;
+  height: 50px;
+  width: 100%;
 }
+
+/* TOP GROWING COMMUNITIES CARD-------------------------------------------- */
+
+/* TRENDING COMMUNITIES CARD ---------------------------------------------- */
+
+/* POPULAR COMMUNITIES CARD ----------------------------------------------- */
+
+/* FOOTER CARD ------------------------------------------------------------ */
