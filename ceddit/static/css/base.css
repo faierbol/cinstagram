@@ -19,7 +19,7 @@
   Dark-purple:  #8E44AD
   Light-purple: #9B59B6
 
-  Dark-blue:    #2980B9
+  Dark-blue:    #0079D3
   Light-blue:   #3498DB
 
   Dark-green:   #27AE60
@@ -33,11 +33,17 @@
 
   Dark-grey:    #7F8C8D
   Light-grey:   #CACFD2
+  very-light-g: #E5E8E8
 
   Dark-navy:    #2C3E50
   Light-navy:   #34495E
 
 */
+
+* {
+  padding: 0;
+  margin: 0;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto";
@@ -50,4 +56,13 @@ p {
 body {
   margin: 0px;
   padding: 0px;
+}
+
+a {
+  color: #0079D3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }

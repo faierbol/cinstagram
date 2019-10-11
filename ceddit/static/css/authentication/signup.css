@@ -1,19 +1,39 @@
 .signup_wrapper {
-  margin: 0px;
-  padding: 0px;
-  background-color: green;
-  padding: 20px;
+  height: auto;
+  width: auto;
+  background-color: white;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.left_side_banter {
-  background-color: #C0392B;
-  height: 100vh;
-  width: 10%;
+.left_side {
+  height: 100%;
+  width: 20%;
+  background-color: #E74C3C;
+
+
+
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
   display: inline-block;
-  top: 0;
-  left: 0;
 }
 
 .right_side {
+  height: auto;
+  width: 78%;
+  background-color: white;
+
+
+
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
   display: inline-block;
 }

@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6, button, a, li, span, i, b {
+  font-family: "Roboto";
+}
+
+.container {
+  background-color: #CACFD2;
+  height: 100vh;
+  width: 100%;
+}
+
+.top-navbar {
+  background-color: white;
+  height: 50px;
+  width: 100%;
+
+  border-bottom: lightgrey;
+
+}
+
+.top-navbar button, input, img, a {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.top-navbar img {
+  margin-top: 7px;
+  margin-left: 20px;
+  height: 36px;
+
+  display: inline-block;
+}
+
+.feed-filter-dropdown {
+
+}
+
+.feed-changer-btn {
+  float: right;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: white;
+  font-size: 16px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  color: black;
+}
+.feed-changer-btn:hover {
+  background-color: #E5E8E8;
+}
+
+.login-btn {
+  float: right;
+  font-size: 14px;
+  padding: 8px 15px;
+  color: #0074c6;
+  background-color: white;
+  border-radius: 5px;
+  font-weight: bolder;
+  margin-right: 5px;
+  margin-top: 8px;
+  text-decoration: none;
+  border: 1px solid #0074c6;
+  text-decoration: none;
+}
+.login-btn:hover {
+  opacity: 0.5;
+}
+
+.signup-btn {
+  float: right;
+  font-size: 14px;
+  padding: 8px 15px;
+  color: white;
+  background-color: #0074c6;
+  border-radius: 5px;
+  font-weight: bolder;
+  margin-right: 5px;
+  margin-top: 8px;
+  border: 1px solid #0074c6;
+  text-decoration: none;
+}
+
+.signup-btn:hover {
+  opacity: 0.5;
+}
+
+.user-dropdown-btn {
+  float: right;
+  margin-right: 15px;
+}
+
+.user-dowpdown-btn span {
+  margin-right: 15px;
+
+}

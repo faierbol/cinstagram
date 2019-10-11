@@ -2,6 +2,8 @@
 
 {% block css_links %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/authentication/signup.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/buttons.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/forms.css') }}" />
 {% endblock %}
 
 {% block content %}
@@ -9,25 +11,28 @@
 <div class="signup_wrapper">
 
   <!-- left side banter -->
-  <div class="left_side_banter"></div>
+  <div class="left_side"></div>
+
 
   <div class="right_side">
+  
     <h3>
       By having a Reddit account, you can join, vote, and comment
       on all of your favorite Reddit content.
     </h3>
 
     <form>
-        <input type="text" placeholder="email" />
-        <input type="text" placeholder="username" />
-        <input type="password" placeholder="password" />
-        <input type="submit" value="SIGNUP"/>
+        <input type="text" placeholder="email" class="input" />
+        <input type="text" placeholder="username" class="input"/>
+        <input type="password" placeholder="password" class="input"/>
+        <input type="submit" value="SIGN UP" class="btn_medium btn_blue"/>
     </form>
 
     <p>
         Already a Redditor ? <a href="">LOG IN</a>
     </p>
-  </div>
+
+  </div><!--/right side -->
 
 </div>
 

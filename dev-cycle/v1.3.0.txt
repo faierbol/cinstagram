@@ -10,9 +10,5 @@
 # Plan
 # ----------
 
-- [ ] signup sys html, css, js
-- [ ] signup sys, models
-- [ ] signup sys - views
-- [ ] signup sys - url pathing
-- [ ] test the code
+- [ ] do all of the templates of the site
 - [ ] document the version
