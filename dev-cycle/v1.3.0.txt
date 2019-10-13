@@ -12,3 +12,4 @@
 
 - [ ] do all of the templates of the site
 - [ ] document the version
+- [ ] devlog (this is important, self note: i know you are lazy but remember to do this please ffs)

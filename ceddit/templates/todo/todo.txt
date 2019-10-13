@@ -1,16 +1,20 @@
-- [ ] Help Center
 - [ ] Signup Page
 - [ ] Login Page
-- [ ] Static pages on the left nav footer
 - [ ] Homepage
-- [ ] Top Growing communities
-- [ ] Subreddit page
+- [ ] home page with large post 
 - [ ] Updated home page with user stuff
 - [ ] navbar update with user specific stuff
+- [ ] Static pages on the left nav footer
+- [ ] Subreddit page
+- [ ] subreddit updated with user stuff
 - [ ] all of the user profile
 - [ ] all of the user settings
 - [ ] user create a post
 - [ ] user-messages
 - [ ] user chat stuff
 - [ ] searh page stuff
+- [ ] Help Center
+- [ ] Top Growing communities
+
+
 - [ ] ont he 13th do not forget to add subreddit mod, create pages ... etc.

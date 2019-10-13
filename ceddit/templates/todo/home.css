@@ -251,6 +251,12 @@ color: grey !important;
 
 }
 
+.top-growing-comunity-cell-a {
+  display: block;
+  font-size: 16px;
+
+}
+
 .right-side-container {
   height: auto;
   width: 350px;
@@ -266,7 +272,7 @@ color: grey !important;
 
 /* TOP GROWING COMMUNITIES CARD-------------------------------------------- */
 .top-growing-communities-card {
-  height: 480px;
+  height: 460px;
   width: 350px;
   background-color: white;
   border-radius: 5px;
@@ -287,6 +293,7 @@ color: grey !important;
   color: white;
   background-color: transparent;
   padding-top: 45px;
+  font-size: 16px;
 }
 
 .top-growing-communities-cell {
@@ -325,6 +332,22 @@ color: grey !important;
   margin-top: 15px;
 }
 
+.btn-medium {
+  background-color: white;
+  color: black;
+  padding: 8px 30px;
+  font-family: "Roboto";
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 900;
+  border: 1px solid black;
+}
+
+.btn-medium:hover {
+  opacity: 0.5;
+}
+
 .btn-large {
   background-color: white;
   color: black;
@@ -335,8 +358,6 @@ color: grey !important;
   border-radius: 5px;
   font-weight: bold;
   border: 1px solid black;
-
-
 }
 
 .btn-large:hover {
@@ -349,15 +370,77 @@ color: grey !important;
   color: white;
 }
 
+.category-tags {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.category-tags a {
+  background-color: #F2F3F4;
+  color: #0074c6;
+  text-decoration: none;
+  padding: 6px 11px;
+  border-radius: 2px;
+  margin: 0px 5px;
+  font-size: 14px;
+}
+
+.category-tags a:hover {
+  opacity: 0.5;
+}
+
 
 /* TRENDING COMMUNITIES CARD ---------------------------------------------- */
 .trending-communities-card {
-  height: 340px;
+  height: 350px;
   width: 350px;
   background-color: white;
   border-radius: 5px;
   margin-bottom: 20px;
 }
+
+.trending-communities-card-header {
+  padding-top: 15px !important;
+  margin-left: 30px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.trending-communities-cell {
+  background-color: white;
+  width: 100% - 15px; /* -15 because there is +15 marginleft pixels */
+  height: 45px;
+  padding-top: 15px;
+  margin-bottom: 2px;
+  margin-left: 15px;
+}
+
+.tending-communities-cell-sub-picture {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: grey;
+  margin-left: 15px;
+}
+
+.trending-communities-cell-sub-description {
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: -15px;
+  margin-right: 45px;
+}
+
+.trending-communities-cell-sub-description p, a {
+  font-size: 13px;
+  color: black;
+  text-decoration: none;
+}
+
+.trending-communities-cell-sub-description a:hover {
+  text-decoration: underline;
+}
+
 
 /* POPULAR COMMUNITIES CARD ----------------------------------------------- */
 .popular-communities-card {
@@ -375,4 +458,82 @@ color: grey !important;
   background-color: white;
   border-radius: 5px;
   margin-bottom: 20px;
+  padding-top: 15px;
+  font-weight: lighter;
+}
+
+.footer-card-left-side {
+  background-color: white;
+  width: 150px;
+  height: 180px;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 15px;
+}
+
+.footer-card-left-side h3 {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.footer-card-left-side a {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.footer-card-left-side a:hover {
+  text-decoration: underline;
+}
+
+.footer-card-right-side {
+  background-color: white;
+  width: 150px;
+  height: 180px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer-card-right-side h3 {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.footer-card-right-side a {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.footer-card-right-side a:hover {
+  text-decoration: underline;
+}
+
+.footer-card-bottom-side {
+  background-color: white;
+  width: 300px;
+  height: 80px;
+  margin-top: 10px;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.footer-card-bottom-side a {
+  font-size: 14px;
+  float: left;
+  margin-bottom: 10px;
+  margin-right: 7px;
+}
+
+.footer-card-bottom-side a:hover {
+  text-decoration: underline;
+}
+
+
+.back-to-top-btn {
+  position: absolute;
+  right: 0;
+  border: 0;
+  margin-right: 120px;
+  margin-top: -100px;
 }
