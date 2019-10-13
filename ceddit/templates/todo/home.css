@@ -240,7 +240,7 @@ color: grey !important;
   margin-right: 10px;
 }
 
-/* TOP GROWING COMMUNITIES CARD-------------------------------------------- */
+/* LEFT SIDE OF HOMEPAGE --------------------------------------------------*/
 .left-side-container {
   height: 2000px;
   width: 65%;
@@ -248,15 +248,73 @@ color: grey !important;
   margin-top: 25px;
   margin-left: 25px;
   display: inline-block;
-
 }
 
-.top-growing-comunity-cell-a {
+.post-cell {
+  height: 100px;
+  width: 100% ;
+  background-color: white;
+  border: 1px solid #CACFD2;
+  border-bottom-color: transparent;
+}
+
+.post-cell:hover {
+  border-color: #7F8C8D;
+}
+
+.post-cell-container {}
+
+.post-upvote-downvote {
+  height: 85px;
+  width: 40px;
+  display: inline-block;
+  background-color: orange;
+  vertical-align: top;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.post-upvote-downvote a, span {
   display: block;
-  font-size: 16px;
-
 }
 
+.post-picture-container {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 10px;
+  background-color: green;
+  width: 100px;
+  height: 90px; /* -10 because of padding top */
+}
+
+.post-picture {
+  height: 60px;
+  width: 80px;
+  background-color: lightgrey;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.post-right-side {
+  height: 100px;
+  width: 80%;
+  background-color: orange;
+  display: inline-block;
+}
+
+.post-description {
+  height: 70%;
+  width: 100%;
+  background-color: green;
+}
+
+.post-options {
+  height: 30%;
+  width: 100%;
+  background-color: red;
+}
+
+/* RIGHT SIDE OF HOMEPAGE --------------------------------------------------*/
 .right-side-container {
   height: auto;
   width: 350px;
@@ -286,7 +344,6 @@ color: grey !important;
   border-top-left-radius: 5px;
   background-color: grey;
   text-align: center;
-
 }
 
 .sub-banner h3 {
@@ -303,6 +360,10 @@ color: grey !important;
   border: 1px solid #F2F4F4;
 }
 
+.top-growing-comunity-cell-a {
+  display: block;
+  font-size: 16px;
+}
 
 .sub-rank {
   display: inline-block;
@@ -453,7 +514,7 @@ color: grey !important;
 
 /* FOOTER CARD ------------------------------------------------------------ */
 .footer-card {
-  height: 300px;
+  height: 250px;
   width: 350px;
   background-color: white;
   border-radius: 5px;
@@ -512,7 +573,7 @@ color: grey !important;
 .footer-card-bottom-side {
   background-color: white;
   width: 300px;
-  height: 80px;
+  height: 50px;
   margin-top: 10px;
   font-size: 14px;
   margin-left: 15px;
