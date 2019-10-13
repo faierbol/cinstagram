@@ -9,8 +9,15 @@ p, h1, h2, h3, h4, h5, h6, button, a, li, span, i, b {
 
 .container {
   background-color: #DAE0E6;
-  height: 100vh;
+  height: auto;
   width: 100%;
+  padding-bottom: 30px;
+}
+
+.text-align-center-div {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 /* TOP MENU NAVBAR -------------------------------------------------------- */
@@ -19,8 +26,10 @@ p, h1, h2, h3, h4, h5, h6, button, a, li, span, i, b {
   background-color: white;
   height: 50px;
   width: 100%;
-
+  position: fixed;
   border-bottom: 1px solid #F2F4F4;
+  top:0px;
+  z-index: 99;
 
 }
 
@@ -168,15 +177,202 @@ color: grey !important;
 /* SORT & VIEW FILTERS ---------------------------------------------------- */
 
 .sort-view-and-filter-bar {
+  margin-top: 52px;
   background-color: white;
   height: 50px;
   width: 100%;
+  font-size: 10px;
+  color: grey;
+  font-weight: 900;
+}
+
+.sort-view-and-filter-bar p {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 11px;
+}
+
+#filter-header {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+.toggle-large-view {
+  display: inline-block;
+  color: #0074c6;
+  font-size: 22px;
+  margin-top: 13px;
+}
+
+.toggle-medium-view {
+  display: inline-block;
+  color: #0074c6;
+  font-size: 22px;
+  margin-top: 13px;
+  margin-left: 5px;
+}
+
+.horizontal-division-line {
+  display: inline-block;
+  height: 20px;
+  margin-top: 15px;
+  width: 30px;
+  border-left: 2px solid lightgrey;
+  margin-left: 20px;
+}
+
+.sort-type {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 11px;
+}
+
+.sort-type a {
+  color: #7F8C8D;
+  text-decoration: none;
+  margin-top: -2px;
+}
+
+.sort-type span {
+  font-size: 15px;
+  margin-right: 10px;
 }
 
 /* TOP GROWING COMMUNITIES CARD-------------------------------------------- */
+.left-side-container {
+  height: 2000px;
+  width: 65%;
+  background-color: grey;
+  margin-top: 25px;
+  margin-left: 25px;
+  display: inline-block;
+
+}
+
+.right-side-container {
+  height: auto;
+  width: 350px;
+  background-color: transparent;
+  margin-top: 25px;
+  margin-right: 25px;
+  display: inline-block;
+  float: right;
+  position: absolute;
+  right: 0;
+  margin-right: 25px;
+}
+
+/* TOP GROWING COMMUNITIES CARD-------------------------------------------- */
+.top-growing-communities-card {
+  height: 480px;
+  width: 350px;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.sub-banner {
+  width: 100%;
+  height: 80px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: grey;
+  text-align: center;
+
+}
+
+.sub-banner h3 {
+  color: white;
+  background-color: transparent;
+  padding-top: 45px;
+}
+
+.top-growing-communities-cell {
+  height: 50px;
+  width: 100% + 1px;
+  background-color: white;
+  border: 1px solid #F2F4F4;
+}
+
+
+.sub-rank {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 25px;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.sub-rank span {
+  color: #2ECC71;
+}
+
+.sub-picture {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: grey;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.sub-name {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 15px;
+}
+
+.btn-large {
+  background-color: white;
+  color: black;
+  padding: 7px 120px;
+  font-family: "Roboto";
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 1px solid black;
+
+
+}
+
+.btn-large:hover {
+  opacity: 0.5;
+}
+
+.btn-blue {
+  background-color: #0074c6;
+  border-color: #0074c6;
+  color: white;
+}
+
 
 /* TRENDING COMMUNITIES CARD ---------------------------------------------- */
+.trending-communities-card {
+  height: 340px;
+  width: 350px;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
 
 /* POPULAR COMMUNITIES CARD ----------------------------------------------- */
+.popular-communities-card {
+  height: 400px;
+  width: 350px;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
 
 /* FOOTER CARD ------------------------------------------------------------ */
+.footer-card {
+  height: 300px;
+  width: 350px;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
