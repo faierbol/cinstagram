@@ -1,0 +1,219 @@
+/* TOP MENU NAVBAR -------------------------------------------------------- */
+
+.top-navbar {
+  background-color: white;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  border-bottom: 1px solid #F2F4F4;
+  top:0px;
+  z-index: 99;
+
+}
+
+.top-navbar form, button, input, img, a {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.top-navbar img {
+  margin-top: 7px;
+  margin-left: 20px;
+  height: 36px;
+
+  display: inline-block;
+}
+
+.feed-filter-dropdown {
+  text-decoration: none;
+  font-size: 18px;
+  background-color: white;
+  height: 28px;
+  margin-top: 9px;
+  border-radius: 5px;
+  padding-top: 5px; /*this deltes 5px of the height if you delete this readd that 5px to the height */
+  margin-left: 30px;
+  width: 260px;
+  border: 1px solid white;
+  margin-right: 15px;
+}
+
+.feed-filter-dropdown:hover {
+  border-color: lightgrey;
+}
+
+.feed-filter-dropdown-icon {
+  margin-left: 10px;
+}
+
+.feed-filter-dropdown-arrow {
+  float: right;
+  margin-right: 20px !important;
+color: grey !important;
+}
+
+
+.feed-filter-dropdown span {
+  color: #0074c6;
+  margin-right: 5px;
+}
+
+.search-form {
+
+}
+
+.search-form button {
+  background-color: #F8F9F9;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #E5E8E8;
+  border-right-color: transparent;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-right: -4px;
+  margin-top: 5px;
+  color: #CACFD2;
+}
+
+.search-form input {
+  background-color: #F8F9F9;
+  font-size: 16px;
+  padding: 11px 0px 10px 0px;
+  border: 1px solid #E5E8E8;
+  border-left-color: transparent;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 250px;
+  margin-top: 5px;
+}
+
+.feed-changer-btn {
+  float: right;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: white;
+  font-size: 16px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  color: black;
+}
+.feed-changer-btn:hover {
+  background-color: #E5E8E8;
+}
+
+.login-btn {
+  float: right;
+  font-size: 14px;
+  padding: 8px 20px;
+  color: #0074c6;
+  background-color: white;
+  border-radius: 5px;
+  font-weight: bolder;
+  margin-right: 5px;
+  margin-top: 8px;
+  text-decoration: none;
+  border: 1px solid #0074c6;
+  text-decoration: none;
+}
+.login-btn:hover {
+  opacity: 0.5;
+}
+
+.signup-btn {
+  float: right;
+  font-size: 14px;
+  padding: 8px 20px;
+  color: white;
+  background-color: #0074c6;
+  border-radius: 5px;
+  font-weight: bolder;
+  margin-right: 5px;
+  margin-top: 8px;
+  border: 1px solid #0074c6;
+  text-decoration: none;
+}
+
+.signup-btn:hover {
+  opacity: 0.5;
+}
+
+.user-dropdown-btn {
+  float: right;
+  margin-right: 15px;
+  color: grey;
+  border: 1px solid lightgrey;
+  padding: 8px 20px;
+  font-size: 16px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 6px;
+  text-decoration: none;
+}
+
+/* SORT & VIEW FILTERS ---------------------------------------------------- */
+
+.sort-view-and-filter-bar {
+  margin-top: 52px;
+  background-color: white;
+  height: 50px;
+  width: 100%;
+  font-size: 10px;
+  color: grey;
+  font-weight: 900;
+}
+
+.sort-view-and-filter-bar p {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 11px;
+}
+
+#filter-header {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+.toggle-large-view {
+  display: inline-block;
+  color: #0074c6;
+  font-size: 22px;
+  margin-top: 13px;
+}
+
+.toggle-medium-view {
+  display: inline-block;
+  color: #0074c6;
+  font-size: 22px;
+  margin-top: 13px;
+  margin-left: 5px;
+}
+
+.horizontal-division-line {
+  display: inline-block;
+  height: 20px;
+  margin-top: 15px;
+  width: 30px;
+  border-left: 2px solid lightgrey;
+  margin-left: 20px;
+}
+
+.sort-type {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 11px;
+}
+
+.sort-type a {
+  color: #7F8C8D;
+  text-decoration: none;
+  margin-top: -2px;
+}
+
+.sort-type span {
+  font-size: 15px;
+  margin-right: 10px;
+}
