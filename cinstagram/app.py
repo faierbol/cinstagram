@@ -1,9 +1,9 @@
 #
-#    Title: Ceddit
+#    Title: Cinstagram
 #
-#    Desc: This project is just a reddit clone. The reason I am not putting a
-#          MIT license on the source code is because this is just an education
-#          -al project for me and I want it to stay it that way.
+#    Desc: This project is just a instagram clone. The reason I am not putting
+#          a MIT license on the source code is because this is just an educati-
+#          -onal project for me and I want it to stay it that way.
 #
 #    Author: Demir Antay (@demirantay) -- demir99antay@gmail.com
 #
