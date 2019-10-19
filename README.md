@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Cinstagram is a fully fledged instagram.com clone. The support for IOS and Android will come in the future. Remember, this is just a clone and Instagram is a registered trademark of Instagram Inc. All of the static assets have been created by me and not copied from the Instagram Inc. I am just cloning the functionality of the site to improve my understanding of large web application.
+Cinstagram is a fully fledged instagram.com clone. The support for IOS and Android will come in the future. Remember, this is just a clone and Instagram is a registered trademark of Instagram Inc. All of the static assets have been created by me and not copied from the Instagram Inc. I am just cloning the functionality of the site to improve my understanding of how large web applications work under the hood.
 
 ## Screenshots
 
@@ -13,6 +13,27 @@ Cinstagram is a fully fledged instagram.com clone. The support for IOS and Andro
 ## Official Documentation
 
 Documentation for Cinstagram can be found on the [`docs/index.md` folder](./docs/index.md)
+
+## Features
+
+- [ ] Login/Signup
+- [ ] Home
+- [ ] Photo & Video Upload
+- [ ] Profile Page
+- [ ] Profile Settings
+- [ ] Search Indexes
+- [ ] Explore
+- [ ] Stories
+- [ ] Chat
+- [ ] IG/TV
+- [ ] Android & IOS Support
+- [ ] About Page
+- [ ] Press
+- [ ] API
+- [ ] Help Centre  
+- [ ] Admin Panel
+- [ ] Programmer Panel
+- [ ] Bot's mimicking real users
 
 ## Questions ?
 
