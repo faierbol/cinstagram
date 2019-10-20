@@ -1,0 +1,37 @@
+Plan (finish these apps frontend):
+
+- [ ] Help Centre app pages
+- [ ] About app pages
+- [ ] Press app pages
+
+--------------
+
+# Help Centre App Frontend
+
+- [ ] Main page (that is the index showing the posts for help centre)
+- [ ] Post Page
+- [ ] Search Page
+
+------------
+
+# About App Frontend
+
+- [ ] Company Page (static)
+- [ ] Legal Page (static)
+- [ ] Jobs CRUD App Pages
+- [ ] Jobs Posting Post
+
+
+------------
+
+# Press App Frontend
+
+- [ ] Info Center Page
+- [ ] Our Story Page
+- [ ] Brand Assets Page
+- [ ] Post Page
+
+
+#########
+
+After completing above since it is frontend skip test and documentation but write the devlog

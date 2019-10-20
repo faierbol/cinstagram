@@ -1,83 +1,295 @@
-# `Discuss`
+# Cinstagram Clone
 
-- There is not much to discuss, I will literally try to clone every aspect of reddit and it's features.
+## `Discuss`
 
-# `Design Features`
+The thing is I cannot discuss an idea that already exists, Instead of discussing the application, I can reverse engineer all of it's features to the bones. But the main idea is to be structured with your development/work cycle so that everything does not get mingled together.
 
-- Main design principles:
-  - Do the easy thing first, than spend your time in the details
-  - The complexity should not come from the code itself, it should come from so many apps talking to each other, there fore creating a a complex API network
-  - Python where we should, and c++ where we must
+<br>
+<br>
 
-- After completing each feature: test it and document it before completing it.
+## `Design`
 
-# `Planning`
+Normally in a normal application dev-cycle there would be a plan section where we would design the site starting from the wireframes -> design -> frontend -> backend -> devpops -> deployment ... etc. But since the designs are already ready, I will just start from the frontend step.
 
+The most important thing to remember is to do the easy thing first. For example pages like home page, programmer panel, bot control panel ... etc. are "container" pages (which holds nearly all of the applications of te site) so they should be built at last.
+
+<br>
+<br>
+
+## `Plan`
+
+Instagram is a huge application to clone, it is not just some basic CRUD application. Forutentally most of the applications are small and compact enough or defined-well-enough to be modulirized from the others. Try to do the following in versions:
+
+### Front-end
+
+---
+- [ ] Help Centre app pages
+- [ ] About app pages
+- [ ] Press app pages
+---
+- [ ] API-web
+- [ ] Signup/Login
+- [ ] Profile Settings
+---
+- [ ] Photo Video Upload
+- [ ] Public Profile
+- [ ] Private Profile
+---
+- [ ] Stories
+- [ ] IG/TV
+- [ ] Chat
+---
+- [ ] Home
+- [ ] Search
+- [ ] explore
+---
+- Start using frontend framework: probably react (module the elements)
+---
+- [ ] react:: help centre app pages
+- [ ] react:: About app pages
+---
+- [ ] react:: Press app pages
+- [ ] react:: API-web
+---
+- [ ] react:: Signup/Login
+- [ ] react:: Profile Settings
+---
+- [ ] react:: Photo Video Upload
+- [ ] react:: Public Profile
+---
+- [ ] react:: Private Profile
+- [ ] react:: Stories
+---
+- [ ] react:: IG/TV
+- [ ] react:: Chat
+---
+- [ ] react:: Home
+- [ ] react:: Search
+---
+- [ ] react:: explore
+
+
+<br>
+
+### Back-end
+
+---
 - [x] Basic Programmer Panel (key verification)
-
+- [x] Admin Panel
+---
 - [x]  Basic Configuration
-
 - [x]  Basic URL Pathing system
-
+---
+- [ ] Basic Help Centre
+    - Note: There are lots of pages but they are not static it is just one big
+      CRUD app, you can use drop-view for headers instead of that weird shift
+---
+- [ ] Basic About app
+  - Note: Index about use, jobs CRUD app, necessary legal parts
+---
+- [ ] Basic Press app
+  - Note: Info center, our story, brand assets
+---
+- [ ] Basic API WEB-CRUD info app
+  - Note: this is not the API creation it is just web app part of it
+---
 - [ ]  Basic Signup system
-
 - [ ]  basic login sys
-
-- [ ]  basic user settings
-
-- [ ]  basic subreddit page
-
-- [ ] basic post page and profile
-
-- [ ] basic home page
-
-- [ ]  secure all of the above (password hashing, key verification, form tokens csrf ... etc.)
-
-- [ ] Improve configuration (seperate it to its own module)
-
-- [ ]  improve url pathing system (seperate it to its own module)
-
-- [ ] improve signup sys fully (seperate it to its own module)
-
-- [ ] improve the login sys fully (seperate it to its own module)
-
-- [ ] improve help center fully
-
-- [ ]  finish the footer's section on the right navbar mostly static
-
-- [ ]  Do all of the user profile logic
-
-- [ ]  Do all of the post creation logic
-
-- [ ] Finish all user-messages logic
-
-- [ ]  Finish all user-chat logic
-
-- [ ] Finish all of the subreddit logic
-
-- [ ] Finish all of the user-mod-subreddit logic
-
-- [ ]  Finish all top growing communities logic
-
-- [ ]  Finish all Home page logic
-
-- [ ] Finish all of the navbar logic
-
-- [ ] finish  all of the search logic
-
-- [ ] improve the search algorithm and the hot, top ... etc. (seperate it to its own module)
-
-- [ ] improve admin panel (there is nothing to improve since I didnt build anything but you get the idea finish a admin panel product fully) fully add the features above (seperate it to its own module)
-
-- [ ] improve programmer panel fully (seperate it to its own module) (viewing the site data with graphs ... etc.)
-
+---
+- [ ] Basic Profile Settings app
+  - Note: edit, profile, change password, authorized applications, email and sms, manage contacts, privacy and ecurity, login activity
+---
+- [ ] Basic Photo & Video upload app
+---
+- [ ] Basic Public Profile
+---
+- [ ] Basic Private Profile App
+  - note: (follow, unfollow ... etc. funcitonality)
+---
+- [ ] Basic Stories App
+---
+- [ ] Basic IG/TV app
+---
+- [ ] Basic Chat app
+---
+- [ ] Basic Home app
+---
+- [ ] Basic Search Indexes app (this is on the navbar on web page it is note explore)
+  - Note: Account Search, Tag search (shop, travel, sports), location serach, hashtag search
+---
+- [ ] Basic Explore app
+  - Note: Explore index, person search , hashtag search, tag search
+---
 - [ ] secure all of the features above
+  - Note: This is the end of the normal basic version now we start improving it
+---
+- [ ] Fully-finish configuration
+- [ ] URL pathing system
+---
+- [ ] Fully-finish Help Centre
+---
+- [ ] Fully-finish About app
+---
+- [ ] Fully-finish Press app
+---
+- [ ] Fully-finish signup system
+- [ ] Fully-finish login system
+---
+- [ ] Fully finish Profile Settings app
+---
+- [ ] Fully finish Photo-video upload
+---
+- [ ] Fully finish public profile
+---
+- [ ] fully finish private profile
+---
+- [ ] fully finish stories
+---
+- [ ] fully finish IG/TV
+---
+- [ ] Fully finish chat section
+---
+- [ ] Fully finish Home App
+---
+- [ ] Fully finish search indexes
+---
+- [ ] Fully finish explore app
+---
+- [ ] Fully finish admin panel
+---
+- [ ] Fully finish programmer panel
+---
+- [ ] Fully-finish API section
+- [ ] Write Bots for:
+  - Note: the reason there are specific bots are becasue I want to test out each feature and if it will break under a lot of request, the magnitude of data will be controlled thorugh bot control panel in admin panel
+  - __admin bot__: from time to time delees bad users post, suspends their accoutns ... etc.
+  - __bad bot__  : intentianlly bad user to get caught to the admin
+  - __about bot__: updates aboout app realted stuff such as job posting ... etc.
+  - __press bot__: updates press apps pages
+  - __login bot__: logs-in and out bot
+  - __signup bot__: signups new accounts
+  - __settings bot__: keeps changing the settings of the account the bot is in it
+  - __photo bot__: uploads photos, videos only
+  - __stories bot__: uploads stories
+  - __chat bot__: tests out the chat feature
+  - __search bot__: constantly searches every shites
+  - Note: I will probably not use most of the bots above the important bot is the one below:
+  -  __user:bot__: try to mimick real personalities for example use real isntagrams real pages and photographies to create virtual clones of those people. For example joe rogan-clone uploads every post that joe rogan uploads but in a timely manner, changes it settings, logs in, logs out, uploads stories, chats with other bots ... etc.
+  - __hacker bot__: intentionally tries to hack the site ddos attacks ... etc.
+---
+- [ ] add the specific bot control panel: add shit like how many bots of each bot you want at a certain point in time ... etc.
+---
+- [ ] Do the Security Fully
+---
+- [ ] Scalability. (most important thing, how to scale so that storing and serving billions of images in a day is not a problem)
+---
+- [ ] Keep maintaining the bugs, all application ... etc. start native part
 
-- [ ] Add bots to every single crud app that you have within the site
-  For example create a bot that updates the blog of the site in every week, a bot to createa an announcment on the official reddits subreddit in every 10 days, and finally create user bots ...etc
+<br>
 
-- [ ] now the fun stuff begins once you think you cloned most of
-  of the feautres you will create bots and try to create millions of request traffic
-  over the course of month. Try to scale your site ... etc. hard and complex part begins here
+### Native
 
-- [ ] Learn about deployment etc.
+---
+- [ ] Basic Programmer Panel (key verification)
+- [ ] Admin Panel
+---
+- [ ]  Basic Configuration
+- [ ]  Basic URL Pathing system
+---
+- [ ] Basic Help Centre
+    - Note: There are lots of pages but they are not static it is just one big
+      CRUD app, you can use drop-view for headers instead of that weird shift
+---
+- [ ] Basic About app
+  - Note: Index about use, jobs CRUD app, necessary legal parts
+---
+- [ ] Basic Press app
+  - Note: Info center, our story, brand assets
+---
+- [ ] Basic API WEB-CRUD info app
+  - Note: this is not the API creation it is just web app part of it
+---
+- [ ]  Basic Signup system
+- [ ]  basic login sys
+---
+- [ ] Basic Profile Settings app
+  - Note: edit, profile, change password, authorized applications, email and sms, manage contacts, privacy and ecurity, login activity
+---
+- [ ] Basic Photo & Video upload app
+---
+- [ ] Basic Public Profile
+---
+- [ ] Basic Private Profile App
+  - note: (follow, unfollow ... etc. funcitonality)
+---
+- [ ] Basic Stories App
+---
+- [ ] Basic IG/TV app
+---
+- [ ] Basic Chat app
+---
+- [ ] Basic Home app
+---
+- [ ] Basic Search Indexes app (this is on the navbar on web page it is note explore)
+  - Note: Account Search, Tag search (shop, travel, sports), location serach, hashtag search
+---
+- [ ] Basic Explore app
+  - Note: Explore index, person search , hashtag search, tag search
+---
+- [ ] secure all of the features above
+  - Note: This is the end of the normal basic version now we start improving it
+---
+- [ ] Fully-finish configuration
+- [ ] URL pathing system
+---
+- [ ] Fully-finish Help Centre
+---
+- [ ] Fully-finish About app
+---
+- [ ] Fully-finish Press app
+---
+- [ ] Fully-finish signup system
+- [ ] Fully-finish login system
+---
+- [ ] Fully finish Profile Settings app
+---
+- [ ] Fully finish Photo-video upload
+---
+- [ ] Fully finish public profile
+---
+- [ ] fully finish private profile
+---
+- [ ] fully finish stories
+---
+- [ ] fully finish IG/TV
+---
+- [ ] Fully finish chat section
+---
+- [ ] Fully finish Home App
+---
+- [ ] Fully finish search indexes
+---
+- [ ] Fully finish explore app
+---
+- [ ] Fully finish admin panel
+---
+- [ ] Fully finish programmer panel
+---
+- [ ] Do the Security Fully
+---
+- [ ] Scalability. (most important thing, how to scale so that storing and serving billions of images in a day is not a problem)
+----
+- [ ] Keep maintaining the bugs, all application ... etc. start native part
+
+<br>
+
+### Deployment
+
+... it will come more once i learn more about devops
+
+- [ ] Learn about deployment etc. I do not know the specifics of DevOPS I will update it once I got more info on DevOPS.
+- [ ] Try to ask for funds from different various companies, IRC chats etc. if no figure something out.
+---
+- [ ] Check if it scales right use the bot contorl panel to handle 4 billion
+requests spread out to a monthly basis. See if the site can handle it. This has been the entire goal of this project
+---
