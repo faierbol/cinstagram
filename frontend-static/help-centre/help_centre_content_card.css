@@ -1,0 +1,117 @@
+.help-centre-content-card {
+  position: relative;
+  background-color: #FFFFFF;
+  height: auto;
+  width: 100%;
+  margin-top: 140px;
+  border: 1px solid #DBDBDB;
+  border-radius: 4px;
+}
+
+.help-centre-content-card-top-part {
+  height: 60px;
+  border-bottom: 1px solid #DBDBDB;
+  width: 100%;
+}
+
+.help-centre-content-card-top-part h1 {
+  font-size: 20px;
+  margin-left: 15px;
+  position: absolute;
+  margin-top: 15px;
+}
+
+.help-centre-content-card-left-part {
+  height: auto;
+  width: 20%;
+  border-right: 1px solid #DBDBDB;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.help-centre-content-card-left-part ul a {
+  text-decoration: none;
+}
+
+.help-centre-content-card-left-part ul a li {
+  list-style-type: none;
+  font-family: "Roboto";
+  padding: 15px 10px;
+  margin-bottom: 1px;
+  border-left: 3px solid transparent;
+  color: black;
+  font-size: 15px;
+}
+
+.help-centre-content-card-left-part ul a li:hover {
+  border-left: 3px solid lightgrey;
+}
+
+.help-centre-content-card-right-part {
+  display: inline-block;
+  height: auto;
+  width: 78%;
+}
+
+.help-centre-content-card-right-part h3 {
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.help-centre-content-card-right-part p {
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+.help-centre-content-card-right-part p a {
+  color: #3B99F0;
+  text-decoration: none;
+}
+
+.help-centre-content-card-right-part ul {
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+.help-centre-content-card-right-part ul a {
+  text-decoration: none;
+}
+
+.help-centre-content-card-right-part ul a li {
+  list-style-type: none;
+  font-family: "Roboto";
+  color: #3B99F0;
+  margin-top: 4px;
+  font-size: 15px;
+}
+
+
+
+/* Mobile Small  --------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {}
+
+
+/* Mobile Medium  --------------------------------------------------------- */
+@media screen and (min-width: 321px) and (max-width: 375px) {}
+
+
+/* Mobile Large - --------------------------------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 425px) {}
+
+
+/* Tablet - --------------------------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {}
+
+
+/* Laptop ------------------------------------------------------------------ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {}
+
+
+/* Laptop Large -------------------------------------------------------------*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {}
+
+
+/* 4K Large Desktop ------------------------------------------------------- */
+@media screen and (min-width: 1441px) {}

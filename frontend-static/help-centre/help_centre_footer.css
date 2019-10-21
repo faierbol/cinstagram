@@ -1,56 +1,24 @@
-
-
-/* TOP NAV ------------------------------------------------------------ */
-
-.help-centre-top-nav {
+.help-centre-footer {
   position: absolute;
-  top:0;
+  bottom:0;
   left: 0;
   right: 0;
-  background-color: white;
-  height: 75px;
-  width: 100%;
-  border-bottom: 1px solid #EFEFEF;
-  padding-left: 10%;
-  padding-right: 10%;
+  height: 50px;
 }
 
-.help-centre-top-nav-logo {
-  height: 40px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: 15px;
-}
-
-.help-centre-top-nav form {
-  margin-left: 120px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: 20px;
-}
-
-.search-submit-btn {
-  color: grey;
-  padding: 5px 10px;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border: 1px solid #DBDBDB;
+.help-centre-footer a {
+  text-decoration: none;
+  font-family: "Roboto";
   font-size: 14px;
-  background-color: #FAFAFA;
-  margin-right: -5px;
-  border-right: 0px;
+  font-weight: 900;
+  color: #003569;
+  margin-right: 10px;
 }
 
-.help-centre-top-nav form input {
-  padding: 5px 15px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  background-color: #FAFAFA;
-  color: black;
-  border: 1px solid #DBDBDB;
-  font-size: 14px;
-  border-left: 0px;
+.help-centre-footer a:hover {
+  opacity: 0.5s;
 }
+
 
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {}

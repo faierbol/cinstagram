@@ -9,6 +9,7 @@ Plan (finish these apps frontend):
 # Help Centre App Frontend
 
 - [ ] Main page (that is the index showing the posts for help centre)
+- [ ] Help Subject Index Page
 - [ ] Post Page
 - [ ] Search Page
 

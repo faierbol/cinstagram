@@ -4,8 +4,12 @@
   padding: 0;
 }
 
-body {
-  background-color: #FAFAFA;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto";
+}
+
+p {
+  font-family: "Roboto";
 }
 
 .help-centre-container {
@@ -17,33 +21,62 @@ body {
 
   background-color: #FAFAFA;
 
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+
 }
 
 /* Mobile Small  --------------------------------------------------------- */
-@media screen and (min-width: 0px) and (max-width: 320px) {}
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .help-centre-container  {
+    background-color: green;
+  }
+}
 
 
 /* Mobile Medium  --------------------------------------------------------- */
-@media screen and (min-width: 321px) and (max-width: 375px) {}
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .help-centre-container  {
+    background-color: red;
+  }
+}
 
 
 /* Mobile Large - --------------------------------------------------------- */
-@media screen and (min-width: 376px) and (max-width: 425px) {}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .help-centre-container  {
+    background-color: green;
+  }
+}
 
 
 /* Tablet - --------------------------------------------------------------- */
-@media screen and (min-width: 426px) and (max-width: 768px) {}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .help-centre-container  {
+    background-color: red;
+  }
+}
 
 
 /* Laptop ------------------------------------------------------------------ */
-@media screen and (min-width: 769px) and (max-width: 1024px) {}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .help-centre-container  {
+
+  }
+}
 
 
 /* Laptop Large -------------------------------------------------------------*/
-@media screen and (min-width: 1025px) and (max-width: 1440px) {}
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .help-centre-container  {
+
+  }
+}
 
 
 /* 4K Large Desktop ------------------------------------------------------- */
-@media screen and (min-width: 1441px) {}
+@media screen and (min-width: 1441px) {
+  .help-centre-container  {
+    background-color: green;
+  }
+}
