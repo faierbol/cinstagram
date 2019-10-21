@@ -21,15 +21,49 @@
 
 
 /* Mobile Small  --------------------------------------------------------- */
-@media screen and (min-width: 0px) and (max-width: 320px) {}
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .help-centre-footer {
+    position: relative;
+    height: 30px;
+    margin-top: 10px;
+  }
+
+  .help-centre-footer a {
+    font-size: 11px;
+    margin-right: 4px;;
+  }
+
+}
 
 
 /* Mobile Medium  --------------------------------------------------------- */
-@media screen and (min-width: 321px) and (max-width: 375px) {}
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .help-centre-footer {
+    position: relative;
+    height: 30px;
+    margin-top: 10px;
+  }
+
+  .help-centre-footer a {
+    font-size: 11px;
+    margin-right: 4px;;
+  }
+}
 
 
 /* Mobile Large - --------------------------------------------------------- */
-@media screen and (min-width: 376px) and (max-width: 425px) {}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .help-centre-footer {
+    position: relative;
+    height: 30px;
+    margin-top: 10px;
+  }
+
+  .help-centre-footer a {
+    font-size: 11px;
+    margin-right: 4px;;
+  }
+}
 
 
 /* Tablet - --------------------------------------------------------------- */
@@ -37,11 +71,15 @@
 
 
 /* Laptop ------------------------------------------------------------------ */
-@media screen and (min-width: 769px) and (max-width: 1024px) {}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* nothing for now */
+}
 
 
 /* Laptop Large -------------------------------------------------------------*/
-@media screen and (min-width: 1025px) and (max-width: 1440px) {}
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* nothing for now */
+}
 
 
 /* 4K Large Desktop ------------------------------------------------------- */

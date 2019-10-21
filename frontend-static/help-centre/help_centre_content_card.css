@@ -90,27 +90,82 @@
 
 
 /* Mobile Small  --------------------------------------------------------- */
-@media screen and (min-width: 0px) and (max-width: 320px) {}
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .help-centre-content-card {
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .help-centre-content-card-left-part {
+    width: 100%;
+    display: block;
+  }
+
+  .help-centre-content-card-right-part {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+}
 
 
 /* Mobile Medium  --------------------------------------------------------- */
-@media screen and (min-width: 321px) and (max-width: 375px) {}
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .help-centre-content-card {
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .help-centre-content-card-left-part {
+    width: 100%;
+    display: block;
+  }
+
+  .help-centre-content-card-right-part {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}
 
 
 /* Mobile Large - --------------------------------------------------------- */
-@media screen and (min-width: 376px) and (max-width: 425px) {}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .help-centre-content-card {
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .help-centre-content-card-left-part {
+    width: 100%;
+    display: block;
+  }
+
+  .help-centre-content-card-right-part {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}
 
 
 /* Tablet - --------------------------------------------------------------- */
-@media screen and (min-width: 426px) and (max-width: 768px) {}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+}
 
 
 /* Laptop ------------------------------------------------------------------ */
-@media screen and (min-width: 769px) and (max-width: 1024px) {}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* nothing for now */
+}
 
 
 /* Laptop Large -------------------------------------------------------------*/
-@media screen and (min-width: 1025px) and (max-width: 1440px) {}
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* nothing for now */
+}
 
 
 /* 4K Large Desktop ------------------------------------------------------- */

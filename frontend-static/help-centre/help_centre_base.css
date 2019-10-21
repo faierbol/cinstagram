@@ -28,49 +28,49 @@ p {
 
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {
-  .help-centre-container  {
-    background-color: green;
+  .help-centre-container {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
 
 /* Mobile Medium  --------------------------------------------------------- */
 @media screen and (min-width: 321px) and (max-width: 375px) {
-  .help-centre-container  {
-    background-color: red;
+  .help-centre-container {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
 
 /* Mobile Large - --------------------------------------------------------- */
 @media screen and (min-width: 376px) and (max-width: 425px) {
-  .help-centre-container  {
-    background-color: green;
+  .help-centre-container {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
 
 /* Tablet - --------------------------------------------------------------- */
 @media screen and (min-width: 426px) and (max-width: 768px) {
-  .help-centre-container  {
-    background-color: red;
+  .help-centre-container {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
 
 /* Laptop ------------------------------------------------------------------ */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  .help-centre-container  {
-
-  }
+  /* nothing for now */
 }
 
 
 /* Laptop Large -------------------------------------------------------------*/
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-  .help-centre-container  {
-
-  }
+  /* nothing for now */
 }
 
 
