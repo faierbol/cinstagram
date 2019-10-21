@@ -76,7 +76,5 @@ p {
 
 /* 4K Large Desktop ------------------------------------------------------- */
 @media screen and (min-width: 1441px) {
-  .help-centre-container  {
-    background-color: green;
-  }
+  
 }
