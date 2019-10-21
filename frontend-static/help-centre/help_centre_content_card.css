@@ -26,7 +26,6 @@
 .help-centre-content-card-left-part {
   height: auto;
   width: 20%;
-  border-right: 1px solid #DBDBDB;
   display: inline-block;
   vertical-align: top;
 }
@@ -53,6 +52,7 @@
   display: inline-block;
   height: auto;
   width: 78%;
+  border-left: 1px solid #DBDBDB;
 }
 
 .help-centre-content-card-right-part h2 {

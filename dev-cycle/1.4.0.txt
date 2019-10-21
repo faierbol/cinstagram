@@ -1,6 +1,6 @@
 Plan (finish these apps frontend):
 
-- [ ] Help Centre app pages
+- [x] Help Centre app pages
 - [ ] About app pages
 - [ ] Press app pages
 
@@ -10,7 +10,7 @@ Plan (finish these apps frontend):
 
 - [x] Main page (that is the index showing the posts for help centre)
 - [x] Help Subject Index Page
-- [ ] Post Page
+- [x] Post Page
 - [x] Search Page
 
 ------------

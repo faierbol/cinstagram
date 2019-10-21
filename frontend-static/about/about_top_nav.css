@@ -1,0 +1,63 @@
+.about-top-nav {
+  position: absolute;
+  top:0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  height: 80px;
+  border-bottom: 1px solid #EFEFEF;
+}
+
+.about-top-nav-logo {
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 20px;
+  margin-left: 10%;
+}
+
+.about-top-nav-username {
+  float: right;
+  margin-right: 10%;
+  margin-top: 30px;
+  color: #003569;
+  text-decoration: none;
+}
+
+/* Mobile Small  --------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+}
+
+
+/* Mobile Medium  --------------------------------------------------------- */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+}
+
+
+/* Mobile Large - --------------------------------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+}
+
+
+/* Tablet - --------------------------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+}
+
+
+/* Laptop ------------------------------------------------------------------ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* nothing for now */
+}
+
+
+/* Laptop Large -------------------------------------------------------------*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* nothing for now */
+}
+
+
+/* 4K Large Desktop ------------------------------------------------------- */
+@media screen and (min-width: 1441px) {
+
+}
