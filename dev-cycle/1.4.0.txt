@@ -17,8 +17,8 @@ Plan (finish these apps frontend):
 
 # About App Frontend
 
-- [ ] Company Page (static)
-- [ ] Legal Page (static)
+- [x] Company Page (static)
+- [x] Legal Page (static)
 - [ ] Jobs CRUD App Pages
 - [ ] Jobs Posting Post
 
