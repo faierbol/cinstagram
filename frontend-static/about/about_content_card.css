@@ -68,21 +68,68 @@
 
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {
+  .about-content-card {
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .about-content-card-left-part {
+    width: 100%;
+    display: block;
+  }
+
+  .about-content-card-right-part {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
 }
 
 
 /* Mobile Medium  --------------------------------------------------------- */
 @media screen and (min-width: 321px) and (max-width: 375px) {
+
+  .about-content-card {
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .about-content-card-left-part {
+    width: 100%;
+    display: block;
+  }
+
+  .about-content-card-right-part {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
 }
 
 
 /* Mobile Large - --------------------------------------------------------- */
 @media screen and (min-width: 376px) and (max-width: 425px) {
+  .about-content-card {
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .about-content-card-left-part {
+    width: 100%;
+    display: block;
+  }
+
+  .about-content-card-right-part {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
 }
 
 
 /* Tablet - --------------------------------------------------------------- */
 @media screen and (min-width: 426px) and (max-width: 768px) {
+  /* nothing for now */
 }
 
 

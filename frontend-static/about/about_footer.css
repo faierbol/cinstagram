@@ -1,23 +1,72 @@
+.about-footer {
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+
+.about-footer a {
+  text-decoration: none;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 900;
+  color: #003569;
+  margin-right: 10px;
+}
+
+.about-footer a:hover {
+  opacity: 0.5s;
+}
 
 
 
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {
+  .about-footer {
+    position: relative;
+    height: 30px;
+    margin-top: 10px;
+  }
+
+  .about-footer a {
+    font-size: 11px;
+    margin-right: 4px;;
+  }
 }
 
 
 /* Mobile Medium  --------------------------------------------------------- */
 @media screen and (min-width: 321px) and (max-width: 375px) {
+  .about-footer {
+    position: relative;
+    height: 30px;
+    margin-top: 10px;
+  }
+
+  .about-footer a {
+    font-size: 11px;
+    margin-right: 4px;;
+  }
 }
 
 
 /* Mobile Large - --------------------------------------------------------- */
 @media screen and (min-width: 376px) and (max-width: 425px) {
+  .about-footer {
+    position: relative;
+    height: 30px;
+    margin-top: 10px;
+  }
+
+  .about-footer a {
+    font-size: 11px;
+    margin-right: 4px;;
+  }
 }
 
 
 /* Tablet - --------------------------------------------------------------- */
 @media screen and (min-width: 426px) and (max-width: 768px) {
+  /* nothing for now */
 }
 
 
