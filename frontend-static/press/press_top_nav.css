@@ -1,0 +1,106 @@
+.press-top-nav {
+  position: absolute;
+  top:0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  height: 190px;
+  border-bottom: 1px solid #EFEFEF;
+}
+
+.press-top-nav-top-part {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 110px;
+  background-color: white;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.about-top-nav-logo {
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 30px;
+  margin-left: 10%;
+}
+
+.press-top-nav-signup-btn {
+  float: right;
+  margin-right: 10%;
+  margin-top: 45px;
+  color: #B61721;
+  text-decoration: none;
+}
+.press-top-nav-signup-btn:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.press-top-nav-bottom-part {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 50px; /* -30 because of padding of the btns */
+  background-color: white;
+  border-bottom: 1px solid #DFDFDF;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.press-top-nav-bottom-part a {
+  text-decoration: none;
+  color: grey;
+  font-weight: lighter;
+  margin-right: 40px;
+}
+
+.press-top-nav-bottom-part a:hover {
+  transition: 0.5s;
+  color: #B61721;
+  border-bottom: 1px solid #B61721;
+  padding-bottom: 30px;
+}
+
+
+/* Mobile Small  --------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+
+}
+
+
+/* Mobile Medium  --------------------------------------------------------- */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+
+}
+
+
+/* Mobile Large - --------------------------------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+
+}
+
+
+/* Tablet - --------------------------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+}
+
+
+/* Laptop ------------------------------------------------------------------ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* nothing for now */
+}
+
+
+/* Laptop Large -------------------------------------------------------------*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* nothing for now */
+}
+
+
+/* 4K Large Desktop ------------------------------------------------------- */
+@media screen and (min-width: 1441px) {
+  /* nothing for now */
+}
