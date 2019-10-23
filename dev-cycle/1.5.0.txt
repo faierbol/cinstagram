@@ -16,7 +16,7 @@ Plan (finish these apps frontend):
 
 # Signup/Login Frontend
 
-- [ ] Signup Page
+- [x] Signup Page
 - [ ] Login Page
 
 --------------

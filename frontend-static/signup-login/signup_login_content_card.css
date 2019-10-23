@@ -12,7 +12,7 @@
   height: auto;
   background-color: white;
   margin: 0 auto;
-  margin-top: 12px;
+  margin-top: 0px;
   text-align: center;
   padding-top: 30px;
 }
@@ -115,23 +115,110 @@
 
 
 /* Login realted cards -------------------------------------------------- */
-
+.login-card-forgot-password-link {
+  color: #003569;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 900;
+}
 
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {
 
+  .signup-login-content-card-signup-child-card {
+    border: 0px;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 20px;
+  }
+
+  .signup-login-content-card-signup-form {
+    margin: 0 auto;
+  }
+
+  .signup-login-content-card-signup-form input {
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 260px;
+  }
+
+  .signup-login-content-card-linker-card {
+    border: 0px;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .signup-login-content-card-app-links {
+    width: 100%;
+  }
 }
 
 
 /* Mobile Medium  --------------------------------------------------------- */
 @media screen and (min-width: 321px) and (max-width: 375px) {
+  .signup-login-content-card-signup-child-card {
+    border: 0px;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 20px;
+  }
 
+  .signup-login-content-card-signup-form {
+    margin: 0 auto;
+  }
+
+  .signup-login-content-card-signup-form input {
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 260px;
+  }
+
+  .signup-login-content-card-linker-card {
+    border: 0px;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .signup-login-content-card-app-links {
+    width: 100%;
+  }
 }
 
 
 /* Mobile Large - --------------------------------------------------------- */
 @media screen and (min-width: 376px) and (max-width: 425px) {
+  .signup-login-content-card-signup-child-card {
+    border: 0px;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 20px;
+  }
 
+  .signup-login-content-card-signup-form {
+    margin: 0 auto;
+  }
+
+  .signup-login-content-card-signup-form input {
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 260px;
+  }
+
+  .signup-login-content-card-linker-card {
+    border: 0px;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .signup-login-content-card-app-links {
+    width: 100%;
+  }
 }
 
 
