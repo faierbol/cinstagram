@@ -1,0 +1,38 @@
+Plan (finish these apps frontend):
+
+- [ ] API Web
+- [ ] Signup/Login
+- [ ] Profile Settings
+
+--------------
+
+# API Web Frontend
+
+- [ ] Landing Overview Page
+- [ ] Post Page
+- [ ] Register Page
+
+--------------
+
+# Signup/Login Frontend
+
+- [ ] Signup Page
+- [ ] Login Page
+
+--------------
+
+# Profile Settings Frontend
+
+- [ ] edit profile page
+- [ ] change password page
+- [ ] authorized applications page
+- [ ] email and sms
+- [ ] manage contacts
+- [ ] privacy and security
+- [ ] login activity
+
+--------------
+
+#########
+
+After completing above since it is frontend skip test and documentation but write the devlog

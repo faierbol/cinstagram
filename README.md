@@ -11,6 +11,10 @@ Cinstagram is a fully fledged Instagram clone. The support for IOS and Android w
 - Android: ... (soon)
 - IOS: ... (soon)
 
+## Demo
+
+...
+
 ## Screenshots
 
 ...(inspiration for README: https://github.com/mohak1283/Instagram-Clone)
