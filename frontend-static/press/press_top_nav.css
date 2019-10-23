@@ -66,19 +66,61 @@
 
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {
+  .press-top-nav-top-part {
+    text-align: center;
+  }
 
+  .about-top-nav-logo {
+    margin-left: 0px;
+  }
+
+  .press-top-nav-signup-btn {
+    display: none;
+  }
+
+  .press-top-nav-bottom-part a {
+    margin-right: 20px;
+  }
 }
 
 
 /* Mobile Medium  --------------------------------------------------------- */
 @media screen and (min-width: 321px) and (max-width: 375px) {
+  .press-top-nav-top-part {
+    text-align: center;
+  }
 
+  .about-top-nav-logo {
+    margin-left: 0px;
+  }
+
+  .press-top-nav-signup-btn {
+    display: none;
+  }
+
+  .press-top-nav-bottom-part a {
+    margin-right: 20px;
+  }
 }
 
 
 /* Mobile Large - --------------------------------------------------------- */
 @media screen and (min-width: 376px) and (max-width: 425px) {
+  .press-top-nav-top-part {
+    text-align: center;
+  }
 
+  .about-top-nav-logo {
+    margin-left: 0px;
+  }
+
+  .press-top-nav-signup-btn {
+    display: none;
+  }
+
+  .press-top-nav-bottom-part a {
+    margin-right: 20px;
+  }
 }
 
 

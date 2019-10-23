@@ -27,7 +27,7 @@ Plan (finish these apps frontend):
 
 # Press App Frontend
 
-- [ ] Info Center Page
+- [x] Info Center Page
 - [ ] Our Story Page
 - [ ] Brand Assets Page
 - [ ] Post Page

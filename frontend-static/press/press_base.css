@@ -24,19 +24,28 @@ p {
 
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {
-
+  .press-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 
 /* Mobile Medium  --------------------------------------------------------- */
 @media screen and (min-width: 321px) and (max-width: 375px) {
-
+  .press-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 
 /* Mobile Large - --------------------------------------------------------- */
 @media screen and (min-width: 376px) and (max-width: 425px) {
-
+  .press-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 
