@@ -1,8 +1,7 @@
 Plan (finish these apps frontend):
 
 - [x] Help Centre app pages
-- [ ] About app pages
-- [ ] Press app pages
+- [x] About app pages
 
 --------------
 
@@ -21,16 +20,6 @@ Plan (finish these apps frontend):
 - [x] Legal Page (static)
 - [x] Jobs CRUD App Pages
 - [x] Jobs Posting Post
-
-
-------------
-
-# Press App Frontend
-
-- [x] Info Center Page
-- [ ] Our Story Page
-- [ ] Brand Assets Page
-- [ ] Post Page
 
 
 #########

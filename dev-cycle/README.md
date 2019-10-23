@@ -23,9 +23,8 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 ### Front-end
 
 ---
-- [ ] Help Centre app pages
-- [ ] About app pages
-- [ ] Press app pages
+- [x] Help Centre app pages
+- [x] About app pages
 ---
 - [ ] API-web
 - [ ] Signup/Login
@@ -47,8 +46,6 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 ---
 - [ ] react:: help centre app pages
 - [ ] react:: About app pages
----
-- [ ] react:: Press app pages
 - [ ] react:: API-web
 ---
 - [ ] react:: Signup/Login
@@ -86,9 +83,6 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 ---
 - [ ] Basic About app
   - Note: Index about use, jobs CRUD app, necessary legal parts
----
-- [ ] Basic Press app
-  - Note: Info center, our story, brand assets
 ---
 - [ ] Basic API WEB-CRUD info app
   - Note: this is not the API creation it is just web app part of it
@@ -129,8 +123,6 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 - [ ] Fully-finish Help Centre
 ---
 - [ ] Fully-finish About app
----
-- [ ] Fully-finish Press app
 ---
 - [ ] Fully-finish signup system
 - [ ] Fully-finish login system
