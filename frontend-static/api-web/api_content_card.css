@@ -1,4 +1,49 @@
+.api-content-card {
+  position: relative;
+  height: 500px;
+  width: 100%;
+}
 
+.api-content-card-left-part {
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.api-content-card-left-part a {
+  display: block;
+  padding: 18px;
+  background-color: black;
+  color: white;
+  margin-bottom: 3px;
+  text-decoration: none;
+  border: 3px solid black;
+  border-radius: 4px;
+}
+
+.api-content-card-left-part a:hover {
+  transition: 0.5s;
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 20px 0px black;
+  -moz-box-shadow: 0px 0px 20px 0px black;
+  box-shadow: 0px 0px 20px 0px black;
+  color: black;
+}
+
+
+.api-content-card-right-part {
+  width: 78%;
+  height: 400px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.api-content-card-right-part h1, h2, h3, h4, h5, h6, a, p, ul, li, ol {
+  margin-left: 30px;
+  margin-top: 10px;
+  font-family: "Roboto";
+}
 
 
 

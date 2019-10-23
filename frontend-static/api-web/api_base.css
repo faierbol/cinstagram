@@ -12,6 +12,17 @@ p {
 }
 
 
+.api-container {
+  position: relative;
+  height: auto;
+
+  background-color: #F6F7F9;
+
+  padding-left: 10%;
+  padding-right: 10%;
+
+  padding-top: 100px;
+}
 
 
 

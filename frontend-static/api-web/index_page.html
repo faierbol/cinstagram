@@ -24,82 +24,60 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- MY CSS LINKS -->
-  <link rel="stylesheet" type="text/css" href="./about_base.css" />
-  <link rel="stylesheet" type="text/css" href="./about_top_nav.css" />
-  <link rel="stylesheet" type="text/css" href="./about_content_card.css" />
-  <link rel="stylesheet" type="text/css" href="./about_footer.css" />
+  <link rel="stylesheet" type="text/css" href="./api_base.css" />
+  <link rel="stylesheet" type="text/css" href="./api_top_nav.css" />
+  <link rel="stylesheet" type="text/css" href="./api_content_card.css" />
+  <link rel="stylesheet" type="text/css" href="./api_footer.css" />
 
 </head>
 
 <body>
-  <div class="about-container">
+  <div class="api-container">
     <!-- TOP NAV MENU ###################################################### -->
-    <div class="about-top-nav">
-      <a href=""><img class="about-top-nav-logo" src="../cinstagram_logo_text.png" alt="logo" /></a>
-      <a href="" class="about-top-nav-username">Account Name</a>
+    <div class="api-top-nav">
+      <a href=""><img class="api-top-nav-logo" src="../favicon.png" alt="logo" /></a>
+      <!-- TOP NAV WILL BE EDITED ON MY DESIGN OF THE API -->
+      <a href="" class="api-top-nav-username">Account Name</a>
     </div>
 
 
-    <!-- Help Centre Card ################################################## -->
-    <div class="about-content-card">
-      <!-- left part -->
-      <div class="about-content-card-left-part">
-        <h2>ABOUT</h2>
-        <a href="">Company</a>
-        <a href="">Jobs</a>
-        <a href="">Terms</a>
-        <a href="">Privacy</a>
+    <!-- API CONTENT Card ################################################## -->
+    <div class="api-content-card">
+
+      <!-- left part: post list -->
+      <div class="api-content-card-left-part">
+        <a href="">Overview</a>
+        <a href="">Authentication</a>
+        <a href="">Post Headers</a>
       </div>
-      <!-- right part -->
-      <div class="about-content-card-right-part">
-        <h1>About Us</h1>
-        <p>
-          Cinstagram is a fully fledged Instagram clone. The support for
-          IOS and Android will come in the future. Remember, this is just a
-          educational clone and Instagram is a registered trademark of Instagram
-          Inc. All of the static assets have been created by me and not copied
-          from the Instagram Inc. I am just cloning the functionality of the site
-          to improve my understanding of how large web applications work under
-          the hood.
-        </p>
 
-        <h2>Real About of Instagram Inc.</h2>
+      <!-- right part: post content -->
+      <div class="api-content-card-right-part">
+        <h1>Overview</h1>
 
         <p>
-          <b>Kevin Systrom (@kevin)</b> co-founded Instagram and served as CEO
-          for 8 years before leaving the company in September 2018 to pursue
-          his next passion project. With Kevin’s focus on simplicity and inspi
-          ring creativity through solving problems with thoughtful product des
-          ign, Instagram became the home for innovation on visual storytelling
-          launching dozens of products including Stories and IGTV.
-          <br />
-          <br />
-          Prior to founding Instagram, Kevin was part of the startup Odeo, whic
-          h later became Twitter, and spent two years at Google working on prod
-          ucts like Gmail and Google Reader. He graduated from Stanford Univer
-          sity with a BS in Management Science & Engineering.
+            This is the Cinstagram API. Most of this will be used by bots in order
+            to create the traffic for the website. I mean I can add more functionality to
+            this but there is no need. All I need to document is to show how the API will
+            work with the bots.
+            <br />
+            <br />
+            Here is the bot's list:
         </p>
 
-        <p>
-          <b>Mike Krieger</b> (@mikeyk) co-founded Instagram and served as Inst
-          agram's Head of Engineering for 8 years, before leaving the company i
-          n September 2018 to explore new projects. Mike focused on building a
-          broad range of creative products to empower the community on Instagra
-          m to connect with their interests and passions. In addition, Mike gr
-          ew the engineering organization to more than 400 employees in Instag
-          ram offices located in Menlo Park, New York and San Francisco.
-          <br />
-          <br />
-          A native of São Paulo, Brazil, Mike holds an MS in Symbolic Systems from Stanfo
-          rd University. Prior to founding Instagram, he worked at Meebo as a user experi
-          ence designer and front-end engineer.
-        </p>
+        <ul>
+          <li>__admin bot__: from time to time delees bad users post, suspends their accoutns ... etc.</li>
+          <li>__bad bot__  : intentianlly bad user to get caught to the admin</li>
+          <li>__user:bot__: try to mimick real personalities for example use real isntagrams real pages and photographies to create virtual clones of those people. For example joe rogan-clone uploads every post that joe rogan uploads but in a timely manner, changes it settings, logs in, logs out, uploads stories, chats with other bots ... etc.</li>
+          <li>__hacker bot__: intentionally tries to hack the site ddos attacks ... etc.</li>
+        </ul>
+
       </div>
     </div>
 
 
     <!-- Footer ###########################################################  -->
-    <div class="about-footer">
+    <div class="api-footer">
       <a href="">ABOUT US</a>
       <a href="">SUPPORT</a>
       <a href="">API</a>
@@ -108,7 +86,7 @@
     </div>
 
 
-  </div><!-- e/help centre container -->
+  </div><!-- e/api container -->
 </body>
 
 </html>

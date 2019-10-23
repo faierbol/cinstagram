@@ -1,4 +1,14 @@
+.api-footer {
+  border-top: 1px solid lightgrey;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
+.api-footer a {
+  color: black;
+  text-decoration: none;
+}
 
 
 
