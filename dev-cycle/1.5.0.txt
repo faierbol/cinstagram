@@ -1,6 +1,6 @@
 Plan (finish these apps frontend):
 
-- [ ] API Web
+- [x] API Web
 - [ ] Signup/Login
 - [ ] Profile Settings
 
