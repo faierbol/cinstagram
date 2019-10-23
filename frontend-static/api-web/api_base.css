@@ -16,7 +16,7 @@ p {
   position: relative;
   height: auto;
 
-  background-color: #F6F7F9;
+  background-color: white;
 
   padding-left: 10%;
   padding-right: 10%;
@@ -29,25 +29,37 @@ p {
 
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {
-
+  .api-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 
 /* Mobile Medium  --------------------------------------------------------- */
 @media screen and (min-width: 321px) and (max-width: 375px) {
-
+  .api-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 
 /* Mobile Large - --------------------------------------------------------- */
 @media screen and (min-width: 376px) and (max-width: 425px) {
-
+  .api-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 
 /* Tablet - --------------------------------------------------------------- */
 @media screen and (min-width: 426px) and (max-width: 768px) {
-
+  .api-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 

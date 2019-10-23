@@ -42,25 +42,58 @@
 
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {
+  .api-top-nav {
+    text-align: center;
+  }
+
+  .api-top-nav-logo {
+    margin-left: 0px;
+  }
+
+  .api-top-nav-username {
+    display: none;
+  }
 
 }
 
 
 /* Mobile Medium  --------------------------------------------------------- */
 @media screen and (min-width: 321px) and (max-width: 375px) {
+  .api-top-nav {
+    text-align: center;
+  }
+
+  .api-top-nav-logo {
+    margin-left: 0px;
+  }
+
+  .api-top-nav-username {
+    display: none;
+  }
 
 }
 
 
 /* Mobile Large - --------------------------------------------------------- */
 @media screen and (min-width: 376px) and (max-width: 425px) {
+  .api-top-nav {
+    text-align: center;
+  }
+
+  .api-top-nav-logo {
+    margin-left: 0px;
+  }
+
+  .api-top-nav-username {
+    display: none;
+  }
 
 }
 
 
 /* Tablet - --------------------------------------------------------------- */
 @media screen and (min-width: 426px) and (max-width: 768px) {
-
+  /* nothing for now */
 }
 
 

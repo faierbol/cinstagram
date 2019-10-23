@@ -14,25 +14,53 @@
 
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {
+  .api-footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .api-footer a {
+    font-size: 10px;
+    margin-right: 3px;
+    display: inline-block;
+  }
 
 }
 
 
 /* Mobile Medium  --------------------------------------------------------- */
 @media screen and (min-width: 321px) and (max-width: 375px) {
+  .api-footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
+  .api-footer a {
+    font-size: 10px;
+    margin-right: 3px;
+    display: inline-block;
+  }
 }
 
 
 /* Mobile Large - --------------------------------------------------------- */
 @media screen and (min-width: 376px) and (max-width: 425px) {
+  .api-footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
+  .api-footer a {
+    font-size: 10px;
+    margin-right: 3px;
+    display: inline-block;
+  }
 }
 
 
 /* Tablet - --------------------------------------------------------------- */
 @media screen and (min-width: 426px) and (max-width: 768px) {
-
+  /* nothing for now */
 }
 
 

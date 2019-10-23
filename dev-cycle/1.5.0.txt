@@ -8,9 +8,9 @@ Plan (finish these apps frontend):
 
 # API Web Frontend
 
-- [ ] Landing Overview Page
-- [ ] Post Page
-- [ ] Register Page
+- [x] Landing Overview Page
+- [x] Post Page
+- [x] Register Page -- this is just a basically post too i just dont know what form input i will put at this moment
 
 --------------
 

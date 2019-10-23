@@ -1,6 +1,6 @@
 .api-content-card {
   position: relative;
-  height: 500px;
+  height: auto;
   width: 100%;
 }
 
@@ -31,12 +31,12 @@
   color: black;
 }
 
-
 .api-content-card-right-part {
   width: 78%;
-  height: 400px;
+  height: auto;
   display: inline-block;
   vertical-align: top;
+  margin-bottom: 40px;
 }
 
 .api-content-card-right-part h1, h2, h3, h4, h5, h6, a, p, ul, li, ol {
@@ -46,22 +46,81 @@
 }
 
 
-
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {
+  .api-content-card {
+    position: relative;
+    height: auto;
+  }
 
+  .api-content-card-left-part {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .api-content-card-right-part {
+    width: 100%;
+    display: block;
+  }
+
+  .api-content-card-right-part h1, h2, h3, h4, h5, h6, a, p, ul, li, ol {
+    margin-left: 30px;
+    margin-top: 10px;
+  }
 }
 
 
 /* Mobile Medium  --------------------------------------------------------- */
 @media screen and (min-width: 321px) and (max-width: 375px) {
+  .api-content-card {
+    position: relative;
+    height: auto;
+  }
 
+  .api-content-card-left-part {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .api-content-card-right-part {
+    width: 100%;
+    display: block;
+  }
+
+  .api-content-card-right-part h1, h2, h3, h4, h5, h6, a, p, ul, li, ol {
+    margin-left: 30px;
+    margin-top: 10px;
+  }
 }
 
 
 /* Mobile Large - --------------------------------------------------------- */
 @media screen and (min-width: 376px) and (max-width: 425px) {
+  .api-content-card {
+    position: relative;
+    height: auto;
+  }
 
+  .api-content-card-left-part {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .api-content-card-right-part {
+    width: 100%;
+    display: block;
+  }
+
+  .api-content-card-right-part h1, h2, h3, h4, h5, h6, a, p, ul, li, ol {
+    margin-left: 30px;
+    margin-top: 10px;
+  }
 }
 
 
