@@ -1,7 +1,7 @@
 Plan (finish these apps frontend):
 
 - [x] API Web
-- [ ] Signup/Login
+- [x] Signup/Login
 - [ ] Profile Settings
 
 --------------
@@ -17,7 +17,7 @@ Plan (finish these apps frontend):
 # Signup/Login Frontend
 
 - [x] Signup Page
-- [ ] Login Page
+- [x] Login Page
 
 --------------
 
