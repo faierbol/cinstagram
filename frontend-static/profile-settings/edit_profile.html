@@ -28,6 +28,7 @@
 
   <!-- specific css links -->
   <link rel="stylesheet" type="text/css" href="./profile_settings_base.css" />
+  <link rel="stylesheet" type="text/css" href="./profile_settings_top_nav.css" />
   <link rel="stylesheet" type="text/css" href="./profile_settings_content_card.css" />
   <link rel="stylesheet" type="text/css" href="./profile_settings_footer.css" />
 
@@ -38,9 +39,10 @@
 
     <!-- TOP NAV MENU ###################################################### -->
     <div class="profile-settings-top-nav">
-      <a href=""><img class="help-centre-top-nav-logo" src="../cinstagram_logo_text.png" alt="logo" /></a>
+      <a href=""><img class="profile-settings-top-nav-logo" src="../cinstagram_logo_text.png" alt="logo" /></a>
       <!-- search form -->
-      <form class="search_form">
+      <form class="top-nav-search-form">
+        <button class="search-submit-btn" type="submit"><span class="fa fa-search"></span></button>
         <input type="text" placeholder="Search" />
       </form>
       <div class="top-nav-navigation">
@@ -54,7 +56,52 @@
     <!-- PROFILE SETTINGS CARD ###################################################### -->
     <div class="profile-settings-content-card">
 
+      <!-- left navigation part -->
+      <div class="profile-settings-content-card-left-part">
+        <ul>
+          <a href=""><li>Edit Profile</li></a>
+          <a href=""><li>Change Password</li></a>
+          <a href=""><li>Auth Applications</li></a>
+          <a href=""><li>Email and SMS</li></a>
+          <a href=""><li>Privacy and Security</li></a>
+        </ul>
+      </div>
 
+      <!-- right content part -->
+      <div class="profile-settings-content-card-right-part">
+        <!-- profile photo form -->
+        <form class="profile-settings-profile-photo-form">
+
+        </form>
+
+        <!-- profile info form -->
+        <form class="profile-settings-info-form">
+          <label>Name</label>
+          <input type="text" placeholder="Name" />
+
+          <label>Username</label>
+          <input type="text" placeholder="Username" />
+
+          <label>Website</label>
+          <input type="text" placeholder="Website" />
+
+          <label>Bio</label>
+          <textarea>Bio ...</textarea>
+
+          <label>Private Information</label>
+
+          <label><b>Email</b></label>
+          <input type="text" placeholder="Email" />
+
+          <label>Phone Number</label>
+          <input type="text" placeholder="Phone Number" />
+
+          <label>Gender</label>
+          <input type="text" placeholder="Gender" />
+
+          <input value="Submit" class="profile-info-form-submit-btn" type="submit" />
+        </form>
+      </div>
 
     </div><!-- e/main card -->
 

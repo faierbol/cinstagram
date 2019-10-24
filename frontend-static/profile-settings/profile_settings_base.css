@@ -13,10 +13,14 @@ p {
 }
 
 .profile-settings-container {
-  font-family: "Roboto";
+  position: relative;
+
   background-color: #FAFAFA;
-  width: 100%;
-  height: auto;
+
+  padding-left: 10%;
+  padding-right: 10%;
+
+  padding-top: 1px;
 }
 
 

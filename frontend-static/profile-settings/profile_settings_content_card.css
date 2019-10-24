@@ -1,4 +1,100 @@
+.profile-settings-content-card {
+  position: relative;
+  background-color: white;
+  height: auto;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 140px;
+  border: 1px solid #DBDBDB;
+  border-radius: 2px;
+  margin-bottom: 40px;
+}
 
+.profile-settings-content-card-left-part {
+  height: auto;
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.profile-settings-content-card-left-part ul a {
+  text-decoration: none;
+  font-weight: 900 !important;
+}
+
+.profile-settings-content-card-left-part ul a li {
+  list-style-type: none;
+  font-family: "Roboto";
+  padding: 15px 10px;
+  margin-bottom: 1px;
+  border-left: 3px solid transparent;
+  color: black;
+  font-size: 16px;
+  font-weight: 900 !important;
+}
+
+.profile-settings-content-card-left-part ul a li:hover {
+  border-left: 3px solid lightgrey;
+  background-color: #FAFAFA;
+}
+
+.profile-settings-content-card-right-part {
+  display: inline-block;
+  height: auto;
+  width: 78%;
+  border-left: 1px solid #DBDBDB;
+}
+
+.profile-settings-profile-photo-form {
+
+}
+
+.profile-settings-info-form {
+  width: 500px;
+  margin: 0 auto;
+  height: auto;
+  font-family: "Roboto";
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.profile-settings-info-form label {
+  display: block;
+  color: black;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.profile-settings-info-form input {
+  background-color: white;
+  display: block;
+  width: 350px;
+  padding: 7px 10px;
+  margin-bottom: 15px;
+  border: 1px solid #EFEFEF;
+  border-radius: 2px;
+  font-size: 16px;
+}
+
+.profile-settings-info-form textarea {
+
+}
+
+.profile-info-form-submit-btn {
+  background-color: #3B99F0 !important;
+  color: white;
+  margin-top: 4px;
+  font-size: 15px;
+  width: auto !important;
+  border-radius: 5px !important;
+  margin: 0 auto;
+}
+
+.profile-info-form-submit-btn:hover {
+  transition: 0.5s ease;
+  background-color: lightgrey !important;
+  color:black !important;
+}
 
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {
