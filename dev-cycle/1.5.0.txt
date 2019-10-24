@@ -1,23 +1,27 @@
 Plan (finish these apps frontend):
 
-- [x] API Web
-- [x] Signup/Login
+- [x] Re-design help-centre
+- [ ] redesign about
+- [ ] redesign api-web
+- [ ] redesign signup-login
+- [ ] API Web
+- [ ] Signup/Login
 - [ ] Profile Settings
 
 --------------
 
 # API Web Frontend
 
-- [x] Landing Overview Page
-- [x] Post Page
-- [x] Register Page -- this is just a basically post too i just dont know what form input i will put at this moment
+- [ ] Landing Overview Page
+- [ ] Post Page
+- [ ] Register Page -- this is just a basically post too i just dont know what form input i will put at this moment
 
 --------------
 
 # Signup/Login Frontend
 
-- [x] Signup Page
-- [x] Login Page
+- [ ] Signup Page
+- [ ] Login Page
 
 --------------
 
