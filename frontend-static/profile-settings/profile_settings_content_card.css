@@ -1,13 +1,15 @@
 .profile-settings-content-card {
   position: relative;
-  background-color: white;
+  background-color: #1F1F1F;
   height: auto;
   width: 95%;
   margin: 0 auto;
   margin-top: 140px;
-  border: 1px solid #DBDBDB;
   border-radius: 2px;
   margin-bottom: 40px;
+  -webkit-box-shadow: 0px 0px 20px -2px rgba(87,87,87,1);
+  -moz-box-shadow: 0px 0px 20px -2px rgba(87,87,87,1);
+  box-shadow: 0px 0px 20px -2px rgba(87,87,87,1);
 }
 
 .profile-settings-content-card-left-part {
@@ -15,6 +17,7 @@
   width: 20%;
   display: inline-block;
   vertical-align: top;
+
 }
 
 .profile-settings-content-card-left-part ul a {
@@ -28,7 +31,7 @@
   padding: 15px 10px;
   margin-bottom: 1px;
   border-left: 3px solid transparent;
-  color: black;
+  color: #BEBEBE;
   font-size: 16px;
   font-weight: 900 !important;
 }
@@ -42,7 +45,7 @@
   display: inline-block;
   height: auto;
   width: 78%;
-  border-left: 1px solid #DBDBDB;
+  border-left: 1px solid #343434;
 }
 
 .profile-settings-profile-photo-form {
@@ -60,7 +63,7 @@
 
 .profile-settings-info-form label {
   display: block;
-  color: black;
+  color: #BEBEBE;
   font-weight: 900;
   font-size: 16px;
 }

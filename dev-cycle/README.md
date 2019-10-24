@@ -23,8 +23,8 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 ### Front-end
 
 ---
-- [x] Help Centre app pages
-- [x] About app pages
+- [ ] Help Centre app pages
+- [ ] About app pages
 ---
 - [ ] API-web
 - [ ] Signup/Login

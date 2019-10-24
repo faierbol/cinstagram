@@ -24,7 +24,7 @@ app.secret_key = "changeThisInProduction"
 app.debug = True
 
 # Database configs
-postgresql_URI = "postgresql://demir@localhost:5432/ceddit"
+postgresql_URI = "postgresql://demir@localhost:5432/cinstagram"
 app.config['SQLALCHEMY_DATABASE_URI'] = postgresql_URI
 
 # SQLAlchemy and Migrate(alembic) configs
