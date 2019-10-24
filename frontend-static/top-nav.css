@@ -16,7 +16,7 @@
   height: 35px;
   display: inline-block;
   vertical-align: middle;
-  margin-top: 8px;
+  margin-top: 6px;
   margin-left: 8%;
 }
 
@@ -24,7 +24,7 @@
   margin-left: 150px;
   display: inline-block;
   vertical-align: middle;
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 .top-nav-search-form input {
@@ -51,7 +51,7 @@
 
 .top-nav-navigation {
   float: right;
-  margin-top: 15px;
+  margin-top: 13px;
   margin-right: 8%;
 }
 
@@ -60,6 +60,11 @@
   font-size: 28px;
   margin-right: 40px;
   vertical-align: top;
+}
+
+.top-nav-navigation a:hover {
+  transition: 0.5s ease;
+  color: #E74C3C;
 }
 
 .top-nav-profile-photo {
@@ -71,25 +76,99 @@
 
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {
-  /* nothing for now */
+
+  .top-nav-logo {
+    height:30px;
+    margin-top: 12px;
+    margin-left: 3px;
+  }
+
+  .top-nav-search-form {
+    display: none;
+  }
+
+  .top-nav-navigation {
+    margin-top: 14px;
+    margin-right: 0px;
+  }
+
+  .top-nav-navigation a {
+    font-size: 23px;
+    margin-right: 10px;
+  }
+
 }
 
 
 /* Mobile Medium  --------------------------------------------------------- */
 @media screen and (min-width: 321px) and (max-width: 375px) {
-  /* nothing for now */
+  .top-nav-logo {
+    height:30px;
+    margin-top: 12px;
+    margin-left: 3px;
+  }
+
+  .top-nav-search-form {
+    display: none;
+  }
+
+  .top-nav-navigation {
+    margin-top: 14px;
+    margin-right: 0px;
+  }
+
+  .top-nav-navigation a {
+    font-size: 23px;
+    margin-right: 10px;
+  }
 }
 
 
 /* Mobile Large - --------------------------------------------------------- */
 @media screen and (min-width: 376px) and (max-width: 425px) {
-  /* nothing for now */
+  .top-nav-logo {
+    height:30px;
+    margin-top: 12px;
+    margin-left: 3px;
+  }
+
+  .top-nav-search-form {
+    display: none;
+  }
+
+  .top-nav-navigation {
+    margin-top: 14px;
+    margin-right: 0px;
+  }
+
+  .top-nav-navigation a {
+    font-size: 23px;
+    margin-right: 10px;
+  }
 }
 
 
 /* Tablet - --------------------------------------------------------------- */
 @media screen and (min-width: 426px) and (max-width: 768px) {
-  /* nothing for now */
+  .top-nav-logo {
+    height:30px;
+    margin-top: 12px;
+    margin-left: 3px;
+  }
+
+  .top-nav-search-form {
+    display: none;
+  }
+
+  .top-nav-navigation {
+    margin-top: 14px;
+    margin-right: 0px;
+  }
+
+  .top-nav-navigation a {
+    font-size: 23px;
+    margin-right: 10px;
+  }
 }
 
 

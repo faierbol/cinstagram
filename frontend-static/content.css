@@ -1,10 +1,8 @@
 .content-wrapper {
-  background-color: orange;
-  height: 500px;
+  background-color: transparent;
+  height: auto;
   width: 100%;
 }
-
-
 
 
 /* Mobile Small  --------------------------------------------------------- */
