@@ -27,8 +27,8 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 - [x] About app pages
 ---
 - [x] API-web
-- [ ] Signup/Login
-- [ ] Profile Settings
+- [x] Signup/Login
+- [x] Profile Settings
 ---
 - [ ] Photo Video Upload
 - [ ] Public Profile

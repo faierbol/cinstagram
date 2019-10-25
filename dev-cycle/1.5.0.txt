@@ -3,7 +3,7 @@ Plan (finish these apps frontend):
 - [x] Re-design help-centre
 - [x] redesign about
 - [x] redesign signup-login
-- [ ] Profile Settings
+- [x] Profile Settings
 
 --------------
 
