@@ -3,12 +3,13 @@
   background-color: white;
   height: auto;
   text-align: center;
-  padding: 30px 0px;
+  padding-top: 30px;
   margin: 0 auto;
 
   /* Box shadow neccesities */
-  border-bottom: 0 none;
-  box-shadow: 0px 7px 25px -20px rgba(0,0,0,0.75);
+  -webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .upload_file {
@@ -67,9 +68,28 @@
 }
 
 .location_input {
+  width: 95%;
+  height: 30px;
+  border: 0px;
+  border-bottom: 1px solid #EAEDED;
+  font-size: 16px;
+  display: block;
+  padding: 0px 10px;
 
+}
+
+.upload-form-footer {
+  background-color: #F7F7F7;
+  border-top: #EDEDED;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .submit_post_button {
   background-color: #E74C3C;
+  padding: 5px 18px;
+  font-size: 16px;
+  color: white;
+  border: 0px;
+  border-radius: 4px;
 }
