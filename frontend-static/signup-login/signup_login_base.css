@@ -12,9 +12,12 @@ p {
   font-family: "Roboto";
 }
 
+body {
+  background-color: #F4F8FE;
+}
+
 .signup-login-container {
   font-family: "Roboto";
-  background-color: #FAFAFA;
   width: 100%;
   height: auto;
   padding-top: 20px;

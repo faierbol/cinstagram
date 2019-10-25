@@ -46,7 +46,7 @@
   border-left: 1px solid #E5E7E9;
 }
 
-.about-content-card-right-part h1, h2, p {
+.about-content-card-right-part h1, h2, h3, p {
   margin-left: 30px;
   margin-bottom: 10px;
 }
@@ -55,29 +55,100 @@
   font-weight: 900;
 }
 
+.about-content-card-right-part ul {
+  color: black;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.about-content-card-right-part ul a {
+  text-decoration: none;
+  color: #3498DB;
+}
 
 
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {
 
+  .about-content-card-left-part {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about-content-card-right-part {
+    display: block;
+    width: 100%;
+    border-left: 0px;
+  }
+
+  .about-content-card-right-part h1, h2, h3, p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .about-content-card-right-part ul {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 }
 
 
 /* Mobile Medium  --------------------------------------------------------- */
 @media screen and (min-width: 321px) and (max-width: 375px) {
+  .about-content-card-left-part {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
 
+  .about-content-card-right-part {
+    display: block;
+    width: 100%;
+    border-left: 0px;
+  }
+
+  .about-content-card-right-part h1, h2, h3, p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .about-content-card-right-part ul {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 }
 
 
 /* Mobile Large - --------------------------------------------------------- */
 @media screen and (min-width: 376px) and (max-width: 425px) {
+  .about-content-card-left-part {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
 
+  .about-content-card-right-part {
+    display: block;
+    width: 100%;
+    border-left: 0px;
+  }
+
+  .about-content-card-right-part h1, h2, h3, p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .about-content-card-right-part ul {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 }
 
 
 /* Tablet - --------------------------------------------------------------- */
 @media screen and (min-width: 426px) and (max-width: 768px) {
-
+  /* nothing for now */
 }
 
 

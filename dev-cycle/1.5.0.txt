@@ -1,9 +1,8 @@
 Plan (finish these apps frontend):
 
 - [x] Re-design help-centre
-- [ ] redesign about
-- [ ] redesign api-web
-- [ ] redesign signup-login
+- [x] redesign about
+- [x] redesign signup-login
 - [ ] Profile Settings
 
 --------------

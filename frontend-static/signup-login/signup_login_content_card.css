@@ -1,20 +1,25 @@
 /* Signup realted cards -------------------------------------------------- */
 
 .signup-login-content-card {
-  background-color: #FAFAFA;
+  background-color: #F4F8FE;
   width: 100%;
   height: auto;
 }
 
 .signup-login-content-card-signup-child-card {
-  border: 1px solid #E6E6E6;
+  border: 1px solid transparent;
   width: 350px;
   height: auto;
   background-color: white;
   margin: 0 auto;
-  margin-top: 0px;
+  margin-top: 10px;
   text-align: center;
   padding-top: 30px;
+  padding-bottom: 10px;
+
+  /* Box shadow neccesities */
+  border-bottom: 0 none;
+  box-shadow: 0px 7px 25px -20px rgba(0,0,0,0.75);
 }
 
 .help-centre-top-nav-logo {
@@ -72,15 +77,19 @@
 }
 
 .signup-login-content-card-linker-card {
-  border: 1px solid #E6E6E6;
+  border: 1px solid transparent;
   width: 350px;
   height: auto;
   background-color: white;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
+
+  /* Box shadow neccesities */
+  border-bottom: 0 none;
+  box-shadow: 0px 7px 25px -20px rgba(0,0,0,0.75);
 }
 
 .signup-login-content-card-linker-card p a {
