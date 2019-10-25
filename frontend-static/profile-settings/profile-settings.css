@@ -104,24 +104,165 @@
   transition: 0.5s;
 }
 
+.profile-settings-sms-email-form {
+  margin-left: 50px;
+}
 
+.profile-settings-sms-email-form i {
+  color: grey;
+}
+
+.profile-sms-email-submit-btn {
+  background-color: #E74C3C;
+  border: 1px solid #E74C3C;
+  color: white;
+  padding: 5px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.profile-sms-email-submit-btn:hover {
+  background-color:white;
+  color: #E74C3C;
+  transition: 0.5s;
+}
+
+.profile-setings-security-form {
+  margin-left: 50px;
+}
+
+.profile-setings-security-form i {
+  color: grey;
+}
 
 
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {
-  /* nothing for now */
+  .profile-settings-content-card {
+    width: 80%;
+    padding: 30px;
+  }
+
+  .profile-settings-content-card-left-part {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .profile-settings-content-card-right-part {
+    display: block;
+    width: 100%;
+    border-left: 0px;
+  }
+
+  .profile-settings-info-form {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .profile-info-form-submit-btn {
+    width: 100% !important;
+    margin-top: 20px;
+  }
+
+  .profile-settings-sms-email-form {
+    margin-left: 5px;
+  }
+
+  .profile-sms-email-submit-btn {
+    padding: 5px 15px;
+  }
+
+  .profile-setings-security-form {
+    margin-left: 5px;
+  }
+
 }
 
 
 /* Mobile Medium  --------------------------------------------------------- */
 @media screen and (min-width: 321px) and (max-width: 375px) {
-  /* nothing for now */
+  .profile-settings-content-card {
+    width: 80%;
+    padding: 30px;
+  }
+
+  .profile-settings-content-card-left-part {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .profile-settings-content-card-right-part {
+    display: block;
+    width: 100%;
+    border-left: 0px;
+  }
+
+  .profile-settings-info-form {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .profile-info-form-submit-btn {
+    width: 100% !important;
+    margin-top: 20px;
+  }
+
+  .profile-settings-sms-email-form {
+    margin-left: 5px;
+  }
+
+  .profile-sms-email-submit-btn {
+    padding: 5px 15px;
+  }
+
+  .profile-setings-security-form {
+    margin-left: 5px;
+  }
 }
 
 
 /* Mobile Large - --------------------------------------------------------- */
 @media screen and (min-width: 376px) and (max-width: 425px) {
-  /* nothing for now */
+  .profile-settings-content-card {
+    width: 80%;
+    padding: 30px;
+  }
+
+  .profile-settings-content-card-left-part {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .profile-settings-content-card-right-part {
+    display: block;
+    width: 100%;
+    border-left: 0px;
+  }
+
+  .profile-settings-info-form {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .profile-info-form-submit-btn {
+    width: 100% !important;
+    margin-top: 20px;
+  }
+
+  .profile-settings-sms-email-form {
+    margin-left: 5px;
+  }
+
+  .profile-sms-email-submit-btn {
+    padding: 5px 15px;
+  }
+
+  .profile-setings-security-form {
+    margin-left: 5px;
+  }
 }
 
 

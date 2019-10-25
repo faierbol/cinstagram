@@ -11,9 +11,9 @@ Plan (finish these apps frontend):
 
 - [x] edit profile page
 - [x] change password page
-- [ ] email and sms
-- [ ] privacy and security
-- [ ] responsive
+- [x] email and sms
+- [x] privacy and security
+- [x] responsive
 
 --------------
 

@@ -1,4 +1,4 @@
-'''
+"""
 
 # Development Config will go here
 def development_config(app):
@@ -10,7 +10,7 @@ def development_config(app):
     # Database configs
     postgresql_URI = "postgresql://demir@localhost:5432/ceddit"
     app.config['SQLALCHEMY_DATABASE_URI'] = postgresql_URI
-'''
+"""
 # The code below here is for the future use, it is psuedo code for now
 
 # baseConfigClass:
