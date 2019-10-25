@@ -1,0 +1,25 @@
+Plan (finish these apps frontend):
+
+- [ ] Photo Video Upload Page
+- [ ] Public/private Profile
+
+--------------
+
+# Photo Video Upload page
+
+- [ ] photo or video upload single panel
+- [ ] Responsive
+
+--------------
+
+# Public/Private Profile
+
+- [ ] Posts Page
+- [ ] IGTV Page
+- [ ] Saved Page
+- [ ] Tagged Page
+- [ ] Responsive
+
+#########
+
+After completing above since it is frontend skip test and documentation but write the devlog

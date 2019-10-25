@@ -35,7 +35,6 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 - [ ] Private Profile
 ---
 - [ ] Stories
-- [ ] IG/TV
 - [ ] Chat
 ---
 - [ ] Home
@@ -57,7 +56,6 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 - [ ] react:: Private Profile
 - [ ] react:: Stories
 ---
-- [ ] react:: IG/TV
 - [ ] react:: Chat
 ---
 - [ ] react:: Home
@@ -102,8 +100,6 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 ---
 - [ ] Basic Stories App
 ---
-- [ ] Basic IG/TV app
----
 - [ ] Basic Chat app
 ---
 - [ ] Basic Home app
@@ -136,8 +132,6 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 - [ ] fully finish private profile
 ---
 - [ ] fully finish stories
----
-- [ ] fully finish IG/TV
 ---
 - [ ] Fully finish chat section
 ---
@@ -206,8 +200,6 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 ---
 - [ ] Basic Stories App
 ---
-- [ ] Basic IG/TV app
----
 - [ ] Basic Chat app
 ---
 - [ ] Basic Home app
@@ -242,8 +234,6 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 - [ ] fully finish private profile
 ---
 - [ ] fully finish stories
----
-- [ ] fully finish IG/TV
 ---
 - [ ] Fully finish chat section
 ---
