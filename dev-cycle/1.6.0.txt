@@ -1,21 +1,20 @@
 Plan (finish these apps frontend):
 
-- [ ] Photo Video Upload Page
+- [x] Photo Video Upload Page
 - [ ] Public/private Profile
 
 --------------
 
 # Photo Video Upload page
 
-- [ ] photo or video upload single panel
-- [ ] Responsive
+- [x] photo or video upload single panel
+- [x] Responsive
 
 --------------
 
 # Public/Private Profile
 
 - [ ] Posts Page
-- [ ] IGTV Page
 - [ ] Saved Page
 - [ ] Tagged Page
 - [ ] Responsive
