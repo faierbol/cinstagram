@@ -18,8 +18,8 @@ Plan (finish these apps frontend):
 - [x] Saved Page
 - [x] Tagged Page
 - [x] post page
-- [ ] follower and following pages
-- [ ] likes page same as above
+- [x] follower and following pages
+- [x] likes page same as above
 - [ ] Responsive
 
 #########
