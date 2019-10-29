@@ -14,11 +14,12 @@ Plan (finish these apps frontend):
 
 # Public/Private Profile
 
-- [ ] Posts Page
-- [ ] Saved Page
-- [ ] Tagged Page
-- [ ] post page
+- [x] Posts Page
+- [x] Saved Page
+- [x] Tagged Page
+- [x] post page
 - [ ] follower and following pages
+- [ ] likes page same as above
 - [ ] Responsive
 
 #########
