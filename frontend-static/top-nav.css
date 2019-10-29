@@ -64,7 +64,7 @@
 }
 
 .top-nav-navigation a:hover {
-  transition: 0.5s ease;
+  transition: 0.1s !important;
   color: #E74C3C;
 }
 

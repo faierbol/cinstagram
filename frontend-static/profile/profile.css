@@ -1,0 +1,194 @@
+.profile-card {
+  background-color: white;
+  height: auto;
+  width: 70%;
+  padding: 1% 5%;
+  margin: 0 auto;
+
+  /* Box shadow neccesities */
+  border-bottom: 0 none;
+  box-shadow: 0px 7px 25px -20px rgba(0,0,0,0.75);
+}
+
+.profile-card-information {
+  height: 220px;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.profile-card-information-left-part {
+  height: 100%;
+  width: 30%;
+  background-color: transparent;
+  display: inline-block;
+  text-align: center;
+}
+
+.profile-card-information-left-part img {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.profile-card-information-right-part {
+  height: 100%;
+  width: 68%;
+  background-color: transparent;
+  display: inline-block;
+  vertical-align: top;
+
+}
+
+.profile-card-information-right-part-top {
+  background-color: transparent;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.profile-card-information-right-part-top h1 {
+  font-size: 28px;
+  font-weight: 300;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  margin-right: 40px;
+}
+
+.profile-card-information-right-part-top a {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  color: black;
+  padding: 5px 8px;
+  border: 1px solid #EAEDED;
+  border-radius: 4px;
+}
+
+.profile-card-information-right-part-top span {
+  font-size: 20px;
+}
+
+.profile-card-information-right-part-top span:hover {
+  cursor: pointer;
+}
+
+.profile-card-information-right-part-middle {
+  background-color: transparent;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+.profile-card-information-right-part-middle a {
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+}
+
+.profile-card-information-right-part-middle a span {
+  font-weight: 900;
+}
+
+.profile-card-information-right-part-bottom {
+  background-color: transparent;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+
+.profile-card-information-right-part-bottom p {
+
+}
+
+.profile-card-navigation {
+  border-top: 1px solid #EAEDED;
+  margin-top: 0px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.profile-card-navigation a {
+  text-decoration: none;
+  color: grey;
+  margin-right: 50px;
+  font-size: 14px;
+}
+
+.profile-card-navigation a:active {
+  color: black;
+  border-top: 1px solid black;
+  padding-top: 16px;
+}
+
+.profile-card-navigation a:hover {
+  color: black;
+  border-top: 1px solid black;
+  padding-top: 16px;
+  transition: 0s !important;
+}
+
+.profile-grid-view {
+  height: auto;
+  width: 80%;
+  padding: 0px;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.grid-view-post-cell {
+ background-color: grey;
+ height: 260px;
+ width: 260px;
+ display: inline-block;
+ margin-right: 15px;
+ margin-left: 15px;
+ margin-bottom: 30px;
+
+}
+
+
+/* Mobile Small  --------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+
+}
+
+
+/* Mobile Medium  --------------------------------------------------------- */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+
+}
+
+
+/* Mobile Large - --------------------------------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+
+}
+
+
+/* Tablet - --------------------------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+}
+
+
+/* Laptop ------------------------------------------------------------------ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* nothing for now */
+}
+
+
+/* Laptop Large -------------------------------------------------------------*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* nothing for now */
+}
+
+
+/* 4K Large Desktop ------------------------------------------------------- */
+@media screen and (min-width: 1441px) {
+
+}

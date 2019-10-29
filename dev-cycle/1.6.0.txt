@@ -17,6 +17,8 @@ Plan (finish these apps frontend):
 - [ ] Posts Page
 - [ ] Saved Page
 - [ ] Tagged Page
+- [ ] post page
+- [ ] follower and following pages
 - [ ] Responsive
 
 #########
