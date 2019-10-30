@@ -20,7 +20,7 @@ Plan (finish these apps frontend):
 - [x] post page
 - [x] follower and following pages
 - [x] likes page same as above
-- [ ] Responsive
+- [x] Responsive
 
 #########
 

@@ -30,9 +30,9 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 - [x] Signup/Login
 - [x] Profile Settings
 ---
-- [ ] Photo Video Upload
-- [ ] Public Profile
-- [ ] Private Profile
+- [x] Photo Video Upload
+- [x] Public Profile
+- [x] Private Profile
 ---
 - [ ] Stories
 - [ ] Chat
