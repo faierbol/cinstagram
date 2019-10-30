@@ -1,7 +1,7 @@
 Plan (finish these apps frontend):
 
 - [x] Photo Video Upload Page
-- [ ] Public/private Profile
+- [x] Public/private Profile
 
 --------------
 

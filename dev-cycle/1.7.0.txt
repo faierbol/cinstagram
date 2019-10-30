@@ -1,0 +1,23 @@
+Plan (finish these apps frontend):
+
+- [ ] Search
+- [ ] Chat
+
+--------------
+
+# search
+
+- [ ] Search Page
+- [ ] Responsive
+
+--------------
+
+# Chat
+
+- [ ] chat's index page
+- [ ] single chat page
+- [ ] Responsive
+
+#########
+
+After completing above since it is frontend skip test and documentation but write the devlog

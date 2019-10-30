@@ -34,11 +34,11 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 - [x] Public Profile
 - [x] Private Profile
 ---
-- [ ] Stories
 - [ ] Chat
+- [ ] Search
 ---
 - [ ] Home
-- [ ] Search
+
 - [ ] explore
 ---
 - Start using frontend framework: probably react (module the elements)
@@ -54,7 +54,6 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 - [ ] react:: Public Profile
 ---
 - [ ] react:: Private Profile
-- [ ] react:: Stories
 ---
 - [ ] react:: Chat
 ---
@@ -98,8 +97,6 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 - [ ] Basic Private Profile App
   - note: (follow, unfollow ... etc. funcitonality)
 ---
-- [ ] Basic Stories App
----
 - [ ] Basic Chat app
 ---
 - [ ] Basic Home app
@@ -131,8 +128,6 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 ---
 - [ ] fully finish private profile
 ---
-- [ ] fully finish stories
----
 - [ ] Fully finish chat section
 ---
 - [ ] Fully finish Home App
@@ -150,7 +145,7 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
   - Note: the reason there are specific bots are becasue I want to test out each feature and if it will break under a lot of request, the magnitude of data will be controlled thorugh bot control panel in admin panel
   - __admin bot__: from time to time delees bad users post, suspends their accoutns ... etc.
   - __bad bot__  : intentianlly bad user to get caught to the admin
-  -  __user:bot__: try to mimick real personalities for example use real isntagrams real pages and photographies to create virtual clones of those people. For example joe rogan-clone uploads every post that joe rogan uploads but in a timely manner, changes it settings, logs in, logs out, uploads stories, chats with other bots ... etc.
+  -  __user:bot__: try to mimick real personalities for example use real isntagrams real pages and photographies to create virtual clones of those people. For example joe rogan-clone uploads every post that joe rogan uploads but in a timely manner, changes it settings, logs in, logs out, chats with other bots ... etc.
   - __hacker bot__: intentionally tries to hack the site ddos attacks ... etc.
 ---
 - [ ] add the specific bot control panel: add shit like how many bots of each bot you want at a certain point in time ... etc.
@@ -198,8 +193,6 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 - [ ] Basic Private Profile App
   - note: (follow, unfollow ... etc. funcitonality)
 ---
-- [ ] Basic Stories App
----
 - [ ] Basic Chat app
 ---
 - [ ] Basic Home app
@@ -232,8 +225,6 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 - [ ] Fully finish public profile
 ---
 - [ ] fully finish private profile
----
-- [ ] fully finish stories
 ---
 - [ ] Fully finish chat section
 ---
