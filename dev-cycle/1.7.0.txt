@@ -7,7 +7,9 @@ Plan (finish these apps frontend):
 
 # search
 
-- [ ] Search Page
+- [ ] account search page
+- [ ] hashtag search page
+- [ ] location search page
 - [ ] Responsive
 
 --------------
