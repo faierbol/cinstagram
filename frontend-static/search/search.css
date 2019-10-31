@@ -1,6 +1,8 @@
+/* --------------------------- ACCOUNT SEARCH ----------------------- */
+
 .search-container {
   background-color: white;
-  width: 70%;
+  width: 30%;
   margin: 0 auto;
   height: auto;
   padding: 30px;
@@ -11,9 +13,82 @@
 }
 
 .search-bar {
+  background-color: white;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.search-bar form {
+
+}
+
+.search-bar form input {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: 1px solid #EAEDED;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #F4F6F6;
+}
+
+.search-bar form button {
 
 }
 
 .searched-accounts {
 
+}
+
+.searched-account-cell {
+  background-color: white;
+  margin-bottom: 15px;
+}
+
+.searched-account-cell-profile-photo {
+  background-color: lightgrey;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-left: 10px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../../branding/profile_photo.jpg");
+}
+
+.searched-account-cell h3 {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.searched-account-cell h4 {
+  color: grey;
+  display: inline-block;
+}
+
+.searched-account-cell form {
+  display: inline-block;
+  float: right;
+  margin-right: 20px;
+  vertical-align: top;
+}
+
+.searched-account-cell form input {
+  background-color: #3498DB;
+  color: white;
+  border-radius: 4px;
+  padding: 3px 7px;
+  border: 0px;
+  font-size: 13px;
+  vertical-align: top;
+  margin-top: 4px;
+}
+
+.searched-account-cell form input:hover {
+  cursor: pointer;
 }
