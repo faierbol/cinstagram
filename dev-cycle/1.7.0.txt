@@ -1,16 +1,16 @@
 Plan (finish these apps frontend):
 
-- [ ] Search
+- [x] Search
 - [ ] Chat
 
 --------------
 
 # search
 
-- [ ] account search page
-- [ ] hashtag search page
-- [ ] location search page
-- [ ] Responsive
+- [x] account search page
+- [x] hashtag search page
+- [x] location search page
+- [x] Responsive
 
 --------------
 

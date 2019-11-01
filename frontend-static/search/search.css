@@ -20,7 +20,7 @@
 
 .search-navigation-links {
   background-color: transparent;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .search-navigation-links a {
@@ -245,18 +245,208 @@ box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {
 
+  .search-container {
+    background-color: white;
+    width: 90%;
+    padding: 10px 0px;
+  }
+
+  .search-navigation-links a {
+    margin: 0px 3px;
+    margin-top: 15px;
+  }
+
+  .search-bar form input {
+    padding: 10px 10px;
+  }
+
+  .search-bar form button {
+    padding: 10px 10px;
+  }
+
+  .searched-account-cell {
+    background-color: white;
+    margin-bottom: 15px;
+  }
+
+  .searched-account-cell-profile-photo {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .searched-account-cell h3 {
+    margin-right: 5px;
+    font-size: 15px;
+  }
+
+  .searched-account-cell h4 {
+    font-size: 15px;
+  }
+
+  .searched-account-cell form {
+    margin-right: 10px;
+  }
+
+
+  /* --------------------------- HASHTAG SEARCH ----------------------- */
+
+  .hashtag-search-container {
+    width: 100%;
+    padding: 10px 0px;
+  }
+
+  .search-grid-view {
+    width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+    background-color: transparent;
+  }
+
+  .search-grid-view-post-cell {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
 }
 
 
 /* Mobile Medium  --------------------------------------------------------- */
 @media screen and (min-width: 321px) and (max-width: 375px) {
+  .search-container {
+    background-color: white;
+    width: 90%;
+    padding: 10px 0px;
+  }
 
+  .search-navigation-links a {
+    margin: 0px 3px;
+    margin-top: 15px;
+  }
+
+  .search-bar form input {
+    padding: 10px 10px;
+  }
+
+  .search-bar form button {
+    padding: 10px 10px;
+  }
+
+  .searched-account-cell {
+    background-color: white;
+    margin-bottom: 15px;
+  }
+
+  .searched-account-cell-profile-photo {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .searched-account-cell h3 {
+    margin-right: 5px;
+    font-size: 15px;
+  }
+
+  .searched-account-cell h4 {
+    font-size: 15px;
+  }
+
+  .searched-account-cell form {
+    margin-right: 10px;
+  }
+
+
+  /* --------------------------- HASHTAG SEARCH ----------------------- */
+
+  .hashtag-search-container {
+    width: 100%;
+    padding: 10px 0px;
+  }
+
+  .search-grid-view {
+    width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+    background-color: transparent;
+  }
+
+  .search-grid-view-post-cell {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
 }
 
 
 /* Mobile Large - --------------------------------------------------------- */
 @media screen and (min-width: 376px) and (max-width: 425px) {
+  .search-container {
+    background-color: white;
+    width: 90%;
+    padding: 10px 0px;
+  }
 
+  .search-navigation-links a {
+    margin: 0px 3px;
+    margin-top: 15px;
+  }
+
+  .search-bar form input {
+    padding: 10px 10px;
+  }
+
+  .search-bar form button {
+    padding: 10px 10px;
+  }
+
+  .searched-account-cell {
+    background-color: white;
+    margin-bottom: 15px;
+  }
+
+  .searched-account-cell-profile-photo {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .searched-account-cell h3 {
+    margin-right: 5px;
+    font-size: 15px;
+  }
+
+  .searched-account-cell h4 {
+    font-size: 15px;
+  }
+
+  .searched-account-cell form {
+    margin-right: 10px;
+  }
+
+
+  /* --------------------------- HASHTAG SEARCH ----------------------- */
+
+  .hashtag-search-container {
+    width: 100%;
+    padding: 10px 0px;
+  }
+
+  .search-grid-view {
+    width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+    background-color: transparent;
+  }
+
+  .search-grid-view-post-cell {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
 }
 
 
