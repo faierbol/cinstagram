@@ -269,25 +269,114 @@
 
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {
+  .chat-container {
+    background-color: white;
+    width: 100%;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    height: auto;
+
+  }
+
+  .chat-index-top-navigation {
+    margin-top: -35px;
+  }
+
+  /* ----------------------------- SINGLE CHAT ------------------------------- */
+
+  .single-chat-top-nav {
+    margin-top: -35px;
+  }
+
+  .single-chat-body {
+    height: 380px;
+    overflow-y: scroll;
+  }
 
 }
 
 
 /* Mobile Medium  --------------------------------------------------------- */
 @media screen and (min-width: 321px) and (max-width: 375px) {
+  .chat-container {
+    background-color: white;
+    width: 100%;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    height: auto;
 
+  }
+
+  .chat-index-top-navigation {
+    margin-top: -35px;
+  }
+
+  /* ----------------------------- SINGLE CHAT ------------------------------- */
+
+  .single-chat-top-nav {
+    margin-top: -35px;
+  }
+
+  .single-chat-body {
+    height: 380px;
+    overflow-y: scroll;
+  }
 }
 
 
 /* Mobile Large - --------------------------------------------------------- */
 @media screen and (min-width: 376px) and (max-width: 425px) {
+  .chat-container {
+    background-color: white;
+    width: 100%;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    height: auto;
 
+  }
+
+  .chat-index-top-navigation {
+    margin-top: -35px;
+  }
+
+  /* ----------------------------- SINGLE CHAT ------------------------------- */
+
+  .single-chat-top-nav {
+    margin-top: -35px;
+  }
+
+  .single-chat-body {
+    height: 380px;
+    overflow-y: scroll;
+  }
 }
 
 
 /* Tablet - --------------------------------------------------------------- */
 @media screen and (min-width: 426px) and (max-width: 768px) {
+  .chat-container {
+    background-color: white;
+    width: 100%;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    height: auto;
 
+  }
+
+  .chat-index-top-navigation {
+    margin-top: -35px;
+  }
+
+  /* ----------------------------- SINGLE CHAT ------------------------------- */
+
+  .single-chat-top-nav {
+    margin-top: -35px;
+  }
+
+  .single-chat-body {
+    height: 380px;
+    overflow-y: scroll;
+  }
 }
 
 

@@ -34,11 +34,11 @@ Instagram is a huge application to clone, it is not just some basic CRUD applica
 - [x] Public Profile
 - [x] Private Profile
 ---
-- [ ] Chat
-- [ ] Search
+- [x] Chat
+- [x] Search
 ---
-- [ ] Home
 - [ ] explore
+- [ ] Home
 ---
 - Start using frontend framework: probably react (module the elements)
 ---

@@ -1,7 +1,7 @@
 Plan (finish these apps frontend):
 
 - [x] Search
-- [ ] Chat
+- [x] Chat
 
 --------------
 
@@ -19,7 +19,7 @@ Plan (finish these apps frontend):
 - [x] chat's index page
 - [x] new chat
 - [x] single chat page
-- [ ] Responsive
+- [x] Responsive
 
 #########
 
