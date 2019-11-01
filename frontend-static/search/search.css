@@ -18,6 +18,25 @@
   margin-bottom: 25px;
 }
 
+.search-navigation-links {
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+
+.search-navigation-links a {
+  text-decoration: none;
+  color: white;
+  background-color: #2C3135;
+  padding: 3px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0px 5px;
+}
+
+.search-navigation-links a:hover {
+ background-color: black;
+}
+
 .search-bar form {
 
 }
@@ -29,10 +48,18 @@
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   background-color: #F4F6F6;
+  border-right: 0px;
 }
 
 .search-bar form button {
-
+  padding: 10px 20px;
+  font-size: 18px;
+  border: 1px solid #EAEDED;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #F4F6F6;
+  margin-left: -4px;
+  border-left: 0px;
 }
 
 .searched-accounts {
@@ -91,4 +118,167 @@
 
 .searched-account-cell form input:hover {
   cursor: pointer;
+}
+
+
+/* --------------------------- HASHTAG SEARCH ----------------------- */
+
+.hashtag-search-container {
+  background-color: transparent;
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+  padding: 30px;
+
+
+}
+
+.hashtag-search-bar {
+  background-color: transparent;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.hashtag-search-bar form {
+
+}
+
+.hashtag-search-bar form input {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: 1px solid #EAEDED;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: white;
+  border-right: 0px;
+}
+
+.hashtag-search-bar form button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: 1px solid #EAEDED;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: white;
+  margin-left: -4px;
+  border-left: 0px;
+}
+
+.hashtag-search-banner {
+  background-color: transparent;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.hashtag-search-banner h2 {
+  font-size: 35px;
+}
+
+.search-grid-view {
+  height: auto;
+  width: 100%;
+  padding: 0px;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.search-grid-view-post-cell {
+  background-color: black;
+  height: 260px;
+  width: 260px;
+  display: inline-block;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 30px;
+  vertical-align: top;
+
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../../branding/profile_photo.jpg");
+}
+
+
+.search-post-cell-link-container {
+  height: 100%;
+  width: 100%;
+  color: transparent;
+}
+
+.search-post-cell-link-container:hover {
+  transition: 0s !important;
+  background-color: black;
+  opacity: 0.5;
+  color: white;
+}
+
+.search-post-cell-link-container span {
+  margin-top: 120px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 18px;
+  transition: 0s !important;
+  opacity: 1 !important;
+}
+
+.search-post-cell-link-container span p {
+  display: inline;
+  transition: 0s !important;
+  display: block;
+  color: white;
+}
+
+
+/* --------------------------- LOCATION SEARCH ----------------------- */
+
+
+
+
+/* Mobile Small  --------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+
+}
+
+
+/* Mobile Medium  --------------------------------------------------------- */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+
+}
+
+
+/* Mobile Large - --------------------------------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+
+}
+
+
+/* Tablet - --------------------------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+}
+
+
+/* Laptop ------------------------------------------------------------------ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* nothing for now */
+}
+
+
+/* Laptop Large -------------------------------------------------------------*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* nothing for now */
+}
+
+
+/* 4K Large Desktop ------------------------------------------------------- */
+@media screen and (min-width: 1441px) {
+
 }
