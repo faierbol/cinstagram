@@ -18,7 +18,7 @@ Plan (finish these apps frontend):
 
 - [x] chat's index page
 - [x] new chat
-- [ ] single chat page
+- [x] single chat page
 - [ ] Responsive
 
 #########
