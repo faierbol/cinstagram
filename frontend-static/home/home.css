@@ -1,25 +1,104 @@
 .home-container {
-  background-color: white;
-  width: 78%;
+  background-color: transparent;
+  width: 90%;
   margin: 0 auto;
   height: auto;
   padding: 30px;
 }
 
 .home-post-feed {
-  background-color: orange;
+  background-color: transparent;
   width: 68%;
-  height: 100px;
+  margin-right: 10px;
+  height: 120vh;
   display: inline-block;
   vertical-align: top;
+  overflow-y: scroll;
 }
 
 .home-post-cell {
+  border: 1px solid #EAEDED;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  border-radius: 4px;
+  background-color: white;
+
+  /* Box shadow neccesities */
+  border-bottom: 0 none;
+  box-shadow: 0px 7px 25px -20px rgba(0,0,0,0.75);
+}
+
+.post-cell-top-part {
+
+}
+
+.post-cell-top-part a {
+  text-decoration: none;
+  color: black;
+}
+
+.post-cell-top-part a img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+.post-cell-top-part a h3 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.post-cell-picture-part {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  margin-top: 10px;
+}
+
+.cell-picture {
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../../branding/profile_photo.jpg");
+  background-size: cover;
+}
+
+.post-cell-options-part {
+  margin-top: 10px;
+}
+
+.post-cell-options-part form {
+  display: inline-block;
+}
+
+.post-cell-options-part form button {
+  font-size: 30px;
+  background-color: white;
+  border: 0px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.post-cell-options-part form button:hover {
+  cursor: pointer;
+}
+
+.post-cell-comments-part {
+
+}
+
+.post-cell-add-comment-form-part {
 
 }
 
 .home-right-side-nav {
-  background-color: white;
+  background-color: transparent;
   width: 30%;
   height: 100px;
   display: inline-block;
@@ -27,7 +106,7 @@
 }
 
 .home-profile-box {
-  border: 1px solid black;
+  border: 1px solid transparent;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -63,19 +142,170 @@
 
 
 .home-alert-box {
+  border: 1px solid #EAEDED;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  border-radius: 4px;
+  background-color: white;
 
+  /* Box shadow neccesities */
+  border-bottom: 0 none;
+  box-shadow: 0px 7px 25px -20px rgba(0,0,0,0.75);
+
+}
+
+.home-alert-box-header {
+  border-bottom: 1px solid #EAEDED;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.home-alert-box-header h2 {
+  font-size: 17px;
+  padding-bottom: 10px;
+  color: grey;
+  margin-left: 5px;
+}
+
+.home-alert-box-header h2 span {
+  margin-right: 5px;
+}
+
+.home-alert-box-scroll-part {
+  background-color: white;
+  height: 250px;
+  overflow-y: scroll;
+}
+
+.alert-cell {
+  margin-bottom: 25px;
+}
+
+.alert-cell a {
+  text-decoration: none;
+  color: black;
+}
+
+.alert-cell a img {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.alert-cell a h2 {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.alert-cell p {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.alert-cell p a {
+  color: #3498DB;
+}
+
+
+.alert-cell p span {
+  margin-left: 5px;
+  color: grey;
 }
 
 .home-suggestions-box {
+  border: 1px solid #EAEDED;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  margin-top: 20px;
+  border-radius: 4px;
+  background-color: white;
+
+  /* Box shadow neccesities */
+  border-bottom: 0 none;
+  box-shadow: 0px 7px 25px -20px rgba(0,0,0,0.75);
+}
+
+.home-suggestions-box-header {
+  border-bottom: 1px solid #EAEDED;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.home-suggestions-box-header h2 {
+  font-size: 17px;
+  padding-bottom: 10px;
+  color: grey;
+  margin-left: 5px;
+}
+
+.home-suggestions-box-cell-container {
+  background-color: white;
+  margin-top: -10px;
+}
+
+.suggestion-cell {
+  margin-top: 25px;
+}
+
+.suggestion-cell img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.suggestion-cell-info-part {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.suggestion-cell-info-part h2 {
+  font-size: 15px;
 
 }
 
+.suggestion-cell-info-part h3 {
+  font-size: 15px;
+  color: grey;
+}
 
+.suggestion-cell form {
+  display: inline-block;
+}
 
+.suggestion-cell form input {
+  color: #3498DB;
+  font-size: 16px;
+  background-color: transparent;
+  border: 0px;
+  vertical-align: middle;
+  margin-left: 25px;
+}
 
+.suggestion-cell form input:hover {
+  cursor: pointer;
+}
 
+.right-nav-footer {
+  text-align: center;
+  margin-top: 20px;
+}
 
-
+.right-nav-footer a {
+  text-decoration: none;
+  color: black;
+  font-weight: 900;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 
 
 
