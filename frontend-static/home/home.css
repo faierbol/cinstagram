@@ -23,6 +23,7 @@
   margin-top: 20px;
   border-radius: 4px;
   background-color: white;
+  margin-top: -10px;
 
   /* Box shadow neccesities */
   border-bottom: 0 none;
@@ -30,7 +31,7 @@
 }
 
 .post-cell-top-part {
-
+  margin-top: 10px;
 }
 
 .post-cell-top-part a {
@@ -87,9 +88,42 @@
 
 .post-cell-options-part form button:hover {
   cursor: pointer;
+  color: #3498DB;
+  transition: 0s !important;
 }
 
 .post-cell-comments-part {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.post-cell-comments-part h2 {
+  margin-bottom: 5px;
+}
+
+.post-cell-caption {
+  margin-bottom: 10px;
+}
+
+.post-cell-caption h3 {
+  display: inline;
+  font-weight: 900;
+}
+
+.post-cell-caption p {
+  display: inline;
+}
+
+.post-cell-comments {
+
+}
+
+.post-cell-comments p {
+
+}
+
+.post-cell-comments p span {
 
 }
 
