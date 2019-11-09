@@ -17,6 +17,8 @@
 }
 
 .home-post-cell {
+  width: 100%;
+  height: auto;
   border: 1px solid #EAEDED;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -24,6 +26,7 @@
   border-radius: 4px;
   background-color: white;
   margin-top: -10px;
+  margin-bottom: 50px;
 
   /* Box shadow neccesities */
   border-bottom: 0 none;
@@ -115,20 +118,78 @@
   display: inline;
 }
 
-.post-cell-comments {
-
+.post-cell-caption a {
+  text-decoration: none;
+  color: grey;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .post-cell-comments p {
-
+  font-size: 16px;
 }
 
 .post-cell-comments p span {
+  font-weight: 900;
+}
+
+.post-time {
+  color: grey;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.post-cell-add-comment-form-part form {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.post-cell-add-comment-form-part form input {
+  padding: 8px 50px;
+  border: 1px solid transparent;
+  border-top: 1px solid #EAEDED;
+  width: 62%;
+  font-size: 16px;
+  display: inline-block;
+  padding-top:15px;
+}
+
+.comment-form-submit-btn {
+  width: 18% !important;
+  padding: 10px 0px;
+  color: #3498DB;
+  font-size: 16px;
+  display: inline-block;
+  margin-left: -5px;
+  padding-top: 15px;
+}
+
+.comment-form-submit-btn:hover {
+  cursor: pointer;
+}
+
+.load-more-posts {
 
 }
 
-.post-cell-add-comment-form-part {
+.load-more-posts form {
+  text-align: center;
+  width: 100%;
+}
 
+.load-more-posts form button {
+  background-color: #3498DB;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid transparent;
+}
+
+.load-more-posts form button:hover {
+  cursor: pointer;
 }
 
 .home-right-side-nav {
