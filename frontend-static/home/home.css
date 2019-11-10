@@ -406,25 +406,377 @@
 
 /* Mobile Small  --------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 320px) {
-  .container {
+  .home-container {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    padding: 0px;
+  }
+
+  .home-post-feed {
+    width: 100%;
+    margin-right: 0px;
+    height: auto;
+    display: block;;
+    overflow-y: hidden;
+  }
+
+  .home-post-cell {
+    width: 100%;
+    height: auto;
+    border: 0px;
+  }
+
+  .post-cell-options-part form button {
+    font-size: 25px;
+  }
+
+  .post-cell-comments-part {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .post-cell-caption h3 {
+    font-size: 16px;
+  }
+
+  .post-cell-caption p {
+    font-size: 16px;
+  }
+
+  .post-cell-caption a {
+    font-size: 15px;
+  }
+
+  .post-cell-comments p {
+    font-size: 15px;
+  }
+
+  .post-time {
+    font-size: 14px;
+  }
+
+  .post-cell-add-comment-form-part form input {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+
+  .comment-form-submit-btn {
+    width: 15% !important;
+    font-size: 15px;
+    background-color: white;
+  }
+
+  .home-right-side-nav {
+    display: none;
+  }
+
+  .home-profile-box {
+    display: none;
+  }
+
+  .home-alert-box {
+    display: none;
+  }
+
+  .home-suggestions-box {
+    display: none;
+  }
+
+  .home-suggestions-box-cell-container {
+    background-color: white;
+    margin-top: -10px;
+  }
+
+  .suggestion-cell {
+    display: none;
+  }
+
+  .right-nav-footer {
+    display: none;
+  }
 }
 
 
 /* Mobile Medium  --------------------------------------------------------- */
 @media screen and (min-width: 321px) and (max-width: 375px) {
+  .home-container {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    padding: 0px;
+  }
 
+  .home-post-feed {
+    width: 100%;
+    margin-right: 0px;
+    height: auto;
+    display: block;;
+    overflow-y: hidden;
+  }
+
+  .home-post-cell {
+    width: 100%;
+    height: auto;
+    border: 0px;
+  }
+
+  .post-cell-options-part form button {
+    font-size: 25px;
+  }
+
+  .post-cell-comments-part {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .post-cell-caption h3 {
+    font-size: 16px;
+  }
+
+  .post-cell-caption p {
+    font-size: 16px;
+  }
+
+  .post-cell-caption a {
+    font-size: 15px;
+  }
+
+  .post-cell-comments p {
+    font-size: 15px;
+  }
+
+  .post-time {
+    font-size: 14px;
+  }
+
+  .post-cell-add-comment-form-part form input {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+
+  .comment-form-submit-btn {
+    width: 15% !important;
+    font-size: 15px;
+    background-color: white;
+  }
+
+  .home-right-side-nav {
+    display: none;
+  }
+
+  .home-profile-box {
+    display: none;
+  }
+
+  .home-alert-box {
+    display: none;
+  }
+
+  .home-suggestions-box {
+    display: none;
+  }
+
+  .home-suggestions-box-cell-container {
+    background-color: white;
+    margin-top: -10px;
+  }
+
+  .suggestion-cell {
+    display: none;
+  }
+
+  .right-nav-footer {
+    display: none;
+  }
 }
 
 
 /* Mobile Large - --------------------------------------------------------- */
 @media screen and (min-width: 376px) and (max-width: 425px) {
+  .home-container {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    padding: 0px;
+  }
 
+  .home-post-feed {
+    width: 100%;
+    margin-right: 0px;
+    height: auto;
+    display: block;;
+    overflow-y: hidden;
+  }
+
+  .home-post-cell {
+    width: 100%;
+    height: auto;
+    border: 0px;
+  }
+
+  .post-cell-options-part form button {
+    font-size: 25px;
+  }
+
+  .post-cell-comments-part {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .post-cell-caption h3 {
+    font-size: 16px;
+  }
+
+  .post-cell-caption p {
+    font-size: 16px;
+  }
+
+  .post-cell-caption a {
+    font-size: 15px;
+  }
+
+  .post-cell-comments p {
+    font-size: 15px;
+  }
+
+  .post-time {
+    font-size: 14px;
+  }
+
+  .post-cell-add-comment-form-part form input {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+
+  .comment-form-submit-btn {
+    width: 15% !important;
+    font-size: 15px;
+    background-color: white;
+  }
+
+  .home-right-side-nav {
+    display: none;
+  }
+
+  .home-profile-box {
+    display: none;
+  }
+
+  .home-alert-box {
+    display: none;
+  }
+
+  .home-suggestions-box {
+    display: none;
+  }
+
+  .home-suggestions-box-cell-container {
+    background-color: white;
+    margin-top: -10px;
+  }
+
+  .suggestion-cell {
+    display: none;
+  }
+
+  .right-nav-footer {
+    display: none;
+  }
 }
 
 
 /* Tablet - --------------------------------------------------------------- */
 @media screen and (min-width: 426px) and (max-width: 768px) {
+  .home-container {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    padding: 0px;
+  }
 
+  .home-post-feed {
+    width: 100%;
+    margin-right: 0px;
+    height: auto;
+    display: block;;
+    overflow-y: hidden;
+  }
+
+  .home-post-cell {
+    width: 100%;
+    height: auto;
+    border: 0px;
+  }
+
+  .post-cell-options-part form button {
+    font-size: 25px;
+  }
+
+  .post-cell-comments-part {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .post-cell-caption h3 {
+    font-size: 16px;
+  }
+
+  .post-cell-caption p {
+    font-size: 16px;
+  }
+
+  .post-cell-caption a {
+    font-size: 15px;
+  }
+
+  .post-cell-comments p {
+    font-size: 15px;
+  }
+
+  .post-time {
+    font-size: 14px;
+  }
+
+  .post-cell-add-comment-form-part form input {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+
+  .comment-form-submit-btn {
+    width: 15% !important;
+    font-size: 15px;
+    background-color: white;
+  }
+
+  .home-right-side-nav {
+    display: none;
+  }
+
+  .home-profile-box {
+    display: none;
+  }
+
+  .home-alert-box {
+    display: none;
+  }
+
+  .home-suggestions-box {
+    display: none;
+  }
+
+  .home-suggestions-box-cell-container {
+    background-color: white;
+    margin-top: -10px;
+  }
+
+  .suggestion-cell {
+    display: none;
+  }
+
+  .right-nav-footer {
+    display: none;
+  }
 }
 
 

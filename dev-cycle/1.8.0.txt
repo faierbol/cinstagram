@@ -15,8 +15,8 @@ Plan (finish these apps frontend):
 
 # Home
 
-- [ ] Home Page
-- [ ] responsive
+- [x] Home Page
+- [x] responsive
 
 
 #########
