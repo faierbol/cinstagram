@@ -35,6 +35,7 @@ migrate = Migrate(app, db)
 # Url blueprint imports
 from .programmer_panel.views import programmer_panel
 from .authentication.views import authentication
+from .help_centre.views import help_centre
 
 
 # Programmer Panel
@@ -52,6 +53,13 @@ app.register_blueprint(programmer_panel)
 # These blueprints contains the user authentication system for the end users
 # of the site such as the "average joe" and not admin, top tier user ... etc.
 app.register_blueprint(authentication)
+
+
+# Help Centre
+# -----------------
+# This is the app where the staff (admin) of the company updates the certain
+# information regarding the usage of the site, what are new or how to use them
+app.register_blueprint(help_centre)
 
 
 @app.route("/")

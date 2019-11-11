@@ -18,7 +18,7 @@ def authentication_signup():
     session.pop('programmer_logged_in', None)
     # add admin session removals ...
 
-    # Signup Form Processing 
+    # Signup Form Processing
 
 
     data = {

@@ -8,12 +8,12 @@
   <meta charset="utf-8" />
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="ceddit, reddit, reddit-clone, cloning, reddit, python" />
-  <meta name="description" content="Reddit clone built with flask python and nginx" />
+  <meta name="keywords" content="cinstagram, instagram, instagram-clone, cloning, instagram, python, flask, nginx" />
+  <meta name="description" content="Instagram clone built with flask python and nginx" />
   <meta name="author" content="demir antay, Demir Antay, @demirantay" />
 
   <!-- FAVICON -->
-  <link rel="icon" href="{{ url_for('static', filename='branding/favicon.png') }}"  />
+  <link rel="favicon" href="{{ url_for('static', filename='branding/favicon.png') }}" />
 
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -24,21 +24,71 @@
   <!-- FONT AWSOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- MY CSS LINKS -->
+  <!-- BASE CSS LINKS -->
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/top-nav.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/content.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/footer.css') }}" />
 
-  <!-- specific css links -->
-  {% block css_links %}
+  <!-- SPECIFIC CSS LINKS -->
+  <link rel="stylesheet" type="text/css" href="./help_centre.css" />
+
+  {% block specific_css_links %}
 
   {% endblock %}
 
 </head>
 
-  <body>
+<body>
+  <div class="container">
+
+    <!-- TOP NAV MENU -->
+    <div class="top-nav">
+      <!-- logo -->
+      <a href=""><img class="top-nav-logo" src="../../branding/cinstagram_logo_text.png" alt="logo" /></a>
+
+      <!-- search form -->
+      <form class="top-nav-search-form">
+        <input type="text" placeholder="Search" />
+        <button class="top-nav-search-submit-btn" type="submit"><span class="fa fa-search"></span></button>
+      </form>
+
+      <!-- top navigation -->
+      <div class="top-nav-navigation">
+        <a href=""><span class="fa fa-home"></span></a>
+        <a href=""><span class="fa fa-compass"></span></a>
+        <a href=""><span class="fa fa-plus-square"></span></a>
+        <a href=""><img class="top-nav-profile-photo" src="../../branding/profile_photo.jpg" alt="profile_photo"/></a>
+      </div>
+    </div>
+
+
+    <!-- CONTENT -->
+    <div class="content-wrapper">
+
+    <!-- ################## CONTENT GOES HERE ######################### -->
 
     {% block content %}
 
     {% endblock %}
 
-  </body>
+
+    <!-- ################## CONTENT GOES HERE ######################### -->
+
+    </div><!-- e/main card -->
+
+
+    <!-- Footer -->
+    <div class="footer">
+      <a href="">ABOUT US</a>
+      <a href="">HELP</a>
+      <a href="">API</a>
+      <a href="">JOBS</a>
+      <a href="">LEGAL</a>
+    </div>
+  </div><!-- e/container-->
+
+
+</body>
+
 </html>
