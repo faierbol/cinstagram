@@ -1,28 +1,19 @@
 Discuss & Design
 ----------
 
-Help Centre app. This app is basically a big CRUD app that is updated by the
-admin (staff) users to give out information to the users. This will be the
-first version of the app do not try to perfect it there will be a time for that
-too.
-
+Move the static templates to the main application
 
 Plan
 ----------
 
-- [x] Move the htmls statics
-- [x] move the css statics
+- [ ] create views for all the pages
+- [ ] create blueprints and link them to the app.py
+- [ ] move the css statics
+- [ ] Move the htmls statics
 - [ ] fix links to flask way (imgs ..etc.)
+- [ ] link all of the static apps together
 
-- [ ] main page
-- [ ] post page
-- [ ] topic page
-- [ ] add these to the temporary control panel
-
-- [ ] Test main page
-- [ ] test post page
-- [ ] test topic page
-
-- [ ] Document main page
-- [ ] Document post page
-- [ ] document topic page
+- [ ] create a detailed database schema of all appliactions -- connections
+      one-to-many's m2m's all of that shit
+- [ ] write the models from the db schema dont worry you will edit them
+      later on

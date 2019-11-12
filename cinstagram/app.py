@@ -63,5 +63,19 @@ app.register_blueprint(help_centre)
 
 
 @app.route("/")
-def index():
-    return "index page"
+def temporary_control_panel():
+    '''
+    This view will be removed once I am done with the first version of the
+    app which can support itself without any crutches
+    '''
+
+    # HELP CENTRE
+    # -------------
+
+    # ABOUT APP
+    # -------------
+
+    data = {
+
+    }
+    return render_template("temp_control_panel.html", data=data)
