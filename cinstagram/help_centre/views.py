@@ -20,3 +20,17 @@ def help_centre_index():
 
     }
     return render_template("help_centre/main_page.html", data=data)
+
+
+@help_centre.route("/help_centre/topic/using_instagram", methods=['POST', 'GET'])
+def help_centre_using_instagram():
+    '''
+
+    '''
+
+    # Deleting any sessions regarding programmer user and normal users
+
+    data = {
+
+    }
+    return render_template("help_centre/topic_page.html", data=data)

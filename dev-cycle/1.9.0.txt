@@ -10,6 +10,10 @@ too.
 Plan
 ----------
 
+- [x] Move the htmls statics
+- [x] move the css statics
+- [ ] fix links to flask way (imgs ..etc.)
+
 - [ ] main page
 - [ ] post page
 - [ ] topic page

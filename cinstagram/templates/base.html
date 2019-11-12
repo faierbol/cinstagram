@@ -13,7 +13,7 @@
   <meta name="author" content="demir antay, Demir Antay, @demirantay" />
 
   <!-- FAVICON -->
-  <link rel="favicon" href="{{ url_for('static', filename='branding/favicon.png') }}" />
+  <link rel="icon" href="{{ url_for('static', filename='branding/favicon.png') }}" />
 
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -31,8 +31,6 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/footer.css') }}" />
 
   <!-- SPECIFIC CSS LINKS -->
-  <link rel="stylesheet" type="text/css" href="./help_centre.css" />
-
   {% block specific_css_links %}
 
   {% endblock %}
@@ -45,7 +43,7 @@
     <!-- TOP NAV MENU -->
     <div class="top-nav">
       <!-- logo -->
-      <a href=""><img class="top-nav-logo" src="../../branding/cinstagram_logo_text.png" alt="logo" /></a>
+      <a href=""><img class="top-nav-logo" src="{{ url_for('static', filename='branding/cinstagram_logo_text.png') }}" alt="logo" /></a>
 
       <!-- search form -->
       <form class="top-nav-search-form">
@@ -58,7 +56,7 @@
         <a href=""><span class="fa fa-home"></span></a>
         <a href=""><span class="fa fa-compass"></span></a>
         <a href=""><span class="fa fa-plus-square"></span></a>
-        <a href=""><img class="top-nav-profile-photo" src="../../branding/profile_photo.jpg" alt="profile_photo"/></a>
+        <a href=""><img class="top-nav-profile-photo" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" alt="profile_photo"/></a>
       </div>
     </div>
 
