@@ -10,6 +10,8 @@ too.
 Plan
 ----------
 
+- [ ] create the algorithm for the mechanisms of the site
+
 - [ ] main page
 - [ ] post page
 - [ ] topic page

@@ -34,3 +34,6 @@ def help_centre_using_instagram():
 
     }
     return render_template("help_centre/topic_page.html", data=data)
+
+
+# HELP CENTRE POST VIEW WILL BE ADDED

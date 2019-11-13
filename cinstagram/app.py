@@ -34,8 +34,18 @@ migrate = Migrate(app, db)
 
 # Url blueprint imports
 from .programmer_panel.views import programmer_panel
-from .authentication.views import authentication
+# admin panel
 from .help_centre.views import help_centre
+# about
+# api web
+from .authentication.views import authentication
+# profile Settings
+# photo video upload
+# profile
+# chat
+# home
+# search indexes
+# explore
 
 
 # Programmer Panel
@@ -48,11 +58,8 @@ from .help_centre.views import help_centre
 app.register_blueprint(programmer_panel)
 
 
-# Authentication
-# ----------------
-# These blueprints contains the user authentication system for the end users
-# of the site such as the "average joe" and not admin, top tier user ... etc.
-app.register_blueprint(authentication)
+# Admin Panel
+# -----------------
 
 
 # Help Centre
@@ -60,6 +67,43 @@ app.register_blueprint(authentication)
 # This is the app where the staff (admin) of the company updates the certain
 # information regarding the usage of the site, what are new or how to use them
 app.register_blueprint(help_centre)
+
+
+# About
+# -----------------
+
+
+# API Website
+# -----------------
+
+
+# Authentication
+# ----------------
+# These blueprints contains the user authentication system for the end users
+# of the site such as the "average joe" and not admin, top tier user ... etc.
+app.register_blueprint(authentication)
+
+
+# Profile Settings
+# ----------------
+
+# Photo & Video Upload
+# ----------------
+
+# Profile
+# ----------------
+
+# Chat
+# ----------------
+
+# Home
+# ----------------
+
+# Search Indexes
+# ----------------
+
+# Explore
+# ----------------
 
 
 @app.route("/")
@@ -74,6 +118,30 @@ def temporary_control_panel():
 
     # ABOUT APP
     # -------------
+
+    # Authentication
+    # ---------------
+
+    # Profile Settings
+    # ----------------
+
+    # Photo & Video Upload
+    # ----------------
+
+    # Profile
+    # ----------------
+
+    # Chat
+    # ----------------
+
+    # Home
+    # ----------------
+
+    # Search Indexes
+    # ----------------
+
+    # Explore
+    # ----------------
 
     data = {
 

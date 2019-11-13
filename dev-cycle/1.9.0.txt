@@ -6,6 +6,8 @@ Move the static templates to the main application
 Plan
 ----------
 
+- [x] create dirs for all of the apps
+- [ ] craete neccessay files that will be moved to static and template later on
 - [ ] create views for all the pages
 - [ ] create blueprints and link them to the app.py
 - [ ] move the css statics
@@ -17,3 +19,18 @@ Plan
       one-to-many's m2m's all of that shit
 - [ ] write the models from the db schema dont worry you will edit them
       later on
+
+
+programmer_panel
+admin panel
+help_centre
+about
+api web
+authentication
+profile Settings
+photo video upload
+profile
+chat
+home
+search indexes
+explore
