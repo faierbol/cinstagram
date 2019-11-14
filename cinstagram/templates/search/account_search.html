@@ -5,5 +5,61 @@
 {% endblock %}
 
 {% block content %}
-<h1>account search</h1>
+<div class="search-container">
+
+  <!-- search bar -->
+  <div class="search-bar">
+
+    <div class="search-navigation-links">
+      <a href="">accounts</a>
+      <a href="">hashtags</a>
+      <a href="">locations</a>
+    </div>
+
+    <form>
+      <input type="text" placeholder="Account Search" />
+      <button type="submit"><span class="fa fa-search"></span></button>
+    </form>
+  </div>
+
+  <!-- accounts list -->
+  <div class="searched-accounts">
+    <div class="searched-account-cell">
+      <div class="searched-account-cell-profile-photo"></div>
+      <h3>John Smith</h3>
+      <h4>@username</h4>
+      <form>
+        <input type="submit" value="follow" />
+      </form>
+    </div><!-- e/cell -->
+
+    <div class="searched-account-cell">
+      <div class="searched-account-cell-profile-photo"></div>
+      <h3>John Smith</h3>
+      <h4>@username</h4>
+      <form>
+        <input type="submit" value="follow" />
+      </form>
+    </div><!-- e/cell -->
+
+    <div class="searched-account-cell">
+      <div class="searched-account-cell-profile-photo"></div>
+      <h3>John Smith</h3>
+      <h4>@username</h4>
+      <form>
+        <input type="submit" value="follow" />
+      </form>
+    </div><!-- e/cell -->
+
+    <div class="searched-account-cell">
+      <div class="searched-account-cell-profile-photo"></div>
+      <h3>John Smith</h3>
+      <h4>@username</h4>
+      <form>
+        <input type="submit" value="follow" />
+      </form>
+    </div><!-- e/cell -->
+  </div>
+
+</div>
 {% endblock %}

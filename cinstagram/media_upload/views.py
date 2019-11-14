@@ -1,4 +1,5 @@
-from flask import Flask, request, render_template, redirect, session, url_for, Blueprint
+from flask import Flask, request, render_template, redirect, session, url_for
+from flask import Blueprint
 
 from ..app import db
 

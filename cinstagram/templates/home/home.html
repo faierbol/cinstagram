@@ -5,5 +5,207 @@
 {% endblock %}
 
 {% block content %}
-<h1>home</h1>
+<div class="home-container">
+
+  <!-- left side: feed -->
+  <div class="home-post-feed">
+      <!-- Post cell -->
+      <div class="home-post-cell">
+        <div class="post-cell-top-part">
+          <a href="">
+            <img alt="profilePhoto" src="../../branding/profile_photo.jpg" />
+            <h3>username</h3>
+          </a>
+        </div>
+
+        <div class="post-cell-picture-part">
+          <div class="cell-picture"></div>
+        </div>
+
+        <div class="post-cell-options-part">
+          <form>
+            <button type="submit"><span class="fa fa-heart"></span></button>
+          </form>
+
+          <form>
+            <button type="submit"><span class="fa fa-bookmark"></span></button>
+          </form>
+
+          <form>
+            <button type="submit"><span class="fa fa-share"></span></button>
+          </form>
+        </div>
+
+        <div class="post-cell-comments-part">
+          <h2>125 likes</h2>
+          <div class="post-cell-caption">
+            <h3>username</h3>
+            <p>Photo by @amivitale | Remote regions of the Zambezi Delta area of Moza, </p>
+            <br />
+            <a href="">View all 252 comments</a>
+          </div>
+          <div class="post-cell-comments">
+            <!-- only 2 comments after that read mode ...link -->
+            <p><span>@gigee9</span> a feel good story here</p>
+            <p><span>@helloa</span> this is a very good post mate cheers!</p>
+            <span class="post-time">Nov, 9, 2019</span>
+          </div>
+        </div>
+
+        <div class="post-cell-add-comment-form-part">
+          <form>
+            <input type="text" placeholder="Add a comment..." />
+            <input class="comment-form-submit-btn" type="submit" value="Post" />
+          </form>
+        </div>
+      </div><!-- e/ post cell -->
+
+      <!-- Post cell -->
+      <div class="home-post-cell">
+        <div class="post-cell-top-part">
+          <a href="">
+            <img alt="profilePhoto" src="../../branding/profile_photo.jpg" />
+            <h3>username</h3>
+          </a>
+        </div>
+
+        <div class="post-cell-picture-part">
+          <div class="cell-picture"></div>
+        </div>
+
+        <div class="post-cell-options-part">
+          <form>
+            <button type="submit"><span class="fa fa-heart"></span></button>
+          </form>
+
+          <form>
+            <button type="submit"><span class="fa fa-bookmark"></span></button>
+          </form>
+
+          <form>
+            <button type="submit"><span class="fa fa-share"></span></button>
+          </form>
+        </div>
+
+        <div class="post-cell-comments-part">
+          <h2>125 likes</h2>
+          <div class="post-cell-caption">
+            <h3>username</h3>
+            <p>Photo by @amivitale | Remote regions of the Zambezi Delta area of Moza, </p>
+            <br />
+            <a href="">View all 252 comments</a>
+          </div>
+          <div class="post-cell-comments">
+            <!-- only 2 comments after that read mode ...link -->
+            <p><span>@gigee9</span> a feel good story here</p>
+            <p><span>@helloa</span> this is a very good post mate cheers!</p>
+            <span class="post-time">Nov, 9, 2019</span>
+          </div>
+        </div>
+
+        <div class="post-cell-add-comment-form-part">
+          <form>
+            <input type="text" placeholder="Add a comment..." />
+            <input class="comment-form-submit-btn" type="submit" value="Post" />
+          </form>
+        </div>
+      </div><!-- e/ post cell -->
+
+
+      <!-- more posts button -->
+      <div class="load-more-posts">
+        <form>
+          <button type="submit"><span class="fa fa-plus"></span></button>
+        </form>
+      </div>
+
+
+  </div> <!-- e/home post feed -->
+
+  <!-- right side: navigation -->
+  <div class="home-right-side-nav">
+
+    <!-- Profile Info -->
+    <div class="home-profile-box">
+      <a href="">
+        <img alt="profilePhoto" src="../../branding/profile_photo.jpg"/>
+        <div class="home-profile-box-info">
+          <h3>username</h3>
+          <h4>John Smith</h4>
+        </div>
+      </a>
+    </div>
+
+    <!-- Alert Box -->
+    <div class="home-alert-box">
+      <div class="home-alert-box-header">
+          <h2><span class="fa fa-bell"></span> ALERTS</h2>
+      </div>
+      <div class="home-alert-box-scroll-part">
+
+          <div class="alert-cell">
+            <a href="">
+              <img alt="profile-photo" src="../../branding/profile_photo.jpg" />
+              <h2>username</h2>
+            </a>
+            <p>liked your <a href="">post</a> <span>20d</span></p>
+          </div><!-- e/ alert cell -->
+
+      </div>
+    </div>
+
+    <!-- Suggestions box -->
+    <div class="home-suggestions-box">
+      <div class="home-suggestions-box-header">
+        <h2>SUGGESTIONS</h2>
+      </div>
+      <div class="home-suggestions-box-cell-container">
+
+        <div class="suggestion-cell">
+          <img alt="profile-photo" src="../../branding/profile_photo.jpg" />
+          <div class="suggestion-cell-info-part">
+            <h2>username</h2>
+            <h3>Recommended for You</h3>
+          </div>
+          <form>
+            <input type="submit" value="Follow"/>
+          </form>
+        </div><!-- e/ suggestion cell -->
+
+        <div class="suggestion-cell">
+          <img alt="profile-photo" src="../../branding/profile_photo.jpg" />
+          <div class="suggestion-cell-info-part">
+            <h2>username</h2>
+            <h3>Recommended for You</h3>
+          </div>
+          <form>
+            <input type="submit" value="Follow"/>
+          </form>
+        </div><!-- e/ suggestion cell -->
+
+        <div class="suggestion-cell">
+          <img alt="profile-photo" src="../../branding/profile_photo.jpg" />
+          <div class="suggestion-cell-info-part">
+            <h2>username</h2>
+            <h3>Recommended for You</h3>
+          </div>
+          <form>
+            <input type="submit" value="Follow"/>
+          </form>
+        </div><!-- e/ suggestion cell -->
+
+      </div>
+    </div><!-- e/suggestions box -->
+
+    <div class="right-nav-footer">
+      <a href="">ABOUT US</a>
+      <a href="">HELP</a>
+      <a href="">API</a>
+      <a href="">JOBS</a>
+      <a href="">LEGAL</a>
+    </div>
+
+  </div><!-- e/home right side -->
+
+</div>
 {% endblock %}

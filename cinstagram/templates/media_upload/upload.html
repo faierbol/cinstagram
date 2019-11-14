@@ -5,5 +5,35 @@
 {% endblock %}
 
 {% block content %}
-<h1>upload</h1>
+<div class="upload-content-card">
+
+  <form class="upload-content-form">
+    <!-- + upload button -->
+    <input type="file" name="upload_file" id="upload_file" class="upload_file"  />
+    <label for="upload_file" class="upload-file-label"><span class="fa fa-plus"></span></label>
+    <br />
+    <br />
+
+    <!-- photo preview with filter slection -->
+    <div class="photo-preview"></div>
+
+    <div class="filters">
+      <div class="filtered-photo-preview"></div>
+      <div class="filtered-photo-preview"></div>
+      <div class="filtered-photo-preview"></div>
+      <div class="filtered-photo-preview"></div>
+    </div>
+
+    <!-- caption, tag, location info -->
+    <textarea placeholder="Write a caption ..."></textarea>
+    <input type="text" placeholder="Add a location" class="location_input" />
+
+    <!-- publish part -->
+    <div class="upload-form-footer">
+      <input type="submit" value="Publish" class="submit_post_button" />
+    </div>
+
+  </form>
+
+</div>
 {% endblock %}
