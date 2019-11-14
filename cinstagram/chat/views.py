@@ -31,4 +31,4 @@ def single_chat():
     # Deleting any sessions regarding top-tier type of users
 
     data = {}
-    return render_template("chat/signle_chat.html", data=data)
+    return render_template("chat/single_chat.html", data=data)

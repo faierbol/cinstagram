@@ -8,7 +8,7 @@ home = Blueprint("home", __name__)
 
 
 @home.route("/home", methods=["POST", "GET"])
-def home():
+def home_page():
     """ ...  """
     # Deleting any sessions regarding top-tier type of users
 

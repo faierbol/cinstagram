@@ -8,7 +8,7 @@ explore = Blueprint("explore", __name__)
 
 
 @explore.route("/explore", methods=["POST", "GET"])
-def explore():
+def explore_page():
     """ ...  """
     # Deleting any sessions regarding top-tier type of users
 

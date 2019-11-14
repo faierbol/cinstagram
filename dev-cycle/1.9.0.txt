@@ -9,7 +9,7 @@ Plan
 - [x] create dirs for all of the apps
 - [x] craete neccessay files that will be moved to static and template later on
 - [x] create views for all the pages
-- [ ] create blueprints and link them to the app.py
+- [x] create blueprints and link them to the app.py
 - [ ] move the css statics
 - [ ] Move the htmls statics
 - [ ] fix links to flask way (imgs ..etc.)
@@ -19,6 +19,8 @@ Plan
       one-to-many's m2m's all of that shit
 - [ ] write the models from the db schema dont worry you will edit them
       later on
+- [ ] create tests for the models
+- [ ] write the documentation for the new code
 
 
 programmer_panel

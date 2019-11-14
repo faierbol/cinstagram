@@ -8,7 +8,7 @@ media_upload = Blueprint("media_upload", __name__)
 
 
 @media_upload.route("/media_upload", methods=["POST", "GET"])
-def media_upload():
+def upload_page():
     """ ...  """
     # Deleting any sessions regarding top-tier type of users
 

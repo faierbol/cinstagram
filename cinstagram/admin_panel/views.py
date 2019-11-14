@@ -7,7 +7,7 @@ from ..app import db
 admin_panel = Blueprint("admin_panel", __name__)
 
 
-@admin_panel.route("admin_panel/dashboard", methods=["POST", "GET"])
+@admin_panel.route("/admin_panel/dashboard", methods=["POST", "GET"])
 def admin_panel_dashboard():
 
     return "This will be edited "

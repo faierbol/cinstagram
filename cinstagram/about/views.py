@@ -15,7 +15,7 @@ def about_landing_page():
     return render_template("about/about_index.html", data=data)
 
 
-@about.route("/job/postings", methods=["POST", "GET"])
+@about.route("/about/job/postings", methods=["POST", "GET"])
 def about_job_postings():
     """ ...  """
     # Deleting any sessions regarding top-tier type of users
