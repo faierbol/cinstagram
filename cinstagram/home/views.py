@@ -1,14 +1,16 @@
-from flask import Flask, request, render_template, redirect, session, \
-                  url_for, Blueprint
+from flask import Flask, request, render_template, redirect, session, url_for, Blueprint
 
 from ..app import db
 
 
 # Blue prints
-admin_panel = Blueprint("admin_panel", __name__)
+home = Blueprint("home", __name__)
 
 
-@admin_panel.route("admin_panel/dashboard", methods=['POST', 'GET'])
-def admin_panel_dashboard():
+@home.route("/home", methods=["POST", "GET"])
+def home():
+    """ ...  """
+    # Deleting any sessions regarding top-tier type of users
 
-    return "This will be edited "
+    data = {}
+    return render_template("home/home.html", data=data)

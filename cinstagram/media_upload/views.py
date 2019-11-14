@@ -1,14 +1,16 @@
-from flask import Flask, request, render_template, redirect, session, \
-                  url_for, Blueprint
+from flask import Flask, request, render_template, redirect, session, url_for, Blueprint
 
 from ..app import db
 
 
 # Blue prints
-admin_panel = Blueprint("admin_panel", __name__)
+media_upload = Blueprint("media_upload", __name__)
 
 
-@admin_panel.route("admin_panel/dashboard", methods=['POST', 'GET'])
-def admin_panel_dashboard():
+@media_upload.route("/media_upload", methods=["POST", "GET"])
+def media_upload():
+    """ ...  """
+    # Deleting any sessions regarding top-tier type of users
 
-    return "This will be edited "
+    data = {}
+    return render_template("media_upload/upload.html", data=data)

@@ -39,6 +39,7 @@ from .help_centre.views import help_centre
 # about
 # api web
 from .authentication.views import authentication
+
 # profile Settings
 # photo video upload
 # profile
@@ -108,10 +109,10 @@ app.register_blueprint(authentication)
 
 @app.route("/")
 def temporary_control_panel():
-    '''
+    """
     This view will be removed once I am done with the first version of the
     app which can support itself without any crutches
-    '''
+    """
 
     # HELP CENTRE
     # -------------
@@ -143,7 +144,5 @@ def temporary_control_panel():
     # Explore
     # ----------------
 
-    data = {
-
-    }
+    data = {}
     return render_template("temp_control_panel.html", data=data)

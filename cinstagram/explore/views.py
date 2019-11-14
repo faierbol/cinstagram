@@ -1,5 +1,4 @@
-from flask import Flask, request, render_template, redirect, session, \
-                  url_for, Blueprint
+from flask import Flask, request, render_template, redirect, session, url_for, Blueprint
 
 from ..app import db
 
@@ -8,9 +7,9 @@ from ..app import db
 explore = Blueprint("explore", __name__)
 
 
-@explore.route("/explore", methods=['POST', 'GET'])
+@explore.route("/explore", methods=["POST", "GET"])
 def explore():
-    ''' ...  '''
+    """ ...  """
     # Deleting any sessions regarding top-tier type of users
 
     data = {}

@@ -8,7 +8,7 @@ Plan
 
 - [x] create dirs for all of the apps
 - [x] craete neccessay files that will be moved to static and template later on
-- [ ] create views for all the pages
+- [x] create views for all the pages
 - [ ] create blueprints and link them to the app.py
 - [ ] move the css statics
 - [ ] Move the htmls statics
