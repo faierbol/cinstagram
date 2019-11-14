@@ -10,7 +10,7 @@ Plan
 - [x] craete neccessay files that will be moved to static and template later on
 - [x] create views for all the pages
 - [x] create blueprints and link them to the app.py
-- [ ] move the css statics
+- [x] move the css statics
 - [ ] Move the htmls statics
 - [ ] fix links to flask way (imgs ..etc.)
 - [ ] link all of the static apps together
