@@ -5,5 +5,55 @@
 {% endblock %}
 
 {% block content %}
-<h1>edit profile</h1>
+<div class="profile-settings-content-card">
+
+  <!-- left navigation part -->
+  <div class="profile-settings-content-card-left-part">
+    <ul>
+      <a href="">Edit Profile</a>
+      <a href="">Change Password</a>
+      <a href="">Email and SMS</a>
+      <a href="">Privacy and Security</a>
+    </ul>
+  </div>
+
+  <!-- right content part -->
+  <div class="profile-settings-content-card-right-part">
+
+    <!-- profile info form -->
+    <form class="profile-settings-info-form">
+      <label>Profile Photo</label>
+      <input type="file" />
+
+      <label>Name</label>
+      <input type="text" placeholder="Name" />
+
+      <label>Username</label>
+      <input type="text" placeholder="Username" />
+
+      <label>Website</label>
+      <input type="text" placeholder="Website" />
+
+      <label>Bio</label>
+      <textarea>Bio ...</textarea>
+
+      <br />
+      <label>Private Information</label>
+      <hr />
+      <br />
+
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Email" />
+
+      <label>Phone Number</label>
+      <input type="text" placeholder="Phone Number" />
+
+      <label>Gender</label>
+      <input type="text" placeholder="Gender" />
+
+      <input value="Submit" class="profile-info-form-submit-btn" type="submit" />
+    </form>
+  </div>
+
+</div><!-- e/main card -->
 {% endblock %}

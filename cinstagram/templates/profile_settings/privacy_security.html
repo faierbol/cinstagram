@@ -5,5 +5,41 @@
 {% endblock %}
 
 {% block content %}
-<h1>privacy security</h1>
+<div class="profile-settings-content-card">
+
+  <!-- left navigation part -->
+  <div class="profile-settings-content-card-left-part">
+    <ul>
+      <a href="">Edit Profile</a>
+      <a href="">Change Password</a>
+      <a href="">Email and SMS</a>
+      <a href="">Privacy and Security</a>
+    </ul>
+  </div>
+
+  <!-- right content part -->
+  <div class="profile-settings-content-card-right-part">
+
+    <!-- privacy and security form -->
+    <form class="profile-setings-security-form">
+      <h3>Account Privacy</h3>
+      <Br />
+
+      <input type="checkbox" value="private_account"/>
+      <b>Private Account</b><br />
+      <i>When your account is private, only people you approve can see your photos and videos on Instagram.</i>
+      <br>
+      <br />
+
+      <input type="checkbox"/>
+      <b>Turn Off Comments</b><br />
+      <i>Turn off the comment section on your photos. No one can post anything on the comment section of your photos.</i>
+      <br><br />
+
+
+      <input value="Submit" class="profile-sms-email-submit-btn" type="submit" />
+    </form>
+  </div>
+
+</div><!-- e/main card -->
 {% endblock %}

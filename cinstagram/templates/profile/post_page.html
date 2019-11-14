@@ -5,5 +5,84 @@
 {% endblock %}
 
 {% block content %}
-<h1>post page</h1>
+<div class="post-container">
+
+  <!-- left side -->
+  <div class="post-left-side">
+    <h1>h</h1>
+  </div>
+
+  <!-- right side -->
+  <div class="post-right-side">
+    <!-- post owner banner -->
+    <div class="post-owner-banner">
+      <a href=""><div class="post-owner-profile-photo"></div></a>
+      <a href=""><h3>username</h3></a>
+      <form>
+          <input type="submit" value="follow" />
+      </form>
+    </div>
+
+    <div class="comment-scroll-container">
+      <!-- caption banner -->
+      <div class="post-caption">
+        <a href=""><div class="caption-owner-profile-photo"></div></a>
+        <a href=""><h3>username</h3></a>
+        <p>On #ThisDayinHistory 1886, The Statue of Liberty is dedicated in New York Harbor by President Grover Cleveland. Originally known as “Liberty Enlightening the World,” the statue was proposed by the French historian Edouard de Laboulaye to commemorate the Franco-American alliance during the American Revolution.</p>
+      </div>
+
+      <!-- post comments -->
+      <div class="post-comments">
+
+        <div class="comment-cell">
+          <a href=""><div class="comment-owner-profile-photo"></div></a>
+          <a href=""><h3>username</h3></a>
+          <p>
+            The sad thing is today's Democrats want to Destroy.
+          </p>
+        </div><!-- e/comment cell -->
+
+        <div class="comment-cell">
+          <a href=""><div class="comment-owner-profile-photo"></div></a>
+          <a href=""><h3>username</h3></a>
+          <p>
+            The sad thing is today's Democrats want to Destroy.
+          </p>
+        </div><!-- e/comment cell -->
+
+        <div class="comment-cell">
+          <a href=""><div class="comment-owner-profile-photo"></div></a>
+          <a href=""><h3>username</h3></a>
+          <p>
+            The sad thing is today's Democrats want to Destroy.
+          </p>
+        </div><!-- e/comment cell -->
+
+
+      </div>
+    </div><!-- e/comment-scroll-container -->
+
+    <!-- like, comment, bookmark options -->
+    <div class="post-options">
+      <!-- like form -->
+      <form class="post-like-form">
+          <button type="submit"><span class="fa fa-heart"></span></button>
+      </form>
+
+      <!-- bookmark -->
+      <form class="post-bookmark-form">
+        <button type="submit"><span class="fa fa-bookmark"></span></button>
+      </form>
+
+      <!-- comment -->
+      <form class="post-comment-form">
+        <button type="submit"><span class="fa fa-comment"></span></button>
+        <input type="text"  placeholder="Comment ..."/>
+      </form>
+    </div>
+
+
+  </div><!-- e/post-right side -->
+
+</div><!-- post-container -->
 {% endblock %}
