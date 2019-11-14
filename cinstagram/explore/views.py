@@ -5,10 +5,13 @@ from ..app import db
 
 
 # Blue prints
-admin_panel = Blueprint("admin_panel", __name__)
+explore = Blueprint("explore", __name__)
 
 
-@admin_panel.route("admin_panel/dashboard", methods=['POST', 'GET'])
-def admin_panel_dashboard():
+@explore.route("/explore", methods=['POST', 'GET'])
+def explore():
+    ''' ...  '''
+    # Deleting any sessions regarding top-tier type of users
 
-    return "This will be edited "
+    data = {}
+    return render_template("explore/explore.html", data=data)

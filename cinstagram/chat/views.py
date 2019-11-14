@@ -5,10 +5,31 @@ from ..app import db
 
 
 # Blue prints
-admin_panel = Blueprint("admin_panel", __name__)
+chat = Blueprint("chat", __name__)
 
 
-@admin_panel.route("admin_panel/dashboard", methods=['POST', 'GET'])
-def admin_panel_dashboard():
+@chat.route("/chat", methods=['POST', 'GET'])
+def chat_index():
+    ''' ...  '''
+    # Deleting any sessions regarding top-tier type of users
 
-    return "This will be edited "
+    data = {}
+    return render_template("chat/index_page.html", data=data)
+
+
+@chat.route("/chat/new_chat", methods=['POST', 'GET'])
+def new_chat():
+    ''' ...  '''
+    # Deleting any sessions regarding top-tier type of users
+
+    data = {}
+    return render_template("chat/new_chat.html", data=data)
+
+
+@chat.route("/chat/singChatIdWillBeHere", methods=['POST', 'GET'])
+def single_chat():
+    ''' ...  '''
+    # Deleting any sessions regarding top-tier type of users
+
+    data = {}
+    return render_template("chat/signle_chat.html", data=data)
