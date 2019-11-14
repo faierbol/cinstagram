@@ -8,20 +8,19 @@ from ..app import db
 authentication = Blueprint('authentication', __name__)
 
 
-@authentication.route("/authentication/signup", methods=['POST', 'GET'])
-def authentication_signup():
-    '''
-        Signup system that is built just for the end-user's (e.g. customers)
-    '''
+@authentication.route("/auth/signup", methods=['POST', 'GET'])
+def auth_signup():
+    ''' ...  '''
     # Deleting any sessions regarding top-tier type of users
-    session.pop("programmer_username", None)
-    session.pop('programmer_logged_in', None)
-    # add admin session removals ...
 
-    # Signup Form Processing
-
-
-    data = {
-
-    }
+    data = {}
     return render_template("authentication/signup.html", data=data)
+
+
+@authentication.route("/auth/login", methods=['POST', 'GET'])
+def auth_login():
+    ''' ...  '''
+    # Deleting any sessions regarding top-tier type of users
+
+    data = {}
+    return render_template("authentication/login.html", data=data)
