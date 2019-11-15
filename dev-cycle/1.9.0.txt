@@ -21,18 +21,3 @@ Plan
       later on
 - [ ] create tests for the models
 - [ ] write the documentation for the new code
-
-
-programmer_panel
-admin panel
-help_centre
-about
-api web
-authentication
-profile Settings
-photo video upload
-profile
-chat
-home
-search indexes
-explore

@@ -24,10 +24,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- MY CSS LINKS -->
-  <link rel="stylesheet" type="text/css" href="./api_base.css" />
-  <link rel="stylesheet" type="text/css" href="./api_top_nav.css" />
-  <link rel="stylesheet" type="text/css" href="./api_content_card.css" />
-  <link rel="stylesheet" type="text/css" href="./api_footer.css" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/api_web/api_base.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/api_web/api_top_nav.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/api_web/api_content_card.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/api_web/api_footer.css') }}" />
 
 </head>
 
@@ -35,7 +35,7 @@
   <div class="api-container">
     <!-- TOP NAV MENU ###################################################### -->
     <div class="api-top-nav">
-      <a href=""><img class="api-top-nav-logo" src="../../branding/favicon.png" alt="logo" /></a>
+      <a href=""><img class="api-top-nav-logo" src="{{ url_for('static', filename='branding/favicon.png') }}" alt="logo" /></a>
       <!-- TOP NAV WILL BE EDITED ON MY DESIGN OF THE API -->
       <a href="" class="api-top-nav-username">Account Name</a>
     </div>
