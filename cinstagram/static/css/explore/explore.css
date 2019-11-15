@@ -52,7 +52,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("../../branding/profile_photo.jpg");
+  background-image: url("{{ url_for('static', filename='branding/profile_photo.jpg') }}");
 }
 
 .explore-post-cell-link-container {

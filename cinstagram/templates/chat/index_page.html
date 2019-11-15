@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block specific_css_links %}
-
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chat/chat.css') }}" />
 {% endblock %}
 
 {% block content %}
@@ -28,7 +28,7 @@
     <div class="chat-cell">
       <a href="">
         <div class="chat-cell-left-part">
-          <img alt="profile-photo" src='../../branding/profile_photo.jpg' />
+          <img alt="profile-photo" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" />
         </div>
         <div class="chat-cell-right-part">
           <h2>User Name</h2>
@@ -42,7 +42,7 @@
     <div class="chat-cell">
       <a href="">
         <div class="chat-cell-left-part">
-          <img alt="profile-photo" src='../../branding/profile_photo.jpg' />
+          <img alt="profile-photo" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" />
         </div>
         <div class="chat-cell-right-part">
           <h2>User Name</h2>
