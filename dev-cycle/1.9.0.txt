@@ -11,7 +11,7 @@ Plan
 - [x] create views for all the pages
 - [x] create blueprints and link them to the app.py
 - [x] move the css statics
-- [ ] Move the htmls statics
+- [x] Move the htmls statics
 - [ ] fix static and template links  (img ... etc. not linking them together)
 - [ ] link all of the static apps together
 
