@@ -13,7 +13,7 @@ Plan
 - [x] move the css statics
 - [x] Move the htmls statics
 - [ ] fix static and template links  (img ... etc. not linking them together)
-- [ ] link all of the static apps together
+- [ ] link all of templates with targeted viewss
 
 - [ ] create a detailed database schema of all appliactions -- connections
       one-to-many's m2m's all of that shit
