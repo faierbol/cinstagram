@@ -12,7 +12,7 @@ Plan
 - [x] create blueprints and link them to the app.py
 - [x] move the css statics
 - [x] Move the htmls statics
-- [ ] fix static and template links  (img ... etc. not linking them together)
+- [x] fix static and template links  (img ... etc. not linking them together)
 - [ ] link all of templates with targeted viewss
 
 - [ ] create a detailed database schema of all appliactions -- connections
