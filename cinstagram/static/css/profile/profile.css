@@ -1,4 +1,4 @@
-explore.profile-card {
+.profile-card {
   background-color: white;
   height: auto;
   width: 70%;
@@ -210,7 +210,6 @@ explore.profile-card {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("../../branding/profile_photo.jpg");
 }
 
 .post-right-side {
@@ -244,7 +243,6 @@ explore.profile-card {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("../../branding/profile_photo.jpg");
 }
 
 .post-owner-banner h3 {
@@ -302,7 +300,6 @@ explore.profile-card {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("../../branding/profile_photo.jpg");
 }
 
 .post-caption a {
@@ -337,7 +334,6 @@ explore.profile-card {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("../../branding/profile_photo.jpg");
 }
 
 .comment-cell {
@@ -470,7 +466,6 @@ explore.profile-card {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("../../branding/profile_photo.jpg");
 }
 
 .user-cell h3 {
@@ -838,7 +833,8 @@ explore.profile-card {
     width: 100%;
   }
 
-  .post-left-side {
+  .
+   {
     height: 280px;
     background-color: black;
     width: 100%;

@@ -67,6 +67,11 @@
   margin-left: 10px;
   margin-right: 10px;
   cursor: pointer;
+
+  background-image: url();
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .upload-content-form textarea {

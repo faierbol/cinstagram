@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block specific_css_links %}
-
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/profile/profile.css') }}" />
 {% endblock %}
 
 {% block content %}
@@ -11,7 +11,7 @@
   <div class="profile-card-information">
 
       <div class="profile-card-information-left-part">
-        <img src="../../branding/profile_photo.jpg" alt="profile-image" />
+        <img src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" alt="profile-image" />
       </div><!--e/left part -->
 
       <div class="profile-card-information-right-part">
@@ -49,7 +49,7 @@
   <!-- grid view -->
   <div class="profile-grid-view">
     <!-- after three posts always break -->
-    <div class="grid-view-post-cell">
+    <div class="grid-view-post-cell" style="background-image: url('{{ url_for('static', filename='branding/profile_photo.jpg') }}');">
       <a href="">
       <div class="post-cell-link-container">
         <span class="fa fa-heart"> 106</span>

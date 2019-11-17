@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block specific_css_links %}
-
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/upload/upload.css') }}" />
 {% endblock %}
 
 {% block content %}
@@ -15,13 +15,13 @@
     <br />
 
     <!-- photo preview with filter slection -->
-    <div class="photo-preview"></div>
+    <div class="photo-preview" style="background-image: url('{{ url_for('static', filename='branding/profile_photo.jpg') }}');"></div>
 
     <div class="filters">
-      <div class="filtered-photo-preview"></div>
-      <div class="filtered-photo-preview"></div>
-      <div class="filtered-photo-preview"></div>
-      <div class="filtered-photo-preview"></div>
+      <div class="filtered-photo-preview" style="background-image: url('{{ url_for('static', filename='branding/profile_photo.jpg') }}');"></div>
+      <div class="filtered-photo-preview" style="background-image: url('{{ url_for('static', filename='branding/profile_photo.jpg') }}');"></div>
+      <div class="filtered-photo-preview" style="background-image: url('{{ url_for('static', filename='branding/profile_photo.jpg') }}');"></div>
+      <div class="filtered-photo-preview" style="background-image: url('{{ url_for('static', filename='branding/profile_photo.jpg') }}');"></div>
     </div>
 
     <!-- caption, tag, location info -->
