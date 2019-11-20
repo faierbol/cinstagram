@@ -23,3 +23,10 @@ def auth_login():
 
     data = {}
     return render_template("authentication/login.html", data=data)
+
+
+# Forgot password link will be added
+
+
+# Static page of terms and legal will be added (not linking to about i will add
+# a new single simple single web page)

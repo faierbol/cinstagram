@@ -10,7 +10,7 @@
   <!-- top naviagtion -->
   <div class="chat-index-top-navigation">
     <h1>Chat</h1>
-    <a href=""><span class="fa fa-plus"></span></a>
+    <a href="{{ url_for('chat.new_chat') }}"><span class="fa fa-plus"></span></a>
   </div>
 
   <!-- search bar -->
@@ -24,9 +24,8 @@
   <!-- messages list index -->
   <div class="chat-index">
 
-
     <div class="chat-cell">
-      <a href="">
+      <a href="{{ url_for('chat.single_chat')}}">
         <div class="chat-cell-left-part">
           <img alt="profile-photo" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" />
         </div>
@@ -40,7 +39,7 @@
     </div><!-- e/chat cell -->
 
     <div class="chat-cell">
-      <a href="">
+      <a href="{{ url_for('chat.single_chat')}}">
         <div class="chat-cell-left-part">
           <img alt="profile-photo" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" />
         </div>

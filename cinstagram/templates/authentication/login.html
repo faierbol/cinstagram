@@ -57,26 +57,16 @@
 
       <div class="signup-login-content-card-linker-card">
         <p>
-            Have an account? <a href="">Sign up</a>
+            Have an account? <a href="{{ url_for('authentication.auth_signup' )}}">Sign up</a>
         </p>
       </div>
 
       <div class="signup-login-content-card-app-links">
           <p>Get the app.</p>
-          <a href=""><img src="{{ url_for('static', filename='branding/ios-android/ios-black-badge.png') }}" class="apple-store-badge" alt="apple-store-logo" /></a>
-          <a href=""><img src="{{ url_for('static', filename='branding/ios-android/google-play-badge.png') }}" class="google-store-badge" alt="google-store-logo" /></a>
+          <a href="https://github.com/demirantay/cinstagram#android--ios"><img src="{{ url_for('static', filename='branding/ios-android/ios-black-badge.png') }}" class="apple-store-badge" alt="apple-store-logo" /></a>
+          <a href="https://github.com/demirantay/cinstagram#android--ios"><img src="{{ url_for('static', filename='branding/ios-android/google-play-badge.png') }}" class="google-store-badge" alt="google-store-logo" /></a>
       </div>
     </div><!-- e/main card -->
-
-
-    <!-- Footer ###########################################################  -->
-    <div class="signup-login-footer">
-      <a href="">ABOUT US</a>
-      <a href="">SUPPORT</a>
-      <a href="">API</a>
-      <a href="">JOBS</a>
-      <a href="">LEGAL</a>
-    </div>
 
 
   </div><!-- e/container-->
