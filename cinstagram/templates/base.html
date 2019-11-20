@@ -43,7 +43,7 @@
     <!-- TOP NAV MENU -->
     <div class="top-nav">
       <!-- logo -->
-      <a href=""><img class="top-nav-logo" src="{{ url_for('static', filename='branding/cinstagram_logo_text.png') }}" alt="logo" /></a>
+      <a href="{{ url_for('home.home_page') }}"><img class="top-nav-logo" src="{{ url_for('static', filename='branding/cinstagram_logo_text.png') }}" alt="logo" /></a>
 
       <!-- search form -->
       <form class="top-nav-search-form">
@@ -53,10 +53,10 @@
 
       <!-- top navigation -->
       <div class="top-nav-navigation">
-        <a href=""><span class="fa fa-home"></span></a>
-        <a href=""><span class="fa fa-compass"></span></a>
-        <a href=""><span class="fa fa-plus-square"></span></a>
-        <a href=""><img class="top-nav-profile-photo" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" alt="profile_photo"/></a>
+        <a href="{{ url_for('home.home_page') }}"><span class="fa fa-home"></span></a>
+        <a href="{{ url_for('explore.explore_page') }}"><span class="fa fa-compass"></span></a>
+        <a href="{{ url_for('media_upload.upload_page') }}"><span class="fa fa-plus-square"></span></a>
+        <a href="{{ url_for('profile.profile_posts_page') }}"><img class="top-nav-profile-photo" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" alt="profile_photo"/></a>
       </div>
     </div>
 
@@ -78,11 +78,11 @@
 
     <!-- Footer -->
     <div class="footer">
-      <a href="">ABOUT US</a>
-      <a href="">HELP</a>
-      <a href="">API</a>
-      <a href="">JOBS</a>
-      <a href="">LEGAL</a>
+      <a href="{{ url_for('about.about_landing_page') }}">ABOUT US</a>
+      <a href="{{ url_for('help_centre.help_centre_index') }}">HELP</a>
+      <a href="{{ url_for('api_web.api_web_landing_page') }}">API</a>
+      <a href="{{ url_for('about.about_job_postings') }}">JOBS</a>
+      <a href="{{ url_for('about.about_legal') }}">LEGAL</a>
     </div>
   </div><!-- e/container-->
 

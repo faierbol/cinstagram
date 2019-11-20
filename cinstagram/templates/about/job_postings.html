@@ -10,9 +10,9 @@
   <!-- left part -->
   <div class="about-content-card-left-part">
     <h2>ABOUT</h2>
-    <a href="">Company</a>
-    <a href="">Jobs</a>
-    <a href="">Legal</a>
+    <a href="{{ url_for('about.about_landing_page') }}">Company</a>
+    <a href="{{ url_for('about.about_job_postings') }}">Jobs</a>
+    <a href="{{ url_for('about.about_legal' )}}">Legal</a>
   </div>
   <!-- right part -->
   <div class="about-content-card-right-part">
@@ -24,85 +24,73 @@
 
     <!-- Teams -->
     <ul>
-        <a href=""><li>Data & Analytics</li></a>
-        <a href=""><li>Design & User Experience, Instagram, Research</li></a>
-        <a href=""><li>Business Development & Partnerships</li></a>
-        <a href=""><li>Software Engineering</li></a>
-        <a href=""><li>Instagram, Legal, Finance, Facilities & Admin</li></a>
-        <a href=""><li>Instagram, Software Engineering</li></a>
-        <a href=""><li>Data & Analytics, Instagram</li></a>
-        <a href=""><li>Sales & Marketing</li></a>
-        <a href=""><li>Communications & Public Policy</li></a>
-        <a href=""><li>Creative</li></a>
-        <a href=""><li>Product Management</li></a>
-        <a href=""><li>Communications & Public Policy, Instagram</li></a>
-        <a href=""><li>Research</li></a>
-        <a href=""><li>Software Engineering, Instagram</li></a>
-        <a href=""><li>Design & User Experience, Research, Instagram</li></a>
-        <a href=""><li>Instagram</li></a>
+        <a href="#data-and-analytics"><li>Data & Analytics</li></a>
+        <a href="#design-ux"><li>Design & User Experience, Instagram, Research</li></a>
+        <a href="#business"><li>Business Development & Partnerships</li></a>
+        <a href="#software-engineering"><li>Software Engineering</li></a>
+        <a href="#legal-finance"><li>Instagram, Legal, Finance, Facilities & Admin</li></a>
+        <a href="#instagram-software-engineering"><li>Instagram, Software Engineering</li></a>
+        <a href="#legal-finance"><li>Data & Analytics, Instagram</li></a>
+        <a href="#instagram-software-engineering"><li>Sales & Marketing</li></a>
+        <a href="#communucations"><li>Communications & Public Policy</li></a>
+        <a href="#creative"><li>Creative</li></a>
+        <a href="#product-management"><li>Product Management</li></a>
+        <a href="#research"><li>Research</li></a>
+        <a href="#instagram"><li>Instagram</li></a>
     </ul>
 
     <!-- team specific jobs -->
     <h2>Jobs</h2>
 
-    <h3>Data & Analytics</h3>
+    <h3 id="data-and-analytics">Data & Analytics</h3>
     <ul>
-        <a href=""><li>Job Title and Its location</li></a>
-        <a href=""><li>Job Title and Its location</li></a>
+        <a href="{{ url_for('about.about_job_post') }}"><li>Job Title and Its location</li></a>
+        <a href="{{ url_for('about.about_job_post') }}"><li>Job Title and Its location</li></a>
     </ul>
 
     <br />
-    <h3>Design & User Experience, Instagram, Research</h3>
+    <h3 id="design-ux">Design & User Experience, Instagram, Research</h3>
     <ul>
-        <a href=""><li>Job Title and Its location</li></a>
-        <a href=""><li>Job Title and Its location</li></a>
+        <a href="{{ url_for('about.about_job_post') }}"><li>Job Title and Its location</li></a>
+        <a href="{{ url_for('about.about_job_post') }}"><li>Job Title and Its location</li></a>
     </ul>
 
     <br />
-    <h3>Business Development & Partnerships</h3>
+    <h3 id="business">Business Development & Partnerships</h3>
     <ul>
-        <a href=""><li>Job Title and Its location</li></a>
-        <a href=""><li>Job Title and Its location</li></a>
+        <a href="{{ url_for('about.about_job_post') }}"><li>Job Title and Its location</li></a>
+        <a href="{{ url_for('about.about_job_post') }}"><li>Job Title and Its location</li></a>
     </ul>
 
     <br />
-    <h3>Software Engineering</h3>
+    <h3 id="software-engineering">Software Engineering</h3>
 
     <br />
-    <h3>Instagram, Legal, Finance, Facilities & Admin</h3>
+    <h3 id="legal-finance">Instagram, Legal, Finance, Facilities & Admin</h3>
 
     <br />
-    <h3>Instagram, Software Engineering</h3>
+    <h3 id="instagram-software-engineering">Instagram, Software Engineering</h3>
 
     <br />
-    <h3>Data & Analytics, Instagram</h3>
+    <h3 id="instagram-data-analytics">Data & Analytics, Instagram</h3>
 
     <br />
-    <h3>Sales & Marketing</h3>
+    <h3 id="sales-and-marketing">Sales & Marketing</h3>
 
     <br />
-    <h3>Communications & Public Policy</h3>
+    <h3 id="communucations">Communications & Public Policy</h3>
 
     <br />
-    <h3>Creative</h3>
+    <h3 id="creative">Creative</h3>
 
     <br />
-    <h3>Product Management</h3>
+    <h3 id="product-management">Product Management</h3>
 
     <br />
-    <h3>Communications & Public Policy, Instagram</h3>
+    <h3 id="research">Research</h3>
 
     <br />
-    <h3>Research</h3>
-
-    <br />
-    <h3>Software Engineering, Instagram</h3>
-
-    <br />
-    <h3>Design & User Experience, Research, Instagram</h3>
-
-    <br />
-    <h3>Instagram</h3>
+    <h3 id="instagram">Instagram</h3>
 
   </div>
 </div>
