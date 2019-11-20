@@ -13,7 +13,6 @@ Plan
 - [x] move the css statics
 - [x] Move the htmls statics
 - [x] fix static and template links  (img ... etc. not linking them together)
-- [ ] link all of templates with targeted viewss
-
-- [ ] create a detailed database schema of all appliactions -- connections
-      one-to-many's m2m's all of that shit
+- [x] link all of templates with targeted viewss - (I have done it but stopped
+      since some of the urls need to be modfiied in the guture with paramtetrs
+      to their urls ... etc. there is no pratical need for this at the moment)

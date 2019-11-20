@@ -16,8 +16,10 @@
 
   <div class="user-cell">
       <div class="followers-likers-user-cell-profile-photo" style="background-image: url('{{ url_for('static', filename='branding/profile_photo.jpg') }}');"></div>
+      <a href="{{ url_for('profile.profile_posts_page') }}">
       <h3>Joe Smith</h3>
       <h3 class="follower-likers-username">@username</h3>
+      </a>
       <form>
           <input type="submit" value="Follow"/>
       </form>

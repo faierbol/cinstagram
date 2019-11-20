@@ -1,26 +1,14 @@
-Discuss & Design
-----------
-
-Help Centre app. This app is basically a big CRUD app that is updated by the
-admin (staff) users to give out information to the users. This will be the
-first version of the app do not try to perfect it there will be a time for that
-too.
 
 
-Plan
-----------
+- [ ] I need to learn a lot about the foreign keys one to many many to many
+      relationships between tables
 
-- [ ] create the algorithm for the mechanisms of the site
+- [ ] I need to create a database schema of all of the applications and how
+      they are connected
 
-- [ ] main page
-- [ ] post page
-- [ ] topic page
--
+- [ ] I need to implement the new modles (dont worry they will be updated as i
+      go along building the views)
 
-- [ ] Test main page
-- [ ] test post page
-- [ ] test topic page
+- [ ] test the models
 
-- [ ] Document main page
-- [ ] Document post page
-- [ ] document topic page
+- [ ] document the models

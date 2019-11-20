@@ -17,13 +17,13 @@
       <div class="profile-card-information-right-part">
         <div class="profile-card-information-right-part-top">
           <h1>username</h1>
-          <a href="">Edit Profile</a>
+          <a href="{{ url_for('profile_settings.profile_settings_edit_profile') }}">Edit Profile</a>
           <span class="fa fa-cog drop-down-menu"></span>
         </div>
 
         <div class="profile-card-information-right-part-middle">
-          <a href=""><span>1</span> Posts</a>
-          <a href=""><span>1</span> Follower</a>
+          <a href="{{ url_for('profile.profile_post_page') }}"><span>1</span> Posts</a>
+          <a href="{{ url_for('profile.profile_followers') }}"><span>1</span> Follower</a>
           <a href=""><span>1</span> Following</a>
         </div>
 
@@ -36,9 +36,9 @@
 
       <!-- bottom profile navigation -->
       <div class="profile-card-navigation">
-        <a href=""><span class="fa fa-th-large"></span> POSTS</a>
-        <a href=""><span class="fa fa-bookmark"></span> SAVED</a>
-        <a href=""><span class="fa fa-tag"></span> TAGGED</a>
+        <a href="{{ url_for('profile.profile_posts_page') }}"><span class="fa fa-th-large"></span> POSTS</a>
+        <a href="{{ url_for('profile.profile_saved') }}"><span class="fa fa-bookmark"></span> SAVED</a>
+        <a href="{{ url_for('profile.profile_tagged')}}"><span class="fa fa-tag"></span> TAGGED</a>
       </div>
 
 

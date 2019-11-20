@@ -1,0 +1,26 @@
+Discuss & Design
+----------
+
+Help Centre app. This app is basically a big CRUD app that is updated by the
+admin (staff) users to give out information to the users. This will be the
+first version of the app do not try to perfect it there will be a time for that
+too.
+
+
+Plan
+----------
+
+- [ ] create the algorithm for the mechanisms of the site
+
+- [ ] main page
+- [ ] post page
+- [ ] topic page
+-
+
+- [ ] Test main page
+- [ ] test post page
+- [ ] test topic page
+
+- [ ] Document main page
+- [ ] Document post page
+- [ ] document topic page
