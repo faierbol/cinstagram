@@ -24,7 +24,7 @@
       <!-- Post cell -->
       <div class="home-post-cell">
         <div class="post-cell-top-part">
-          <a href="">
+          <a href="{{ url_for('profile.profile_posts_page') }}">
             <img alt="profilePhoto" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" />
             <h3>username</h3>
           </a>
@@ -54,7 +54,7 @@
             <h3>username</h3>
             <p>Photo by @amivitale | Remote regions of the Zambezi Delta area of Moza, </p>
             <br />
-            <a href="">View all 252 comments</a>
+            <a href="{{ url_for('profile.profile_post_page') }}">View all 252 comments</a>
           </div>
           <div class="post-cell-comments">
             <!-- only 2 comments after that read mode ...link -->
@@ -88,7 +88,7 @@
 
     <!-- Profile Info -->
     <div class="home-profile-box">
-      <a href="">
+      <a href="{{ url_for('profile.profile_posts_page') }}">
         <img alt="profilePhoto" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}"/>
         <div class="home-profile-box-info">
           <h3>username</h3>
@@ -105,11 +105,11 @@
       <div class="home-alert-box-scroll-part">
 
           <div class="alert-cell">
-            <a href="">
+            <a href="{{ url_for('profile.profile_posts_page') }}">
               <img alt="profile-photo" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" />
               <h2>username</h2>
             </a>
-            <p>liked your <a href="">post</a> <span>20d</span></p>
+            <p>liked your <a href="{{ url_for('profile.profile_post_page') }}">post</a> <span>20d</span></p>
           </div><!-- e/ alert cell -->
 
       </div>
@@ -123,47 +123,53 @@
       <div class="home-suggestions-box-cell-container">
 
         <div class="suggestion-cell">
-          <img alt="profile-photo" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" />
-          <div class="suggestion-cell-info-part">
-            <h2>username</h2>
-            <h3>Recommended for You</h3>
-          </div>
-          <form>
-            <input type="submit" value="Follow"/>
-          </form>
+          <a href="{{ url_for('profile.profile_posts_page') }}">
+            <img alt="profile-photo" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" />
+            <div class="suggestion-cell-info-part">
+              <h2>username</h2>
+              <h3>Recommended for You</h3>
+            </div>
+            <form>
+              <input type="submit" value="Follow"/>
+            </form>
+          </a>
         </div><!-- e/ suggestion cell -->
 
         <div class="suggestion-cell">
-          <img alt="profile-photo" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" />
-          <div class="suggestion-cell-info-part">
-            <h2>username</h2>
-            <h3>Recommended for You</h3>
-          </div>
-          <form>
-            <input type="submit" value="Follow"/>
-          </form>
+          <a href="{{ url_for('profile.profile_posts_page') }}">
+            <img alt="profile-photo" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" />
+            <div class="suggestion-cell-info-part">
+              <h2>username</h2>
+              <h3>Recommended for You</h3>
+            </div>
+            <form>
+              <input type="submit" value="Follow"/>
+            </form>
+          </a>
         </div><!-- e/ suggestion cell -->
 
         <div class="suggestion-cell">
-          <img alt="profile-photo" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" />
-          <div class="suggestion-cell-info-part">
-            <h2>username</h2>
-            <h3>Recommended for You</h3>
-          </div>
-          <form>
-            <input type="submit" value="Follow"/>
-          </form>
+          <a href="{{ url_for('profile.profile_posts_page') }}">
+            <img alt="profile-photo" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" />
+            <div class="suggestion-cell-info-part">
+              <h2>username</h2>
+              <h3>Recommended for You</h3>
+            </div>
+            <form>
+              <input type="submit" value="Follow"/>
+            </form>
+          </a>
         </div><!-- e/ suggestion cell -->
 
       </div>
     </div><!-- e/suggestions box -->
 
     <div class="right-nav-footer">
-      <a href="">ABOUT US</a>
-      <a href="">HELP</a>
-      <a href="">API</a>
-      <a href="">JOBS</a>
-      <a href="">LEGAL</a>
+      <a href="{{ url_for('about.about_landing_page') }}">ABOUT US</a>
+      <a href="{{ url_for('help_centre.help_centre_index') }}">HELP</a>
+      <a href="{{ url_for('api_web.api_web_landing_page') }}">API</a>
+      <a href="{{ url_for('about.about_job_postings') }}">JOBS</a>
+      <a href="{{ url_for('about.about_legal') }}">LEGAL</a>
     </div>
 
   </div><!-- e/home right side -->

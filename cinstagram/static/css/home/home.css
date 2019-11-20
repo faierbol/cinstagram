@@ -349,6 +349,11 @@
   margin-top: 25px;
 }
 
+.suggestion-cell a {
+  color: black !important;
+  text-decoration: none !important;
+}
+
 .suggestion-cell img {
   border-radius: 50%;
   height: 40px;
@@ -362,10 +367,14 @@
 .suggestion-cell-info-part {
   display: inline-block;
   vertical-align: middle;
+  color: black;
+  text-decoration: none;
 }
 
 .suggestion-cell-info-part h2 {
   font-size: 15px;
+  color: black;
+  text-decoration: none;
 
 }
 
