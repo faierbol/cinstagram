@@ -1,5 +1,15 @@
 <p align="center">
-  <img src="branding/black_logo.png" width="300px">
+    <img src="branding/app-logo.png" alt="Repository logo" width="72" height="72">
+</p>
+
+<h3 align="center">Cinstagram</h3>
+
+<p align="center">
+  Instagram clone built with Flask + PostgreSQL + Nginx
+  <br>
+  <a href=""><strong>Visit the App »</strong></a>
+  <br>
+  <br>
 </p>
 
 ## Introduction
