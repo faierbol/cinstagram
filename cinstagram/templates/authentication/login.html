@@ -13,6 +13,8 @@
   <meta name="author" content="demir antay, Demir Antay, @demirantay" />
 
   <!-- FAVICON -->
+  <link rel="icon" href="{{ url_for('static', filename='branding/app-logo.png') }}" />
+
 
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -43,7 +45,7 @@
         <img class="help-centre-top-nav-logo" src="{{ url_for('static', filename='branding/cinstagram_logo_text.png') }}" alt="logo" />
         <p class="meta-signup-info">Log in to see photos and videos from your friends.</p>
         <form class="signup-login-content-card-signup-form">
-            <input type="text" placeholder="Email, username, or phone number"/><br />
+            <input type="text" placeholder="Email or username"/><br />
             <input type="text" placeholder="Password"/><br />
             <input type="submit" value="Log In" class="signup-form-submit-btn"/><br />
         </form>

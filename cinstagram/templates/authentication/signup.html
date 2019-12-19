@@ -13,6 +13,8 @@
   <meta name="author" content="demir antay, Demir Antay, @demirantay" />
 
   <!-- FAVICON -->
+  <link rel="icon" href="{{ url_for('static', filename='branding/app-logo.png') }}" />
+
 
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -31,6 +33,14 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/authentication/signup_login_content_card.css') }}" />
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/authentication/signup_login_footer.css') }}" />
 
+  <style>
+    {% if data.invalid_credentials == True %}
+      .signup-login-content-card-signup-form input {
+        border-color: red;
+      }
+    {% endif %}
+  </style>
+
 </head>
 
 <body>
@@ -42,12 +52,12 @@
       <div class="signup-login-content-card-signup-child-card">
         <img class="help-centre-top-nav-logo" src="{{ url_for('static', filename='branding/cinstagram_logo_text.png') }}" alt="logo" />
         <p class="meta-signup-info">Sign up to see photos and videos from your friends.</p>
-        <form class="signup-login-content-card-signup-form">
-            <input type="text" placeholder="Mobile Number or Email"/><br />
-            <input type="text" placeholder="Full Name"/><br />
-            <input type="text" placeholder="Username"/><br />
-            <input type="text" placeholder="Password"/><br />
-            <input type="submit" value="Sign up" class="signup-form-submit-btn"/><br />
+        <form class="signup-login-content-card-signup-form" method="POST" action="{{ url_for('authentication.auth_signup') }}">
+            <input type="text" placeholder="Email" name="email"/><br />
+            <input type="text" placeholder="Full Name" name="fullName"/><br />
+            <input type="text" placeholder="Username" name="username"/><br />
+            <input type="text" placeholder="Password" name="password"/><br />
+            <input type="submit" value="Sign up" class="signup-form-submit-btn" name="signup_submit_btn"/><br />
         </form>
         <p class="meta-legal-info">
             By signing up, you agree to our <a href=""><b>Terms and Legal Policies.</b></a>
