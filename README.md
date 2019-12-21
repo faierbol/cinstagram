@@ -35,7 +35,7 @@ Documentation for Cinstagram can be found on the [`docs/index.md` folder](./docs
 
 ## Features
 
-- [ ] Login/Signup
+- [x] Login/Signup
 - [ ] Home
 - [ ] Photo & Video Upload
 - [ ] Profile Page

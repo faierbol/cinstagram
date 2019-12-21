@@ -141,7 +141,12 @@ app.register_blueprint(search)
 app.register_blueprint(explore)
 
 
-@app.route("/")
+
+# THESE MODEL IMPORTS ARE TEMPORARYILY USED FOR THE VIEW BELOW I WILL DELETE THEM
+
+from .authentication.models import User
+
+@app.route("/", methods=["POST", "GET"])
 def temporary_control_panel():
     """
     This view will be removed once I am done with the first version of the
@@ -156,6 +161,16 @@ def temporary_control_panel():
 
     # Authentication
     # ---------------
+    if request.form.get("user_create_form_submit_btn"):
+        email = request.form["email"]
+        full_name = request.form["full_name"]
+        username = request.form["username"]
+        password = request.form["password"]
+
+        new_user = User(email, full_name, username, password)
+        db.session.add(new_user)
+        db.session.commit()
+
 
     # Profile Settings
     # ----------------
