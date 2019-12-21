@@ -38,6 +38,7 @@ Documentation for Cinstagram can be found on the [`docs/index.md` folder](./docs
 - [x] Login/Signup
 - [ ] Home
 - [ ] Photo & Video Upload
+- [ ] Image Recognition
 - [ ] Profile Page
 - [ ] Profile Settings
 - [ ] Search Indexes
@@ -51,8 +52,10 @@ Documentation for Cinstagram can be found on the [`docs/index.md` folder](./docs
 - [ ] API
 - [ ] Help Centre  
 - [ ] Admin Panel
+- [ ] Business Panel
 - [ ] Programmer Panel
-- [ ] Bot's mimicking real users
+- [ ] Mockup Data Generator
+- [ ] Mobile Support
 
 ## Questions ?
 
