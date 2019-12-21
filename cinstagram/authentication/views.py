@@ -48,8 +48,10 @@ def auth_signup():
         else:
             # If it is not empty check if the username exists, if it does
             # do not create a new user
-            if User.query.filter_by(username=username).first() is None or \
-               User.query.filter_by(email=email).first() is None:
+            if (
+                User.query.filter_by(username=username).first() is None
+                or User.query.filter_by(email=email).first() is None
+            ):
                 # User does not exist
                 new_user = User(email, full_name, username, password)
                 db.session.add(new_user)
@@ -83,10 +85,39 @@ def auth_login():
     empty_credentials = False
 
     # Login Form Validation
-
-    data = {}
+    if request.form.get("login_submit_btn"):
+        email = request.form["email"]
+        password = request.form["password"]
+        # check if the inputs are empty or not
+        if (
+            bool(email) is False
+            or bool(email.strip()) is False
+            or bool(password) is False
+            or bool(password.strip()) is False
+        ):
+            empty_credentials = True
+        else:
+            # Check if the user credits are right and if they
+            # are log the user into the system and add sessions
+            if User.query.filter_by(email=email, password=password).first() \
+             is None:
+                # User does not exist
+                invalid_credentials = True
+            else:
+                # Add the session variables than redirect the user
+                session["cinstagram_user_email"] = email
+                session["cinstagram_user_logged_in"] = True
+                return redirect(url_for("home.home_page"))
+    data = {
+        "invalid_credentials": invalid_credentials,
+        "empty_credentials": empty_credentials,
+    }
     return render_template("authentication/login.html", data=data)
 
+
+# Thank you for signig up will be added
+
+# Setting up acount will be added
 
 # Forgot password link will be added
 

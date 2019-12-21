@@ -33,6 +33,20 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/authentication/signup_login_content_card.css') }}" />
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/authentication/signup_login_footer.css') }}" />
 
+
+  <style>
+  {% if data.invalid_credentials == True %}
+
+    .login-form-input {
+      border-color: red !important;
+    }
+  {% elif data.empty_credentials == True %}
+    .login-form-input {
+      border-color: red !important;
+    }
+  {% endif %}
+  </style>
+
 </head>
 
 <body>
@@ -44,10 +58,10 @@
       <div class="signup-login-content-card-signup-child-card">
         <img class="help-centre-top-nav-logo" src="{{ url_for('static', filename='branding/cinstagram_logo_text.png') }}" alt="logo" />
         <p class="meta-signup-info">Log in to see photos and videos from your friends.</p>
-        <form class="signup-login-content-card-signup-form">
-            <input type="text" placeholder="Email or username"/><br />
-            <input type="text" placeholder="Password"/><br />
-            <input type="submit" value="Log In" class="signup-form-submit-btn"/><br />
+        <form class="signup-login-content-card-signup-form" method="POST" action="{{ url_for('authentication.auth_login') }}">
+            <input class="login-form-input" type="text" placeholder="Email" name="email"/><br />
+            <input class="login-form-input" type="text" placeholder="Password" name="password"/><br />
+            <input type="submit" value="Log In" class="signup-form-submit-btn" name="login_submit_btn"/><br />
         </form>
 
         <br />
