@@ -31,7 +31,7 @@ Cinstagram is a fully fledged Instagram clone. The support for IOS and Android w
 
 ## Official Documentation
 
-Documentation for Cinstagram can be found on the [`docs/index.md` folder](./docs/index.md)
+Documentation for Cinstagram can be found on the [`docs/README.md` folder](./docs/index.md)
 
 ## Features
 
