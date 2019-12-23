@@ -1,8 +1,7 @@
 > This markdown file will include the blueprint wireframes of documentation
 
-# `Module Name`
+# `Version Name`
 
-...
 
 # Design Summary
 

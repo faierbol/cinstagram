@@ -1,10 +1,10 @@
 # Cinstagram Documentation
 
-Most of the code and explanations in the documentation is abstracted from the code that is currently being used because There is no guarantee that the app will keep using python and flask as it's core development resources.
+Most of the code and explanations in the documentation is abstracted from the code that is currently being used and portrayed in pseudo-code format because There is no guarantee that the app will keep using python and flask as it's core development resources.
 
 The second reason is that every developer will have the same chance to understand what is going on in the code base.
 
-# Module Docs
+# Feature Docs
 
 > Please visit each module's own documentation for more information.
 
@@ -33,18 +33,18 @@ The second reason is that every developer will have the same chance to understan
 
 # System Architecture Docs
 
-- [`Algorithms`](./)
-- [`Database Schema`](./)
-- [`Feature Development`](./)
-- [`Networking`](./)
-- [`Scalability`](./)
-- [`Security`](./)
-- [`Storage`](./)
-- [`Sysadmin`](./)
-- [`DevOps`](./)
+- [`Algorithms`](./architecture_docs/algorithms.md)
+- [`Database Schema`](./architecture_docs/database_schema.md)
+- [`Feature Development`](./architecture_docs/feature_development.md)
+- [`Networking`](./architecture_docs/networking.md)
+- [`Scalability`](./architecture_docs/scalability.md)
+- [`Security`](./architecture_docs/security.md)
+- [`Storage`](./architecture_docs/storage.md)
+- [`Sysadmin`](./architecture_docs/sysadmin.md)
+- [`DevOps`](./architecture_docs/devops.md)
 
 <br>
 
 # Version Docs
 
-- [Version `1.10.0`](./)
+- [Version `1.10.0`](./version-1.10.0.md)
