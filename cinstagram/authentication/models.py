@@ -1,4 +1,6 @@
 from ..app import db
+from ..media_upload.models import UserPhoto, UserPhotoComment, UserPhotoLike
+from ..media_upload.models import UserPhotoBookmark
 
 
 # User Model
@@ -13,10 +15,10 @@ class User(db.Model):
     username = db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(50), unique=False, nullable=False)
     # Relationships
-    photos = db.relationship("user_posts")
-    comments = db.relationship("user_photo_comments")
-    likes = db.relationship("user_photo_likes")
-    bookmarks = db.relationship("user_photo_bookmarks")
+    photos = db.relationship("UserPhoto")
+    comments = db.relationship("UserPhotoComment")
+    likes = db.relationship("UserPhotoLike")
+    bookmarks = db.relationship("UserPhotoBookmark")
 
     def __init__(self, email, full_name, username, password):
         self.email = email

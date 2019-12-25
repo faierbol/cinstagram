@@ -9,17 +9,19 @@ class UserPhoto(db.Model):
     __tablename__ = "user_photos"
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('cinstagram_user.id'))
-    photo = db.Column(db.LargeBinary, nullable=False)
+    photo = db.Column(db.String(100), nullable=False)
     creation_date = db.Column(db.DateTime, default=datetime.now())
     caption = db.Column(db.String(2200), unique=False, nullable=True)
-    comments = db.relationship("user_photo_comments")
-    likes = db.relationship("user_photo_likes")
-    bookmarks = db.relationship("user_photo_bookmarks")
+    comments = db.relationship("UserPhotoComment")
+    likes = db.relationship("UserPhotoLike")
+    bookmarks = db.relationship("UserPhotoBookmark")
 
-    def __init__(self, photo, creation_date, caption):
+    def __init__(self, user_id, photo, creation_date, caption):
+        self.user_id = user_id
         self.photo = photo
         self.creation_date = datetime.now()
         self.caption = caption
+
 
     def __str__(self):
         return "Photo user: " + str(self.user_id) + "| Photo id: " + str(self.id)

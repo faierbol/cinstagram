@@ -18,10 +18,15 @@ from flask_migrate import Migrate
 # to avoid circular imports
 app = Flask(__name__)
 
+# Boiler Plate Configs
 app.config["static_folder"] = "./static"
 app.config["template_folder"] = "./templates"
 app.secret_key = "changeThisInProduction"
 app.debug = True
+
+# Media Configs
+app.config["UPLOAD_FOLDER"] = "./media/"
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
 # Database configs
 postgresql_URI = "postgresql://demir@localhost:5432/cinstagram"
