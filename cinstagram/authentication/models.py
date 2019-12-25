@@ -12,6 +12,11 @@ class User(db.Model):
     full_name = db.Column(db.String(100), unique=False, nullable=False)
     username = db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(50), unique=False, nullable=False)
+    # Relationships
+    photos = db.relationship("user_posts")
+    comments = db.relationship("user_photo_comments")
+    likes = db.relationship("user_photo_likes")
+    bookmarks = db.relationship("user_photo_bookmarks")
 
     def __init__(self, email, full_name, username, password):
         self.email = email

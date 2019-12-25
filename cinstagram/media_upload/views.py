@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template, redirect, session, url_for
 from flask import Blueprint
 
+from .models import UserPhoto, UserPhotoComment, UserPhotoLike, UserPhotoBookmark
 from ..app import db
 
 
