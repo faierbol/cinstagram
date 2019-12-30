@@ -15,11 +15,12 @@ SQLAlchemy==1.3.8
 Werkzeug==0.16.0
 
 
-asgiref==3.2.3
-Django==3.0.1
-pip==19.3.1
-psycopg2==2.8.3
-pytz==2019.3
-setuptools==41.4.0
-sqlparse==0.3.0
-wheel==0.33.6
+
+asgiref          3.2.3
+Django           3.0.1
+pip              19.3.1
+psycopg2         2.8.3
+pytz             2019.3
+setuptools       41.4.0
+sqlparse         0.3.0
+wheel            0.33.6

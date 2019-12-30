@@ -1,0 +1,56 @@
+[ ] Move the configuration
+[ ] Move the Templates
+[ ] Move the static files
+[ ] Move the necessary code from app.py
+[ ] Move About module
+  [ ] Models
+  [ ] Template
+  [ ] Views
+[ ] Move admin panel module
+  [ ] Models
+  [ ] Template
+  [ ] Views
+[ ] move api_web module
+  [ ] Models
+  [ ] Template
+  [ ] Views
+[ ] move authentication module
+  [ ] Models
+  [ ] Template
+  [ ] Views
+[ ] move chat module
+  [ ] Models
+  [ ] Template
+  [ ] Views
+[ ] move explore module
+  [ ] Models
+  [ ] Template
+  [ ] Views
+[ ] move help center module
+  [ ] Models
+  [ ] Template
+  [ ] Views
+[ ] move home module
+  [ ] Models
+  [ ] Template
+  [ ] Views
+[ ] move move media upload
+  [ ] Models
+  [ ] Template
+  [ ] Views
+[ ] move profile module
+  [ ] Models
+  [ ] Template
+  [ ] Views
+[ ] move profile settings module
+  [ ] Models
+  [ ] Template
+  [ ] Views
+[ ] move programmer panel module
+  [ ] Models
+  [ ] Template
+  [ ] Views
+[ ] move search module
+  [ ] Models
+  [ ] Template
+  [ ] Views
