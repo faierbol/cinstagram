@@ -1,9 +1,9 @@
-[ ] Move the configuration
+[x] Move the configuration
 [ ] Move the Templates
 [ ] Move the static files
-[ ] Move the necessary code from app.py
+[x] Move the necessary code from app.py
 [ ] Move About module
-  [ ] Models
+  [x] Models
   [ ] Template
   [ ] Views
 [ ] Move admin panel module

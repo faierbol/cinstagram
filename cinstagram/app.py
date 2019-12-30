@@ -26,7 +26,7 @@ app.debug = True
 
 # Media Configs
 app.config["UPLOAD_FOLDER"] = "./media/"
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+ALLOWED_EXTENSIONS = {"txt", "pdf", "png", "jpg", "jpeg", "gif"}
 
 # Database configs
 postgresql_URI = "postgresql://demir@localhost:5432/cinstagram"
@@ -146,10 +146,10 @@ app.register_blueprint(search)
 app.register_blueprint(explore)
 
 
-
 # THESE MODEL IMPORTS ARE TEMPORARYILY USED FOR THE VIEW BELOW I WILL DELETE THEM
 
 from .authentication.models import User
+
 
 @app.route("/", methods=["POST", "GET"])
 def temporary_control_panel():
@@ -175,7 +175,6 @@ def temporary_control_panel():
         new_user = User(email, full_name, username, password)
         db.session.add(new_user)
         db.session.commit()
-
 
     # Profile Settings
     # ----------------

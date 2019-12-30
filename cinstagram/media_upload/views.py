@@ -26,9 +26,7 @@ def upload_page():
 
     empty_credentials = False
 
-    current_user = User.query.filter_by(
-                        email=session["cinstagram_user_email"]
-                   ).first()
+    current_user = User.query.filter_by(email=session["cinstagram_user_email"]).first()
 
     # Media Upload Validation
     if request.form.get("media_upload_submit_btn"):
@@ -41,13 +39,10 @@ def upload_page():
             empty_credentials = True
         else:
             photo.save(photo.filename)
-            new_photo = UserPhoto(current_user.id, photo.filename,
-                                  caption, location)
+            new_photo = UserPhoto(current_user.id, photo.filename, caption, location)
             db.session.add(new_photo)
             db.session.commit()
 
     # dont forget to change the templates permission for no outsider visiblity
-    data = {
-        "empty_credentials": empty_credentials,
-    }
+    data = {"empty_credentials": empty_credentials}
     return render_template("media_upload/upload.html", data=data)

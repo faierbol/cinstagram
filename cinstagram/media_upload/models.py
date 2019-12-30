@@ -8,7 +8,7 @@ from datetime import datetime
 class UserPhoto(db.Model):
     __tablename__ = "user_photos"
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('cinstagram_user.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey("cinstagram_user.id"))
     photo = db.Column(db.String(100), nullable=False)
     creation_date = db.Column(db.DateTime, default=datetime.now())
     caption = db.Column(db.String(2200), unique=False, nullable=True)
@@ -22,7 +22,6 @@ class UserPhoto(db.Model):
         self.creation_date = datetime.now()
         self.caption = caption
 
-
     def __str__(self):
         return "Photo user: " + str(self.user_id) + "| Photo id: " + str(self.id)
 
@@ -33,8 +32,8 @@ class UserPhoto(db.Model):
 class UserPhotoComment(db.Model):
     __tablename__ = "user_photo_comments"
     id = db.Column(db.Integer, primary_key=True)
-    commented_photo_id = db.Column(db.Integer, db.ForeignKey('user_photos.id'))
-    comment_owner_id = db.Column(db.Integer, db.ForeignKey('cinstagram_user.id'))
+    commented_photo_id = db.Column(db.Integer, db.ForeignKey("user_photos.id"))
+    comment_owner_id = db.Column(db.Integer, db.ForeignKey("cinstagram_user.id"))
     text = db.Column(db.String(2200), unique=False, nullable=True)
     comment_time = db.Column(db.DateTime, default=datetime.now())
 
@@ -46,8 +45,10 @@ class UserPhotoComment(db.Model):
 
     def __str__(self):
         return (
-            "Comment owner id: " + str(self.comment_owner_id) +
-            "comment photo id " + str(self.commented_photo_id)
+            "Comment owner id: "
+            + str(self.comment_owner_id)
+            + "comment photo id "
+            + str(self.commented_photo_id)
         )
 
 
@@ -57,8 +58,8 @@ class UserPhotoComment(db.Model):
 class UserPhotoLike(db.Model):
     __tablename__ = "user_photo_likes"
     id = db.Column(db.Integer, primary_key=True)
-    liked_photo_id = db.Column(db.Integer, db.ForeignKey('user_photos.id'))
-    like_owner_id = db.Column(db.Integer, db.ForeignKey('cinstagram_user.id'))
+    liked_photo_id = db.Column(db.Integer, db.ForeignKey("user_photos.id"))
+    like_owner_id = db.Column(db.Integer, db.ForeignKey("cinstagram_user.id"))
 
     def __init__(self, liked_photo_id, like_owner_id):
         self.liked_photo_id = liked_photo_id
@@ -66,8 +67,10 @@ class UserPhotoLike(db.Model):
 
     def __str__(self):
         return (
-            "Liker: " + str(self.like_owner_id) +
-            " Liked Photo: " + str(self.liked_photo_id)
+            "Liker: "
+            + str(self.like_owner_id)
+            + " Liked Photo: "
+            + str(self.liked_photo_id)
         )
 
 

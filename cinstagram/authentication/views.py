@@ -99,8 +99,7 @@ def auth_login():
         else:
             # Check if the user credits are right and if they
             # are log the user into the system and add sessions
-            if User.query.filter_by(email=email, password=password).first() \
-             is None:
+            if User.query.filter_by(email=email, password=password).first() is None:
                 # User does not exist
                 invalid_credentials = True
             else:
