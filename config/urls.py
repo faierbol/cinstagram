@@ -35,6 +35,7 @@ urlpatterns = [
     # -----------------
     # This app shows the history, who they are, goals of the company ... etcThe
     # most important functionality in this app is the job postings and the jobs
+    path("", include("about.urls")),
 
 
     # API Website
@@ -87,7 +88,7 @@ urlpatterns = [
     # search pages include three search indexes 1 - account searches, 2 hashtag
     # searches and finally 3 - location searches
 
-    
+
     # Explore
     # ----------------
     # Explore page is a simple container just like the home pageitconsistsofnew

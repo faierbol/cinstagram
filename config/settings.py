@@ -25,6 +25,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    
     # MY APP's added down below:
 ]
 
@@ -43,7 +45,7 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ["../templates"],
+        "DIRS": ["./templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -51,6 +53,8 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+
+
                 # For adding media to the file system
                 "django.template.context_processors.media",
             ]
