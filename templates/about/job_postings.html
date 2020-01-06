@@ -1,18 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
+
+<!-- ############### -->
 
 {% block specific_css_links %}
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about/about.css') }}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/about/about.css' %}" />
 {% endblock %}
 
+<!-- ############### -->
+
 {% block content %}
+
 
 <div class="about-content-card">
   <!-- left part -->
   <div class="about-content-card-left-part">
     <h2>ABOUT</h2>
-    <a href="{{ url_for('about.about_landing_page') }}">Company</a>
-    <a href="{{ url_for('about.about_job_postings') }}">Jobs</a>
-    <a href="{{ url_for('about.about_legal' )}}">Legal</a>
+    <a href="{% url 'about' %}">Company</a>
+    <a href="{% url 'jobs' %}">Jobs</a>
+    <a href="{% url 'legal' %}">Legal</a>
   </div>
   <!-- right part -->
   <div class="about-content-card-right-part">
@@ -44,22 +50,22 @@
 
     <h3 id="data-and-analytics">Data & Analytics</h3>
     <ul>
-        <a href="{{ url_for('about.about_job_post') }}"><li>Job Title and Its location</li></a>
-        <a href="{{ url_for('about.about_job_post') }}"><li>Job Title and Its location</li></a>
+        <a href=""><li>Job Title and Its location</li></a>
+        <a href=""><li>Job Title and Its location</li></a>
     </ul>
 
     <br />
     <h3 id="design-ux">Design & User Experience, Instagram, Research</h3>
     <ul>
-        <a href="{{ url_for('about.about_job_post') }}"><li>Job Title and Its location</li></a>
-        <a href="{{ url_for('about.about_job_post') }}"><li>Job Title and Its location</li></a>
+        <a href=""><li>Job Title and Its location</li></a>
+        <a href=""><li>Job Title and Its location</li></a>
     </ul>
 
     <br />
     <h3 id="business">Business Development & Partnerships</h3>
     <ul>
-        <a href="{{ url_for('about.about_job_post') }}"><li>Job Title and Its location</li></a>
-        <a href="{{ url_for('about.about_job_post') }}"><li>Job Title and Its location</li></a>
+        <a href=""><li>Job Title and Its location</li></a>
+        <a href=""><li>Job Title and Its location</li></a>
     </ul>
 
     <br />

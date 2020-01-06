@@ -2,19 +2,11 @@
 [ ] Move the Templates
 [ ] Move the static files
 [x] Move the necessary code from app.py
-[ ] Move About module
+[x] Move About module
   [x] Models
-  [ ] Template
-  [ ] Views
-[ ] Move admin panel module
-  [ ] Models
-  [ ] Template
-  [ ] Views
+  [x] Template
+  [x] Views
 [ ] move api_web module
-  [ ] Models
-  [ ] Template
-  [ ] Views
-[ ] move authentication module
   [ ] Models
   [ ] Template
   [ ] Views
@@ -34,10 +26,6 @@
   [ ] Models
   [ ] Template
   [ ] Views
-[ ] move move media upload
-  [ ] Models
-  [ ] Template
-  [ ] Views
 [ ] move profile module
   [ ] Models
   [ ] Template
@@ -46,11 +34,23 @@
   [ ] Models
   [ ] Template
   [ ] Views
+[ ] move search module
+  [ ] Models
+  [ ] Template
+  [ ] Views
 [ ] move programmer panel module
   [ ] Models
   [ ] Template
   [ ] Views
-[ ] move search module
+[ ] Move admin panel module
+  [ ] Models
+  [ ] Template
+  [ ] Views
+[ ] move authentication module
+  [ ] Models
+  [ ] Template
+  [ ] Views
+[ ] move move media upload
   [ ] Models
   [ ] Template
   [ ] Views

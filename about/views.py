@@ -9,6 +9,7 @@ from django.core.exceptions import ObjectDoesNotExist
 
 
 def about(request):
+    # Deleting any sessions regarding top-tier type of users
 
     data = {
 
@@ -18,12 +19,27 @@ def about(request):
 
 
 def jobs(request):
-    return HttpResponse("about -- jobs")
+    # Deleting any sessions regarding top-tier type of users
+
+    data = {
+
+    }
+    return render(request, "about/job_postings.html", data)
 
 
 def job_post(request, job_id):
-    return HttpResponse("about -- job post")
+    # Deleting any sessions regarding top-tier type of users
+
+    data = {
+
+    }
+    return render(request, "about/jobs_post_page.html", data)
 
 
 def legal(request):
-    return HttpResponse("about -- legal")
+    # Deleting any sessions regarding top-tier type of users
+
+    data = {
+
+    }
+    return render(request, "about/legal.html", data)
