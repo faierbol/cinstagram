@@ -1,6 +1,6 @@
 [x] Move the configuration
 [ ] Move the Templates
-[ ] Move the static files
+[x] Move the static files
 [x] Move the necessary code from app.py
 [x] Move About module
   [x] Models
