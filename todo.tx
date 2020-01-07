@@ -7,9 +7,9 @@
   [x] Template
   [x] Views
 [ ] move api_web module
-  [ ] Models
-  [ ] Template
-  [ ] Views
+  [x] Models
+  [x] Template
+  [x] Views
 [ ] move chat module
   [ ] Models
   [ ] Template

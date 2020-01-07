@@ -9,28 +9,31 @@ from django.core.exceptions import ObjectDoesNotExist
 
 
 def api_web(request):
+    """ ... """
     # Deleting any sessions regarding top-tier type of users
 
     data = {
 
     }
 
-    return render(request, "", data)
+    return render(request, "api_web/index_page.html", data)
 
 
 def api_web_register(request):
+    """ ... """
     # Deleting any sessions regarding top-tier type of users
 
     data = {
 
     }
-    return render(request, "about/job_postings.html", data)
+    return render(request, "api_web/register_page.html", data)
 
 
 def api_web_post_page(request, job_id):
+    """ ... """
     # Deleting any sessions regarding top-tier type of users
 
     data = {
 
     }
-    return render(request, "about/jobs_post_page.html", data)
+    return render(request, "api_web/post_page.html", data)

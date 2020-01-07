@@ -43,6 +43,7 @@ urlpatterns = [
     # This app is just the GUI web interface for the usage of the API ofthesite
     # It does not contain any code that creates the API code. It is just a read
     # -only site
+    path("", include("api_web.urls")),
 
 
     # Authentication

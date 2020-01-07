@@ -26,8 +26,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    
+
     # MY APP's added down below:
+    "about",
+    "api_web",
 ]
 
 MIDDLEWARE = [
