@@ -84,6 +84,7 @@ urlpatterns = [
     # ----------------
     # This is the home page which is just actually asinglecontianerthatincludes
     # user specific feeds, alerts, notifications ... etc.
+    path("", include("home.urls")),
 
 
     # Search Pages

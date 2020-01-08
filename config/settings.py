@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "chat",
     "explore",
     "help_centre",
+    "home",
 ]
 
 MIDDLEWARE = [
