@@ -30,7 +30,7 @@ urlpatterns = [
     # -----------------
     # This is the app where the staff (admin) of the company updates thecertain
     # information regarding the usage of the site, what are new or howtousethem
-
+    path("", include("help_centre.urls")),
 
     # About
     # -----------------

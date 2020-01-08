@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block specific_css_links %}
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/help_centre/help_centre.css') }}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/help_centre/help_centre.css' %}" />
 {% endblock %}
 
 {% block content %}

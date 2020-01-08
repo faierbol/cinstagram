@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     "api_web",
     "chat",
     "explore",
+    "help_centre",
 ]
 
 MIDDLEWARE = [
