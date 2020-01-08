@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block specific_css_links %}
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chat/chat.css') }}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/chat/chat.css' %}" />
 {% endblock %}
 
 {% block content %}
@@ -10,7 +11,7 @@
   <!-- top naviagtion -->
   <div class="chat-index-top-navigation">
     <h1>Chat</h1>
-    <a href="{{ url_for('chat.new_chat') }}"><span class="fa fa-plus"></span></a>
+    <a href="{% url 'new_chat' %}"><span class="fa fa-plus"></span></a>
   </div>
 
   <!-- search bar -->
@@ -25,9 +26,9 @@
   <div class="chat-index">
 
     <div class="chat-cell">
-      <a href="{{ url_for('chat.single_chat')}}">
+      <a href="">
         <div class="chat-cell-left-part">
-          <img alt="profile-photo" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" />
+          <img alt="profile-photo" src="{% static 'branding/profile_photo.jpg' %}" />
         </div>
         <div class="chat-cell-right-part">
           <h2>User Name</h2>
@@ -39,9 +40,9 @@
     </div><!-- e/chat cell -->
 
     <div class="chat-cell">
-      <a href="{{ url_for('chat.single_chat')}}">
+      <a href="">
         <div class="chat-cell-left-part">
-          <img alt="profile-photo" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" />
+          <img alt="profile-photo" src="{% static 'branding/profile_photo.jpg' %}" />
         </div>
         <div class="chat-cell-right-part">
           <h2>User Name</h2>

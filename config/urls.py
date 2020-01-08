@@ -6,7 +6,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     # Admin Panel
     # The admin panel that comes shipped with django
-    path("admin/", admin.site.urls),
+    path("admin/", admin.site.urls),   # remove this and add your ownadminpanel
+
     # Programmer Panel
     # ----------------
     # This is where the neccessary views regarding the programmer panel app of
@@ -76,6 +77,7 @@ urlpatterns = [
     # ----------------
     # This is the chat application where the users can chat with eachother.Itis
     # pretty self explanatory
+    path("", include("chat.urls")),
 
 
     # Home

@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block specific_css_links %}
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chat/chat.css') }}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/chat/chat.css' %}" />
 {% endblock %}
 
 {% block content %}
@@ -9,8 +10,8 @@
 
   <!-- top nav -->
   <div class="single-chat-top-nav">
-    <a href="{{ url_for('chat.chat_index') }}"><span class="fa fa-arrow-left"></span></a>
-    <img alt="profile_photo" src="{{ url_for('static', filename='branding/profile_photo.jpg') }}"/>
+    <a href="{% url 'chat_index' %}"><span class="fa fa-arrow-left"></span></a>
+    <img alt="profile_photo" src="{% static 'branding/profile_photo.jpg' %}"/>
     <h1>username</h1>
     <form>
         <button type="submit"><span class="fa fa-trash"></span></button>

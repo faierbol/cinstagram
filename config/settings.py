@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     # MY APP's added down below:
     "about",
     "api_web",
+    "chat",
 ]
 
 MIDDLEWARE = [

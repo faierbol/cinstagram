@@ -1,19 +1,19 @@
 [x] Move the configuration
-[ ] Move the Templates
+[x] Move the Templates
 [x] Move the static files
 [x] Move the necessary code from app.py
 [x] Move About module
   [x] Models
   [x] Template
   [x] Views
-[ ] move api_web module
+[x] move api_web module
   [x] Models
   [x] Template
   [x] Views
-[ ] move chat module
-  [ ] Models
-  [ ] Template
-  [ ] Views
+[x] move chat module
+  [x] Models
+  [x] Template
+  [x] Views
 [ ] move explore module
   [ ] Models
   [ ] Template
