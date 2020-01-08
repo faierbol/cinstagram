@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block specific_css_links %}
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/explore/explore.css') }}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/explore/explore.css' %}" />
 
 <style>
 
@@ -22,7 +23,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("{{ url_for('static', filename='branding/profile_photo.jpg') }}");
+    background-image: url("{% static 'branding/profile_photo.jpg' %}");
   }
 
 </style>
@@ -34,21 +35,21 @@
 
   <!-- hashtag tag links -->
   <div class="explore-hashtag-links">
-    <a href="{{ url_for('search.hashtag_search') }}">#hashTag1</a>
-    <a href="{{ url_for('search.hashtag_search') }}">#hashTag2</a>
-    <a href="{{ url_for('search.hashtag_search') }}">#hashTag3</a>
-    <a href="{{ url_for('search.hashtag_search') }}">#hashTag4</a>
-    <a href="{{ url_for('search.hashtag_search') }}">#hashTag5</a>
-    <a href="{{ url_for('search.hashtag_search') }}">#hashTag6</a>
-    <a href="{{ url_for('search.hashtag_search') }}">#hashTag7</a>
-    <a href="{{ url_for('search.hashtag_search') }}">#hashTag8</a>
+    <a href="">#hashTag1</a>
+    <a href="">#hashTag2</a>
+    <a href="">#hashTag3</a>
+    <a href="">#hashTag4</a>
+    <a href="">#hashTag5</a>
+    <a href="">#hashTag6</a>
+    <a href="">#hashTag7</a>
+    <a href="">#hashTag8</a>
   </div>
 
   <!-- grid view -->
   <div class="explore-grid-view">
     <!-- after three posts always break -->
     <div class="explore-grid-view-post-cell">
-      <a href=" {{ url_for('profile.profile_post_page') }}">
+      <a href="">
       <div class="explore-post-cell-link-container">
         <span class="fa fa-heart"> 106</span>
         <span class="fa fa-comment"> 14</span>
@@ -58,7 +59,7 @@
 
 
     <div class="explore-grid-view-post-cell">
-      <a href=" {{ url_for('profile.profile_post_page') }}">
+      <a href="">
       <div class="explore-post-cell-link-container">
         <span class="fa fa-heart"> 106</span>
         <span class="fa fa-comment"> 14</span>
@@ -68,7 +69,7 @@
 
 
     <div class="explore-grid-view-post-cell">
-      <a href=" {{ url_for('profile.profile_post_page') }}">
+      <a href="">
       <div class="explore-post-cell-link-container">
         <span class="fa fa-heart"> 106</span>
         <span class="fa fa-comment"> 14</span>

@@ -96,6 +96,7 @@ urlpatterns = [
     # ----------------
     # Explore page is a simple container just like the home pageitconsistsofnew
     # and unseen and suggested account pictures videos to the current user
+    path("", include("explore.urls")),
 ]
 
 if settings.DEBUG:

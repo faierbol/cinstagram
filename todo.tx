@@ -14,10 +14,10 @@
   [x] Models
   [x] Template
   [x] Views
-[ ] move explore module
-  [ ] Models
-  [ ] Template
-  [ ] Views
+[x] move explore module
+  [x] Models
+  [x] Template
+  [x] Views
 [ ] move help center module
   [ ] Models
   [ ] Template
@@ -38,11 +38,11 @@
   [ ] Models
   [ ] Template
   [ ] Views
-[ ] move programmer panel module
+[ ] Move admin panel module
   [ ] Models
   [ ] Template
   [ ] Views
-[ ] Move admin panel module
+[ ] move programmer panel module
   [ ] Models
   [ ] Template
   [ ] Views
