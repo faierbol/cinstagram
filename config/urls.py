@@ -71,7 +71,7 @@ urlpatterns = [
     # This app contains the landing page of the user, followers, likers, tagged
     # bookmarked photos single post pages ... etc. Everything that is relatedto
     # a user with private, public viewing options ... etc.
-
+    path("", include("profile_app.urls")),
 
     # Chat
     # ----------------

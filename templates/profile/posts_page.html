@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block specific_css_links %}
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/profile/profile.css') }}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile/profile.css' %}" />
 {% endblock %}
 
 {% block content %}
@@ -11,19 +12,19 @@
   <div class="profile-card-information">
 
       <div class="profile-card-information-left-part">
-        <img src="{{ url_for('static', filename='branding/profile_photo.jpg') }}" alt="profile-image" />
+        <img src="{% static 'branding/profile_photo.jpg' %}" alt="profile-image" />
       </div><!--e/left part -->
 
       <div class="profile-card-information-right-part">
         <div class="profile-card-information-right-part-top">
           <h1>username</h1>
-          <a href="{{ url_for('profile_settings.profile_settings_edit_profile') }}">Edit Profile</a>
+          <a href="">Edit Profile</a>
           <span class="fa fa-cog drop-down-menu"></span>
         </div>
 
         <div class="profile-card-information-right-part-middle">
-          <a href="{{ url_for('profile.profile_post_page') }}"><span>1</span> Posts</a>
-          <a href="{{ url_for('profile.profile_followers') }}"><span>1</span> Follower</a>
+          <a href=""><span>1</span> Posts</a>
+          <a href=""><span>1</span> Follower</a>
           <a href=""><span>1</span> Following</a>
         </div>
 
@@ -36,9 +37,9 @@
 
       <!-- bottom profile navigation -->
       <div class="profile-card-navigation">
-        <a href="{{ url_for('profile.profile_posts_page') }}"><span class="fa fa-th-large"></span> POSTS</a>
-        <a href="{{ url_for('profile.profile_saved') }}"><span class="fa fa-bookmark"></span> SAVED</a>
-        <a href="{{ url_for('profile.profile_tagged')}}"><span class="fa fa-tag"></span> TAGGED</a>
+        <a href=""><span class="fa fa-th-large"></span> POSTS</a>
+        <a href=""><span class="fa fa-bookmark"></span> SAVED</a>
+        <a href=""><span class="fa fa-tag"></span> TAGGED</a>
       </div>
 
 
@@ -49,7 +50,7 @@
   <!-- grid view -->
   <div class="profile-grid-view">
     <!-- after three posts always break -->
-    <div class="grid-view-post-cell" style="background-image: url('{{ url_for('static', filename='branding/profile_photo.jpg') }}');">
+    <div class="grid-view-post-cell" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');">
       <a href="">
       <div class="post-cell-link-container">
         <span class="fa fa-heart"> 106</span>

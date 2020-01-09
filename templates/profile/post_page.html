@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block specific_css_links %}
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/profile/profile.css') }}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile/profile.css' %}" />
 {% endblock %}
 
 {% block content %}
 <div class="post-container">
 
   <!-- left side -->
-  <div class="post-left-side" style="background-image: url('{{ url_for('static', filename='branding/profile_photo.jpg') }}');">
+  <div class="post-left-side" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');">
     <h1>h</h1>
   </div>
 
@@ -16,8 +17,8 @@
   <div class="post-right-side">
     <!-- post owner banner -->
     <div class="post-owner-banner">
-      <a href="{{ url_for('profile.profile_posts_page') }}"><div class="post-owner-profile-photo" style="background-image: url('{{ url_for('static', filename='branding/profile_photo.jpg') }}');" ></div></a>
-      <a href="{{ url_for('profile.profile_posts_page') }}"><h3>username</h3></a>
+      <a href=""><div class="post-owner-profile-photo" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');" ></div></a>
+      <a href=""><h3>username</h3></a>
       <form>
           <input type="submit" value="follow" />
       </form>
@@ -26,8 +27,8 @@
     <div class="comment-scroll-container">
       <!-- caption banner -->
       <div class="post-caption">
-        <a href="{{ url_for('profile.profile_posts_page') }}"><div class="caption-owner-profile-photo" style="background-image: url('{{ url_for('static', filename='branding/profile_photo.jpg') }}');"></div></a>
-        <a href="{{ url_for('profile.profile_posts_page') }}"><h3>username</h3></a>
+        <a href=""><div class="caption-owner-profile-photo" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');"></div></a>
+        <a href=""><h3>username</h3></a>
         <p>On #ThisDayinHistory 1886, The Statue of Liberty is dedicated in New York Harbor by President Grover Cleveland. Originally known as “Liberty Enlightening the World,” the statue was proposed by the French historian Edouard de Laboulaye to commemorate the Franco-American alliance during the American Revolution.</p>
       </div>
 
@@ -35,24 +36,24 @@
       <div class="post-comments">
 
         <div class="comment-cell">
-          <a href="{{ url_for('profile.profile_posts_page') }}"><div class="comment-owner-profile-photo" style="background-image: url('{{ url_for('static', filename='branding/profile_photo.jpg') }}');"></div></a>
-          <a href="{{ url_for('profile.profile_posts_page') }}"><h3>username</h3></a>
+          <a href=""><div class="comment-owner-profile-photo" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');"></div></a>
+          <a href=""><h3>username</h3></a>
           <p>
             The sad thing is today's Democrats want to Destroy.
           </p>
         </div><!-- e/comment cell -->
 
         <div class="comment-cell">
-          <a href="{{ url_for('profile.profile_posts_page') }}"><div class="comment-owner-profile-photo" style="background-image: url('{{ url_for('static', filename='branding/profile_photo.jpg') }}');"></div></a>
-          <a href="{{ url_for('profile.profile_posts_page') }}"><h3>username</h3></a>
+          <a href=""><div class="comment-owner-profile-photo" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');"></div></a>
+          <a href=""><h3>username</h3></a>
           <p>
             The sad thing is today's Democrats want to Destroy.
           </p>
         </div><!-- e/comment cell -->
 
         <div class="comment-cell">
-          <a href="{{ url_for('profile.profile_posts_page') }}"><div class="comment-owner-profile-photo" style="background-image: url('{{ url_for('static', filename='branding/profile_photo.jpg') }}');"></div></a>
-          <a href="{{ url_for('profile.profile_posts_page') }}"><h3>username</h3></a>
+          <a href=""><div class="comment-owner-profile-photo" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');"></div></a>
+          <a href=""><h3>username</h3></a>
           <p>
             The sad thing is today's Democrats want to Destroy.
           </p>

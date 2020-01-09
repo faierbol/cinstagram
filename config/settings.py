@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     "explore",
     "help_centre",
     "home",
+    "profile_app",
 ]
 
 MIDDLEWARE = [

@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block specific_css_links %}
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/profile/profile.css') }}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile/profile.css' %}" />
 {% endblock %}
+
 
 {% block content %}
 <div class="followers-likers-container">
@@ -15,8 +17,8 @@
   <!-- user cells -->
 
   <div class="user-cell">
-      <div class="followers-likers-user-cell-profile-photo" style="background-image: url('{{ url_for('static', filename='branding/profile_photo.jpg') }}');"></div>
-      <a href="{{ url_for('profile.profile_posts_page') }}">
+      <div class="followers-likers-user-cell-profile-photo" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');"></div>
+      <a href="">
       <h3>Joe Smith</h3>
       <h3 class="follower-likers-username">@username</h3>
       </a>
