@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "home",
     "profile_app",
     "profile_settings",
+    "search",
 ]
 
 MIDDLEWARE = [

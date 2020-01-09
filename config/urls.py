@@ -95,6 +95,7 @@ urlpatterns = [
     # ----------------
     # search pages include three search indexes 1 - account searches, 2 hashtag
     # searches and finally 3 - location searches
+    path("", include("search.urls")),
 
 
     # Explore

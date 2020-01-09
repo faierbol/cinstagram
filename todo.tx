@@ -34,15 +34,15 @@
   [x] Models
   [x] Template
   [x] Views
-[ ] move search module
-  [ ] Models
-  [ ] Template
-  [ ] Views
+[x] move search module
+  [x] Models
+  [x] Template
+  [x] Views
 [ ] Move admin panel module
   [ ] Models
   [ ] Template
   [ ] Views
-[ ] move programmer panel module
+[ ] move programmer panel module (there is already a admin panel for now. Do a pinpoint view like in admin panel, I will review it later on)
   [ ] Models
   [ ] Template
   [ ] Views
