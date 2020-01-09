@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     "help_centre",
     "home",
     "profile_app",
+    "profile_settings",
 ]
 
 MIDDLEWARE = [

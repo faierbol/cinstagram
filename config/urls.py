@@ -8,6 +8,7 @@ urlpatterns = [
     # The admin panel that comes shipped with django
     path("admin/", admin.site.urls),   # remove this and add your ownadminpanel
 
+
     # Programmer Panel
     # ----------------
     # This is where the neccessary views regarding the programmer panel app of
@@ -31,6 +32,7 @@ urlpatterns = [
     # This is the app where the staff (admin) of the company updates thecertain
     # information regarding the usage of the site, what are new or howtousethem
     path("", include("help_centre.urls")),
+
 
     # About
     # -----------------
@@ -57,6 +59,7 @@ urlpatterns = [
     # ----------------
     # This is the app where the user of the site canchangetheiraccoutnsSettings
     # such as changing the password, allowing email and sms messages ... etc.
+    path("", include("profile_settings.urls")),
 
 
     # Media Upload
@@ -72,6 +75,7 @@ urlpatterns = [
     # bookmarked photos single post pages ... etc. Everything that is relatedto
     # a user with private, public viewing options ... etc.
     path("", include("profile_app.urls")),
+
 
     # Chat
     # ----------------
