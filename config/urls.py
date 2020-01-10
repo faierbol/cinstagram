@@ -17,7 +17,8 @@ urlpatterns = [
     # superuser too but admin mostly deals with the content of the site, where
     # the programm--ers deal with site-realibity, graphs of the bandwith
     # usaage ... etc.
-    # path("programmer_panel/", include("")),
+    path("", include("programmer_panel.urls")),
+
 
     # Admin Panel
     # -----------------
@@ -25,6 +26,7 @@ urlpatterns = [
     # content that is being entered to the site, polices it, limits it ... etc.
     # The difference between programmer panel is that admins are more oriented
     # towards user entries and not sysadmin control
+    path("", include("admin_panel.urls")),
 
 
     # Help Centre

@@ -38,14 +38,14 @@
   [x] Models
   [x] Template
   [x] Views
-[ ] Move admin panel module
-  [ ] Models
-  [ ] Template
-  [ ] Views
-[ ] move programmer panel module (there is already a admin panel for now. Do a pinpoint view like in admin panel, I will review it later on)
-  [ ] Models
-  [ ] Template
-  [ ] Views
+[x] Move admin panel module
+  [x] Models
+  [x] Template
+  [x] Views
+[x] move programmer panel module (there is already a admin panel for now. Do a pinpoint view like in admin panel, I will review it later on)
+  [x] Models
+  [x] Template
+  [x] Views
 [ ] move authentication module
   [ ] Models
   [ ] Template

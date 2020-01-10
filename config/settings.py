@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "profile_app",
     "profile_settings",
     "search",
+    "admin_panel",
 ]
 
 MIDDLEWARE = [
