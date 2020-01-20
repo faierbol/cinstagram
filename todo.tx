@@ -47,7 +47,7 @@
   [x] Template
   [x] Views
 [ ] move authentication module
-  [ ] Models
+  [x] Models
   [ ] Template
   [ ] Views
 [ ] move move media upload

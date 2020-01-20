@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html>
 
@@ -13,7 +15,7 @@
   <meta name="author" content="demir antay, Demir Antay, @demirantay" />
 
   <!-- FAVICON -->
-  <link rel="icon" href="{{ url_for('static', filename='branding/app-logo.png') }}" />
+  <link rel="icon" href="{% static 'branding/app-logo.png' %}" />
 
 
   <!-- GOOGLE FONTS -->
@@ -29,12 +31,16 @@
   <link rel="stylesheet" type="text/css" href="" />
 
   <!-- specific css links -->
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/authentication/signup_login_base.css') }}" />
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/authentication/signup_login_content_card.css') }}" />
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/authentication/signup_login_footer.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/authentication/signup_login_base.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/authentication/signup_login_content_card.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/authentication/signup_login_footer.css' %}" />
 
   <style>
-    {% if data.invalid_credentials == True %}
+    {% if invalid_credentials == True %}
+      .signup-login-content-card-signup-form input {
+        border-color: red;
+      }
+    {% elif empty_credentials == True %}
       .signup-login-content-card-signup-form input {
         border-color: red;
       }
@@ -50,9 +56,10 @@
     <div class="signup-login-content-card">
 
       <div class="signup-login-content-card-signup-child-card">
-        <img class="help-centre-top-nav-logo" src="{{ url_for('static', filename='branding/cinstagram_logo_text.png') }}" alt="logo" />
+        <img class="help-centre-top-nav-logo" src="{% static 'branding/cinstagram_logo_text.png' %}" alt="logo" />
         <p class="meta-signup-info">Sign up to see photos and videos from your friends.</p>
-        <form class="signup-login-content-card-signup-form" method="POST" action="{{ url_for('authentication.auth_signup') }}">
+        <form class="signup-login-content-card-signup-form" method="POST" action="{% url 'authentication_signup' %}">
+            {% csrf_token %}
             <input type="text" placeholder="Email" name="email"/><br />
             <input type="text" placeholder="Full Name" name="fullName"/><br />
             <input type="text" placeholder="Username" name="username"/><br />
@@ -66,14 +73,14 @@
 
       <div class="signup-login-content-card-linker-card">
         <p>
-            Have an account? <a href="{{ url_for('authentication.auth_login') }}">Log in</a>
+            Have an account? <a href="{% url 'authentication_login' %}">Log in</a>
         </p>
       </div>
 
       <div class="signup-login-content-card-app-links">
           <p>Get the app.</p>
-          <a href="https://github.com/demirantay/cinstagram#android--ios"><img src="{{ url_for('static', filename='branding/ios-android/ios-black-badge.png') }}" class="apple-store-badge" alt="apple-store-logo" /></a>
-          <a href="https://github.com/demirantay/cinstagram#android--ios"><img src="{{ url_for('static', filename='branding/ios-android/google-play-badge.png') }}" class="google-store-badge" alt="google-store-logo" /></a>
+          <a href="https://github.com/demirantay/cinstagram#android--ios"><img src="{% static 'branding/ios-android/ios-black-badge.png' %}" class="apple-store-badge" alt="apple-store-logo" /></a>
+          <a href="https://github.com/demirantay/cinstagram#android--ios"><img src="{% static 'branding/ios-android/google-play-badge.png' %}" class="google-store-badge" alt="google-store-logo" /></a>
       </div>
 
     </div><!-- e/main card -->

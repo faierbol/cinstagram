@@ -55,6 +55,7 @@ urlpatterns = [
     # ----------------
     # These blueprints contains the user authentication system for the endusers
     # of the site such as the "average joe" and not admin, top tier user ..etc.
+    path("", include("authentication.urls")),
 
 
     # Profile Settings

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "profile_settings",
     "search",
     "admin_panel",
+    "authentication",
 ]
 
 MIDDLEWARE = [
