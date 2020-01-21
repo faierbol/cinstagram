@@ -20,8 +20,9 @@ def authentication_signup(request):
     # session.pop("programmer_logged_in", None) <-- these are flask change it
     # admin user session pop
     # admin user session pop
-    # normal user session pop
-    # normal user session pop
+    del request.session["cinstagram_user_email"]
+    del request.session["cinstagram_user_username"]
+    del request.session["cinstagram_user_logged_in"]
 
     invalid_credentials = False
     empty_credentials = False
@@ -82,8 +83,9 @@ def authentication_login(request):
     # session.pop("programmer_logged_in", None)
     # admin user session pop
     # admin user session pop
-    # normal user session pop
-    # normal user session pop
+    del request.session["cinstagram_user_email"]
+    del request.session["cinstagram_user_username"]
+    del request.session["cinstagram_user_logged_in"]
 
     invalid_credentials = False
     empty_credentials = False
@@ -115,7 +117,9 @@ def authentication_login(request):
                 invalid_credentials = True
             else:
                 # Add the session variables than redirect the user
-                
+                request.session["cinstagram_user_email"] = user.email
+                request.session["cinstagram_user_username"] = user.username
+                request.session["cinstagram_user_logged_in"] = True
                 return HttpResponseRedirect("/home/")
 
     data = {
