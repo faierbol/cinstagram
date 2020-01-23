@@ -20,6 +20,7 @@ class UserPhoto(models.Model):
     )
     creation_date = models.DateField(default=timezone.now)
     caption = models.CharField(max_length=2000)
+    location = models.CharField(max_length=2000, default="")
 
     def __str__(self):
         return "Photo id: " + str(self.id) + " | User: " + str(self.user)

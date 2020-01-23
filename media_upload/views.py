@@ -7,6 +7,8 @@ from django.core.exceptions import ObjectDoesNotExist
 
 # My Module Imports
 from authentication.models import CinstagramUser
+from .models import UserPhoto, UserPhotoComment, UserPhotoLike
+from .models import UserPhotoBookmark
 
 
 def upload_page(request):
@@ -23,17 +25,30 @@ def upload_page(request):
 
     empty_credentials = False
 
-    current_cinstagram_user_email = request.session["username"]
+    current_cinstagram_user_email = request.session["cinstagram_user_email"]
     try:
-        current_cinstagram_user = None
+        current_cinstagram_user = CinstagramUser.objects.get(
+            email=current_cinstagram_user_email
+        )
     except ObjectDoesNotExist:
         current_cinstagram_user = None
 
     # Media Upload Validation
     if request.POST.get("media_upload_submit_btn"):
-        pass
+        photo = request.FILES.get("upload_file")
+        caption = request.POST.get("caption")
+        location = request.POST.get("location")
 
         # check if the file input is empty
+        if bool(photo) is False:
+            empty_credentials = True
+        else:
+            new_photo = UserPhoto(
+                user=current_cinstagram_user, photo=photo,
+                caption=caption, location=location
+            )
+            new_photo.save()
+            return HttpResponseRedirect("/home/")
 
     data = {
         "empty_credentials": empty_credentials,
