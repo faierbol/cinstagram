@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "search",
     "admin_panel",
     "authentication",
+    "media_upload",
 ]
 
 MIDDLEWARE = [

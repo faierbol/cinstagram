@@ -45,7 +45,7 @@
     <!-- TOP NAV MENU -->
     <div class="top-nav">
       <!-- logo -->
-      <a href=""><img class="top-nav-logo" src="{% static 'branding/cinstagram_logo_text.png' %}" alt="logo" /></a>
+      <a href="{% url 'home' %}"><img class="top-nav-logo" src="{% static 'branding/cinstagram_logo_text.png' %}" alt="logo" /></a>
 
       <!-- search form -->
       <form class="top-nav-search-form">
@@ -55,10 +55,10 @@
 
       <!-- top navigation -->
       <div class="top-nav-navigation">
-        <a href=""><span class="fa fa-home"></span></a>
-        <a href=""><span class="fa fa-compass"></span></a>
-        <a href=""><span class="fa fa-plus-square"></span></a>
-        <a href=""><img class="top-nav-profile-photo" src="{% static 'branding/profile_photo.jpg' %}" alt="profile_photo"/></a>
+        <a href="{% url 'home' %}"><span class="fa fa-home"></span></a>
+        <a href="{% url 'explore' %}"><span class="fa fa-compass"></span></a>
+        <a href="{% url 'upload_page' %}"><span class="fa fa-plus-square"></span></a>
+        <a href="{% url 'profile_posts_page' %}"><img class="top-nav-profile-photo" src="{% static 'branding/profile_photo.jpg' %}" alt="profile_photo"/></a>
       </div>
     </div>
 
@@ -80,11 +80,11 @@
 
     <!-- Footer -->
     <div class="footer">
-      <a href="">ABOUT US</a>
-      <a href="">HELP</a>
-      <a href="">API</a>
-      <a href="">JOBS</a>
-      <a href="">LEGAL</a>
+      <a href="{% url 'about' %}">ABOUT US</a>
+      <a href="{% url 'help_centre_index' %}">HELP</a>
+      <a href="{% url 'api_web' %}">API</a>
+      <a href="{% url 'jobs' %}">JOBS</a>
+      <a href="{% url 'legal' %}">LEGAL</a>
     </div>
   </div><!-- e/container-->
 

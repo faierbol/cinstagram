@@ -20,9 +20,10 @@ def authentication_signup(request):
     # session.pop("programmer_logged_in", None) <-- these are flask change it
     # admin user session pop
     # admin user session pop
-    del request.session["cinstagram_user_email"]
-    del request.session["cinstagram_user_username"]
-    del request.session["cinstagram_user_logged_in"]
+    if "cinstagram_user_email" in request.session:
+        del request.session["cinstagram_user_email"]
+        del request.session["cinstagram_user_username"]
+        del request.session["cinstagram_user_logged_in"]
 
     invalid_credentials = False
     empty_credentials = False
@@ -71,7 +72,7 @@ def authentication_signup(request):
         "empty_credentials": empty_credentials,
     }
 
-    return render(request, "authentication/signup.html", context=data)
+    return render(request, "authentication/signup.html", data)
 
 
 def authentication_login(request):
@@ -83,9 +84,10 @@ def authentication_login(request):
     # session.pop("programmer_logged_in", None)
     # admin user session pop
     # admin user session pop
-    del request.session["cinstagram_user_email"]
-    del request.session["cinstagram_user_username"]
-    del request.session["cinstagram_user_logged_in"]
+    if "cinstagram_user_email" in request.session:
+        del request.session["cinstagram_user_email"]
+        del request.session["cinstagram_user_username"]
+        del request.session["cinstagram_user_logged_in"]
 
     invalid_credentials = False
     empty_credentials = False

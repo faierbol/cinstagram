@@ -70,6 +70,7 @@ urlpatterns = [
     # This is kinda the core of the application where the users upload pictures
     # or videos. Self note for future: I will need to updatetheimagerecognition
     # so that the site will not be NSFW
+    path("", include("media_upload.urls")),
 
 
     # Profile
