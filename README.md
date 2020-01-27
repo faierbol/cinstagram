@@ -14,6 +14,9 @@
 
 ## Introduction
 
+Stage: `Pre-Alpha`<br>
+<br>
+
 Cinstagram is a fully fledged Instagram clone. The support for IOS and Android will come in the future. Remember, this is just a educational clone and Instagram is a registered trademark of Instagram Inc. All of the static assets have been created by me and not copied from the Instagram Inc. I am just cloning the functionality of the site to improve my understanding of how large web applications work under the hood.
 
 ## Android & IOS
