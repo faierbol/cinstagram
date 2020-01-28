@@ -20,13 +20,13 @@ class CinstagramUserSettings(models.Model):
     profile_photo = models.ImageField(
         upload_to="profile_photo/", blank=True, null=True
     )
-    full_name = models.CharField(max_length=100)
+    full_name = models.CharField(max_length=100, blank=True, null=True)
     username = models.CharField(max_length=100, blank=False, null=False)
-    personal_url = models.CharField(max_length=1000)
-    bio = models.TextField()
-    email = models.CharField(max_length=100, blank=False, null=False)
-    phone_number = models.IntegerField()
-    gender = models.CharField(max_length=100)
+    personal_url = models.CharField(max_length=1000, blank=True, null=True, default="")
+    bio = models.TextField(blank=True, null=True, default="")
+    email = models.CharField(max_length=100, blank=False, null=False, default="")
+    phone_number = models.IntegerField(blank=True, null=True, default=0)
+    gender = models.CharField(max_length=100, blank=True, null=True, default="")
 
     # Email & SMS -- settings
     feedback_emails = models.BooleanField(default=False)

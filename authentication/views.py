@@ -7,6 +7,7 @@ from django.core.exceptions import ObjectDoesNotExist
 
 # My Module Imports
 from .models import CinstagramUser
+from profile_settings.models import CinstagramUserSettings
 
 
 def authentication_signup(request):
@@ -62,6 +63,17 @@ def authentication_signup(request):
                     username=username, password=password
                 )
                 new_user.save()
+                # Get the new user and add new settings to that user
+                # Reassign the `new_user` variable to get the object not
+                # re-inisiate another class instance
+                new_user = CinstagramUser.objects.get(
+                    email=email, username=username
+                )
+                new_user_settings = CinstagramUserSettings(
+                    settings_owner=new_user, username=username,
+                    email=email, full_name=full_name
+                )
+                new_user_settings.save()
                 return HttpResponseRedirect("/auth/login/")
             else:
                 # User exists
