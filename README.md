@@ -8,7 +8,8 @@
   Instagram clone built with Flask + PostgreSQL + Nginx
   <br>
   <a href=""><strong>Visit the App »</strong></a>
-  <p>`Pre-Alpha: V-1.11.0`<br></p>
+  <br>
+  Pre-Alpha: V-1.11.0
   <br>
   <br>
 </p>

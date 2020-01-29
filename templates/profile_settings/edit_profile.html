@@ -8,6 +8,11 @@
 {% block content %}
 <div class="profile-settings-content-card">
 
+
+{% if empty_credentials == True %}
+  alert("you cannot enter empty credentials to username or email")
+{% endif %}
+
   <!-- left navigation part -->
   <div class="profile-settings-content-card-left-part">
     <ul>

@@ -30,10 +30,10 @@ class CinstagramUserSettings(models.Model):
 
     # Email & SMS -- settings
     feedback_emails = models.BooleanField(default=False)
-    remainder_emails = models.BooleanField(default=False)
-    prodcut_emails = models.BooleanField(default=False)
+    reminder_emails = models.BooleanField(default=False)
+    product_emails = models.BooleanField(default=False)
     news_emails = models.BooleanField(default=False)
-    sms_notifications = models.BooleanField(default=False)
+    sms_messages = models.BooleanField(default=False)
 
     # Privacy & Security -- settings
     private_account = models.BooleanField(default=False)

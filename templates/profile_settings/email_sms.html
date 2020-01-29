@@ -23,36 +23,57 @@
 
 
     <!-- sms and email form -->
-    <form class="profile-settings-sms-email-form">
+    <form class="profile-settings-sms-email-form" method="POST" action="{% url 'profile_settings_email_sms' %}">
+      {% csrf_token %}
       <h3>Subscribe to:</h3>
       <Br />
 
-      <input type="checkbox"/>
+      {% if current_cinstagram_user_settings.feedback_emails == True %}
+        <input type="checkbox" name="feedback_emails" value="true" checked/>
+      {% else %}
+        <input type="checkbox" name="feedback_emails" value="true"/>
+      {% endif %}
       <b>Feedback Emails</b><br />
       <i>Give feedback on Instagram.</i>
       <br><br />
 
-      <input type="checkbox"/>
+      {% if current_cinstagram_user_settings.reminder_emails == True %}
+        <input type="checkbox" name="reminder_emails" value="true" checked/>
+      {% else %}
+        <input type="checkbox" name="reminder_emails" value="true"/>
+      {% endif %}
       <b>Reminder emails</b><br />
       <i>Get notifications you may have missed.</i>
       <br><br />
 
-      <input type="checkbox"/>
+      {% if current_cinstagram_user_settings.product_emails == True %}
+        <input type="checkbox" name="product_emails" value="true" checked/>
+      {% else %}
+        <input type="checkbox" name="product_emails" value="true"/>
+      {% endif %}
       <b>Product emails</b><br />
       <i>Get tips about Instagram's tools.</i>
       <br><br />
 
-      <input type="checkbox"/>
+      {% if current_cinstagram_user_settings.news_emails == True %}
+        <input type="checkbox" name="news_emails" value="true" checked/>
+      {% else %}
+        <input type="checkbox" name="news_emails" value="true"/>
+      {% endif %}
       <b>News emails</b><br />
       <i>Learn about new Instagram features.</i>
       <br><br />
 
-      <input type="checkbox"/>
+      {% if current_cinstagram_user_settings.sms_messages == True %}
+        <input type="checkbox" name="sms_messages" value="true" checked/>
+      {% else %}
+        <input type="checkbox" name="sms_messages" value="true"/>
+      {% endif %}
       <b>Text (SMS) Messages</b><br />
       <i>Get notifications by text message.</i>
       <br><br />
 
-      <input value="Submit" class="profile-sms-email-submit-btn" type="submit" />
+      <input value="Submit" class="profile-sms-email-submit-btn" type="submit" name="sms_email_submit_btn" />
     </form>
   </div>
 

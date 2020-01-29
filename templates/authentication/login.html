@@ -62,7 +62,7 @@
         <form class="signup-login-content-card-signup-form" method="POST" action="{% url 'authentication_login' %}">
             {% csrf_token %}
             <input class="login-form-input" type="text" placeholder="Email" name="email"/><br />
-            <input class="login-form-input" type="text" placeholder="Password" name="password"/><br />
+            <input class="login-form-input" type="password" placeholder="Password" name="password"/><br />
             <input type="submit" value="Log In" class="signup-form-submit-btn" name="login_submit_btn"/><br />
         </form>
 
