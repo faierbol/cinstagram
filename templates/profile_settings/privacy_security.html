@@ -22,23 +22,32 @@
   <div class="profile-settings-content-card-right-part">
 
     <!-- privacy and security form -->
-    <form class="profile-setings-security-form">
+    <form class="profile-setings-security-form" method="POST" aciton="{% url 'profile_settings_privacy_security' %}" >
+      {% csrf_token %}
       <h3>Account Privacy</h3>
       <Br />
 
-      <input type="checkbox" value="private_account"/>
+      {% if current_cinstagram_user_settings.private_account == True %}
+        <input type="checkbox" name="private_account" value="true" checked/>
+      {% else %}
+        <input type="checkbox" name="private_account" value="true"/>
+      {% endif %}
       <b>Private Account</b><br />
       <i>When your account is private, only people you approve can see your photos and videos on Instagram.</i>
       <br>
       <br />
 
-      <input type="checkbox"/>
+      {% if current_cinstagram_user_settings.turn_off_comments == True %}
+        <input type="checkbox" name="turn_off_comments" value="true" checked/>
+      {% else %}
+        <input type="checkbox" name="turn_off_comments" value="true"/>
+      {% endif %}
       <b>Turn Off Comments</b><br />
       <i>Turn off the comment section on your photos. No one can post anything on the comment section of your photos.</i>
       <br><br />
 
 
-      <input value="Submit" class="profile-sms-email-submit-btn" type="submit" />
+      <input value="Submit" class="profile-sms-email-submit-btn" type="submit" name="private_account_submit_btn" />
     </form>
   </div>
 

@@ -222,7 +222,22 @@ def profile_settings_privacy_security(request):
         current_cinstagram_user_settings = None
 
     # Privacy and Security form validation
+    if request.POST.get("private_account_submit_btn"):
+        private_account = request.POST.get("private_account")
+        turn_off_comments = request.POST.get("turn_off_comments")
 
+        if private_account == "true":
+            current_cinstagram_user_settings.private_account = True
+        else:
+            current_cinstagram_user_settings.private_account = False
+
+        if turn_off_comments == "true":
+            current_cinstagram_user_settings.turn_off_comments = True
+        else:
+            current_cinstagram_user_settings.turn_off_comments = False
+
+        current_cinstagram_user_settings.save()
+        return HttpResponseRedirect("/profile/settings/privacy_security/")
 
     data = {
         "current_cinstagram_user": current_cinstagram_user,

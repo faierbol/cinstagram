@@ -9,7 +9,7 @@
   <br>
   <a href=""><strong>Visit the App »</strong></a>
   <br>
-  Pre-Alpha: V-1.11.0
+  Pre-Alpha: V-1.12.0
   <br>
   <br>
 </p>
@@ -41,7 +41,7 @@ Documentation for Cinstagram can be found on the [`docs/README.md` folder](./doc
 - [x] Photo & Video Upload
 - [ ] Image Recognition
 - [ ] Profile Page
-- [ ] Profile Settings
+- [x] Profile Settings
 - [ ] Home
 - [ ] Search Indexes
 - [ ] Explore
