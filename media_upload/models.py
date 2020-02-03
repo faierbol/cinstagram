@@ -48,7 +48,7 @@ class UserPhotoLike(models.Model):
     liked_photo = models.ForeignKey(UserPhoto, on_delete=models.CASCADE)
 
     def __str__(self):
-        return "Like Owner: " + str(self.like_owner)
+        return "Liked photo id: " + str(self.liked_photo.id) + " | Like Owner: " + str(self.like_owner)
 
 
 # User Photo Bookmarks
@@ -60,4 +60,4 @@ class UserPhotoBookmark(models.Model):
     bookmarked_photo = models.ForeignKey(UserPhoto, on_delete=models.CASCADE)
 
     def __str__(self):
-        return "Bookmark Owner: " + str(self.bookmark_owner)
+        return "Bookmarked photo id: " + str(self.bookmarked_photo.id) + " | Bookmark Owner: " + str(self.bookmark_owner)
