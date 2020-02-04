@@ -41,30 +41,15 @@
       <!-- post comments -->
       <div class="post-comments">
 
-        <div class="comment-cell">
-          <a href=""><div class="comment-owner-profile-photo" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');"></div></a>
-          <a href=""><h3>username</h3></a>
-          <p>
-            The sad thing is today's Democrats want to Destroy.
-          </p>
-        </div><!-- e/comment cell -->
-
-        <div class="comment-cell">
-          <a href=""><div class="comment-owner-profile-photo" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');"></div></a>
-          <a href=""><h3>username</h3></a>
-          <p>
-            The sad thing is today's Democrats want to Destroy.
-          </p>
-        </div><!-- e/comment cell -->
-
-        <div class="comment-cell">
-          <a href=""><div class="comment-owner-profile-photo" style="background-image: url('{% static 'branding/profile_photo.jpg' %}');"></div></a>
-          <a href=""><h3>username</h3></a>
-          <p>
-            The sad thing is today's Democrats want to Destroy.
-          </p>
-        </div><!-- e/comment cell -->
-
+        {% for comment in post_comments %}
+          <div class="comment-cell">
+            <a href=""><div class="comment-owner-profile-photo" style="background-image: url('{{ comment.comment_owner_settings.profile_photo.url }}');"></div></a>
+            <a href=""><h3>{{ comment.comment_owner.username }}</h3></a>
+            <p>
+              {{ comment.comment }}
+            </p>
+          </div><!-- e/comment cell -->
+        {% endfor %}
 
       </div>
     </div><!-- e/comment-scroll-container -->
@@ -88,11 +73,12 @@
       </form>
 
       <!-- comment form  -->
-      <form class="post-comment-form" method="POST" action="profile_single_post_page">
+      <form class="post-comment-form" method="POST" action="{% url 'profile_single_post_page' post.id %}">
         {% csrf_token %}
-        <button type="submit" name="post_comment_form_submit_btn"><span class="fa fa-comment"></span></button>
+        <input type="submit" name="post_comment_form_submit_btn" /><span class="fa fa-comment"></span>
+        <!--<button type="submit" name="post_comment_form_submit_btn"><span class="fa fa-comment"></span></button>-->
         <input type="hidden" value="{{ post.id }}" name="hidden_post_id"  />
-        <input type="text"  placeholder="Comment ..."/>
+        <input type="text"  placeholder="Comment ..." name="comment_content"/>
       </form>
     </div>
 

@@ -60,7 +60,7 @@ def profile_single_post_page(request, post_id):
 
     # Get the Post Comments
     try:
-        post_comments = None
+        post_comments = UserPhotoComment.objects.all()
     except ObjectDoesNotExist:
         post_comments = None
 
@@ -69,12 +69,6 @@ def profile_single_post_page(request, post_id):
         post_likes = None
     except ObjectDoesNotExist:
         post_likes = None
-
-    # Get the Post Bookmarks
-    try:
-        post_bookmakarks = None
-    except ObjectDoesNotExist:
-        post_bookmakarks = None
 
     # Post Like form Validation
     if request.POST.get("post_like_form_submit_btn"):
@@ -120,12 +114,23 @@ def profile_single_post_page(request, post_id):
 
     # Post Comment form Validation
     if request.POST.get("post_comment_form_submit_btn"):
-        pass
+        hidden_post_id = request.POST.get("hidden_post_id")
+        comment_content = request.POST.get("comment_content")
+        post = UserPhoto.objects.get(id=hidden_post_id)
+        # Create a new comment for the photo
+        new_comment = UserPhotoComment(
+            comment_owner=current_user,
+            comment_owner_settings=current_user_settings,
+            commented_photo=post,
+            comment=comment_content
+        )
+        new_comment.save()
 
     data = {
         "current_user": current_user,
         "current_user_settings": current_user_settings,
         "post": post,
+        "post_comments": post_comments,
     }
 
     return render(request, "profile/post_page.html", data)

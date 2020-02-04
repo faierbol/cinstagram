@@ -6,6 +6,7 @@ from django.utils import timezone
 
 # My Module Imports
 from authentication.models import CinstagramUser
+from profile_settings.models import CinstagramUserSettings
 
 
 # User Photos
@@ -31,12 +32,13 @@ class UserPhoto(models.Model):
 class UserPhotoComment(models.Model):
     id = models.AutoField(primary_key=True)
     comment_owner = models.ForeignKey(CinstagramUser, on_delete=models.CASCADE)
+    comment_owner_settings = models.ForeignKey(CinstagramUserSettings, on_delete=models.CASCADE, null=True, blank=True)
     commented_photo = models.ForeignKey(UserPhoto, on_delete=models.CASCADE)
     comment = models.CharField(max_length=2000)
     creation_date = models.DateField(default=timezone.now)
 
     def __str__(self):
-        return "Comment Owner: " + str(self.comment_owner)
+        return "Comment Owner: " + str(self.comment_owner) + " | Commented Photo Id: " + str(self.commented_photo.id)
 
 
 # User Photo Likes
