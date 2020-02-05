@@ -32,7 +32,12 @@ class UserPhoto(models.Model):
 class UserPhotoComment(models.Model):
     id = models.AutoField(primary_key=True)
     comment_owner = models.ForeignKey(CinstagramUser, on_delete=models.CASCADE)
-    comment_owner_settings = models.ForeignKey(CinstagramUserSettings, on_delete=models.CASCADE, null=True, blank=True)
+    comment_owner_settings = models.ForeignKey(
+        CinstagramUserSettings,
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True
+    )
     commented_photo = models.ForeignKey(UserPhoto, on_delete=models.CASCADE)
     comment = models.CharField(max_length=2000)
     creation_date = models.DateField(default=timezone.now)
@@ -47,6 +52,12 @@ class UserPhotoComment(models.Model):
 class UserPhotoLike(models.Model):
     id = models.AutoField(primary_key=True)
     like_owner = models.ForeignKey(CinstagramUser, on_delete=models.CASCADE)
+    like_owner_settings = models.ForeignKey(
+        CinstagramUserSettings,
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True
+    )
     liked_photo = models.ForeignKey(UserPhoto, on_delete=models.CASCADE)
 
     def __str__(self):
