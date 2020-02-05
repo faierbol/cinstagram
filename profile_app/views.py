@@ -179,14 +179,14 @@ def profile_post_likers(request, post_id):
     # Get the Followers/Followings
     try:
         current_user_followings = UserFollowing.objects.filter(
-            followed_user=current_user
+            follower_user=current_user,
         )
-        current_user_followers = []
+        accounts_current_user_following = []
         for following in current_user_followings:
-            current_user_followers.append(following.follower_user)
+            accounts_current_user_following.append(following.followed_user)
     except ObjectDoesNotExist:
         current_user_followings = None
-        current_user_followers = []
+        accounts_current_user_following = []
 
     # Follow Form processing
     if request.POST.get("follow_submit_btn"):
@@ -259,7 +259,7 @@ def profile_post_likers(request, post_id):
         "post": post,
         "post_likes": post_likes,
         "current_user_followings": current_user_followings,
-        "current_user_followers": current_user_followers,
+        "accounts_current_user_following": accounts_current_user_following,
     }
 
     return render(request, "profile/likers.html", data)

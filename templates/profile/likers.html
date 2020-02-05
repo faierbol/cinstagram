@@ -25,7 +25,11 @@
         <h3 class="follower-likers-username">@{{ liker.like_owner.username }}</h3>
         </a>
 
-        {% if liker.like_owner in current_user_followers %}
+        {% if like.like_owner in accounts_current_user_following %}
+
+        {% endif %}
+
+        {% if liker.like_owner in accounts_current_user_following %}
         <form method="POST" action="{% url 'profile_post_likers' post.id %}">
             {% csrf_token %}
             <input type="hidden" value="{{ liker.like_owner.id }}" name="hidden_user_id" />
