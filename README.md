@@ -40,7 +40,7 @@ Documentation for Cinstagram can be found on the [`docs/README.md` folder](./doc
 - [x] Login/Signup
 - [x] Photo & Video Upload
 - [ ] Image Recognition
-- [x] Profile Page
+- [x] Profile 
 - [x] Profile Settings
 - [ ] Home
 - [ ] Search Indexes

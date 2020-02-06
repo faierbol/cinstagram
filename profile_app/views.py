@@ -390,11 +390,115 @@ def profile_followers(request):
 
 
 def profile_following(request):
-    """ ... """
+    """
+    In this page the user can see all the followings of her account. And she
+    can follow or unfollow them.
+    """
     # Deleting any sessions regarding top-tier type of users
+    # session.pop("programmer_username", None)  <-- these are flask change it
+    # session.pop("programmer_logged_in", None) <-- these are flask change it
+    # admin user session pop
+    # admin user session pop
+
+    # Get the current user
+    current_cinstagram_user_email = request.session["cinstagram_user_email"]
+    try:
+        current_user = CinstagramUser.objects.get(
+            email=current_cinstagram_user_email
+        )
+    except ObjectDoesNotExist:
+        current_user = None
+
+    # Get the current user settings
+    try:
+        current_user_settings = CinstagramUserSettings.objects.get(
+            settings_owner=current_user
+        )
+    except ObjectDoesNotExist:
+        current_user_settings = None
+
+    # Get the Acounts Current User is Following
+    try:
+        current_user_followings = UserFollowing.objects.filter(
+            follower_user=current_user,
+        )
+        accounts_current_user_following = []
+        for following in current_user_followings:
+            accounts_current_user_following.append(following.followed_user)
+    except ObjectDoesNotExist:
+        current_user_followings = None
+        accounts_current_user_following = []
+
+    # Follow Form processing
+    if request.POST.get("follow_submit_btn"):
+        hidden_user_id = request.POST.get("hidden_user_id")
+        hidden_user = CinstagramUser.objects.get(id=hidden_user_id)
+        hidden_user_settings = CinstagramUserSettings.objects.get(
+            settings_owner=hidden_user
+        )
+        # Check if the user already has a `follow` relationship with thecurrent
+        # user, if there is do nothing. If there is not create new relationship
+        try:
+            filtered_follower = UserFollowing.objects.get(
+                followed_id=hidden_user.id,
+                follower_id=current_user.id,
+            )
+        except ObjectDoesNotExist:
+            filtered_follower = None
+
+        if filtered_follower == None:
+            # new relationship
+            new_following_relationship = UserFollowing(
+                followed_id=hidden_user.id,
+                followed_user=hidden_user,
+                followed_user_settings=hidden_user_settings,
+                follower_id=current_user.id,
+                follower_user=current_user,
+                follower_user_settings=current_user_settings,
+            )
+            new_following_relationship.save()
+            return HttpResponseRedirect("/profile/following/")
+        else:
+            # Do nothing since there is arelationship already
+            pass
+
+    # Un-Follow Form Processing
+    if request.POST.get("unfollow_submit_btn"):
+        hidden_user_id = request.POST.get("hidden_user_id")
+        hidden_user = CinstagramUser.objects.get(id=hidden_user_id)
+        hidden_user_settings = CinstagramUserSettings.objects.get(
+            settings_owner=hidden_user
+        )
+        # Check if the user already has a `follow` relationship with thecurrent
+        # user, if there is not do nothing. If there is  delete  relationship
+        try:
+            filtered_follower = UserFollowing.objects.get(
+                followed_id=hidden_user.id,
+                follower_id=current_user.id,
+            )
+        except ObjectDoesNotExist:
+            filtered_follower = None
+
+        if filtered_follower == None:
+            # do nothing since it does not exists
+            pass
+        else:
+            # delete the relationship
+            filtered_follower.delete()
+            return HttpResponseRedirect("/profile/following/")
+
+    '''
+    SELF NOTE FOR FUTURE AT THE MOMENT I AM NOT IMPLEMENTING THE + BUTTON FORM
+    AT THE END OF THE PAGE FOR LOADING MORE DATA, ATM IT JUST LOADS EVERYTHING
+    THE TABLE HOLDS. BUT IN THE FUTURE I WILL CHANGE IT SINCE IT IS BAD FOR
+    LOADING EVERY ENTRY FROM THE DATA
+    '''
 
     data = {
-
+        "current_user": current_user,
+        "current_user_settings": current_user_settings,
+        "current_user_followings": current_user_followings,
+        "accounts_current_user_following": accounts_current_user_following,
     }
 
     return render(request, "profile/following.html", data)
