@@ -12,16 +12,14 @@ from media_upload.models import UserPhoto, UserPhotoComment, UserPhotoLike
 from media_upload.models import UserPhotoBookmark
 from .models import UserFollowing
 
+# from django.template.defaulttags import register
 
-def profile_posts_page(request):
-    """ ... """
-    # Deleting any sessions regarding top-tier type of users
-
-    data = {
-
-    }
-
-    return render(request, "profile/posts_page.html", data)
+"""
+# Getting a dictianory's key filter
+@register.filter
+def get_item(dictionary, key):
+    return dictionary.get(key)
+"""
 
 
 def profile_single_post_page(request, post_id):
@@ -502,6 +500,102 @@ def profile_following(request):
     }
 
     return render(request, "profile/following.html", data)
+
+
+def profile_posts_page(request):
+    """
+    This is the main landing page of the profile of the user. Whenever they
+    click on their profile page or username they get redirected to here and
+    from here they get riderected to other pages of the profile such as
+    settings, tagged imgs, saved imgs, ... etc.
+    """
+    # Deleting any sessions regarding top-tier type of users
+    # session.pop("programmer_username", None)  <-- these are flask change it
+    # session.pop("programmer_logged_in", None) <-- these are flask change it
+    # admin user session pop
+    # admin user session pop
+
+    # Get the current user
+    current_cinstagram_user_email = request.session["cinstagram_user_email"]
+    try:
+        current_user = CinstagramUser.objects.get(
+            email=current_cinstagram_user_email
+        )
+    except ObjectDoesNotExist:
+        current_user = None
+
+    # Get the current user settings
+    try:
+        current_user_settings = CinstagramUserSettings.objects.get(
+            settings_owner=current_user
+        )
+    except ObjectDoesNotExist:
+        current_user_settings = None
+
+    # Get the Post Count
+    try:
+        posts = UserPhoto.objects.filter(user=current_user)
+        post_count = 0
+        for post in posts:
+            post_count += 1
+    except ObjectDoesNotExist:
+        post_count = 0
+
+    # Get the Follower Count
+    try:
+        followers = UserFollowing.objects.filter(followed_user=current_user)
+        follower_count = 0
+        for follower in followers:
+            follower_count += 1
+    except ObjectDoesNotExist:
+        follower_count = 0
+
+    # Get the Following Count
+    try:
+        followings = UserFollowing.objects.filter(follower_user=current_user)
+        following_count = 0
+        for following in followings:
+            following_count += 1
+    except ObjectDoesNotExist:
+        following_count = 0
+
+    #  Get All of the Users Posts and the posts meta data such as like count, .
+    try:
+        all_posts = UserPhoto.objects.filter(user=current_user)
+        # Getting meta info of the posts
+        all_posts_likes = {}
+        all_posts_comments = {}
+        for post in all_posts:
+            # Getting the like count
+            likes_count = 0
+            current_post_likes = UserPhotoLike.objects.filter(liked_photo=post)
+            for like in current_post_likes:
+                likes_count += 1
+            all_posts_likes[post.id] = likes_count
+
+            comment_count = 0
+            current_post_comments = UserPhotoComment.objects.filter(commented_photo=post)
+            for comment in current_post_comments:
+                comment_count += 1
+            all_posts_comments[post.id] = comment_count
+
+    except ObjectDoesNotExist:
+        all_posts = None
+        all_posts_likes = None
+        all_posts_comments = None
+
+    data = {
+        "current_user": current_user,
+        "current_user_settings": current_user_settings,
+        "post_count": post_count,
+        "follower_count": follower_count,
+        "following_count": following_count,
+        "all_posts": all_posts,
+        "all_posts_likes": all_posts_likes,
+        "all_posts_comments": all_posts_comments,
+    }
+
+    return render(request, "profile/posts_page.html", data)
 
 
 def profile_saved(request):
