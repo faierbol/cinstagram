@@ -709,6 +709,132 @@ def profile_tagged(request):
 
 # -------------------- OTHER USER PROFILES -----------------------
 
+def other_users_profile_single_post_page(request, username, post_id):
+    """
+    This view holds all the controller logic for the post system that the usual
+    users post. They are generally videos, photos, gifs .. etc.
+    """
+    # Deleting any sessions regarding top-tier type of users
+    # session.pop("programmer_username", None)  <-- these are flask change it
+    # session.pop("programmer_logged_in", None) <-- these are flask change it
+    # admin user session pop
+    # admin user session pop
+
+    # Get the current user
+    current_cinstagram_user_email = request.session["cinstagram_user_email"]
+    try:
+        current_user = CinstagramUser.objects.get(
+            email=current_cinstagram_user_email
+        )
+    except ObjectDoesNotExist:
+        current_user = None
+
+    # Get the current user settings
+    try:
+        current_user_settings = CinstagramUserSettings.objects.get(
+            settings_owner=current_user
+        )
+    except ObjectDoesNotExist:
+        current_user_settings = None
+
+    # Get the Other User
+    try:
+        other_user = CinstagramUser.objects.get(username=username)
+    except ObjectDoesNotExist:
+        other_user = None
+
+    # Get the Other User Settings
+    try:
+        pass
+    except ObjectDoesNotExist:
+        other_user_settings = CinstagramUserSettings.objects.get(
+            settings_owner=other_user
+        )
+
+    # Get the current post object
+    try:
+        post = UserPhoto.objects.get(id=post_id, user=other_user)
+    except ObjectDoesNotExist:
+        post = None
+
+    # Get the Post Comments
+    try:
+        post_comments = UserPhotoComment.objects.filter(commented_photo=post)
+    except ObjectDoesNotExist:
+        post_comments = None
+
+    # Get the Post Like Count
+    try:
+        post_like_count = None
+    except ObjectDoesNotExist:
+        post_like_count = None
+
+    # Post Like form Validation
+
+    # Post Bookmark From Validaiton
+
+    # Post Comment form Validation
+
+    # Other User Follow form Validation
+
+    # Other User Un-follow form Validation
+
+    data = {
+        "current_user": current_user,
+        "current_user_settings": current_user_settings,
+        "other_user": other_user,
+        "other_user_settings": other_user_settings,
+        "post": post,
+        "post_comments": post_comments,
+    }
+
+    return render(request, "profile/other_users_post_page.html", data)
+
+
+def other_users_profile_post_likers(request, post_id):
+    """
+
+    """
+
+
+def other_users_profile_followers(request):
+    """
+
+    """
+
+
+def other_users_profile_following(request):
+    """
+
+    """
+
+
+def other_users_profile_posts_page(request):
+    """
+
+    """
+
+
+def other_users_profile_saved(request):
+    """
+
+    """
+
+
+def other_users_profile_tagged(request, username):
+    """ ... """
+    # Deleting any sessions regarding top-tier type of users
+
+    """
+        This view will be skipped for now because i do not have the
+        tag system up and running
+    """
+
+    data = {
+
+    }
+
+    return render(request, "profile/other_users_tagged_page.html", data)
 
 
 # -------------------- Public USER PROFILES ---------------------
