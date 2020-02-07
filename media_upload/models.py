@@ -71,6 +71,7 @@ class UserPhotoBookmark(models.Model):
     id = models.AutoField(primary_key=True)
     bookmark_owner = models.ForeignKey(CinstagramUser, on_delete=models.CASCADE)
     bookmarked_photo = models.ForeignKey(UserPhoto, on_delete=models.CASCADE)
+    bookmark_date = models.DateField(default=timezone.now, blank=True, null=True)
 
     def __str__(self):
         return "Bookmarked photo id: " + str(self.bookmarked_photo.id) + " | Bookmark Owner: " + str(self.bookmark_owner)
