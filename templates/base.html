@@ -58,7 +58,7 @@
         <a href="{% url 'home' %}"><span class="fa fa-home"></span></a>
         <a href="{% url 'explore' %}"><span class="fa fa-compass"></span></a>
         <a href="{% url 'upload_page' %}"><span class="fa fa-plus-square"></span></a>
-        <a href="{% url 'profile_posts_page' %}"><img class="top-nav-profile-photo" src="{% static 'branding/profile_photo.jpg' %}" alt="profile_photo"/></a>
+        <a href="{% url 'profile_posts_page' %}"><img class="top-nav-profile-photo" src="{{ current_user_settings.profile_photo.url }}" alt="profile_photo"/></a>
       </div>
     </div>
 

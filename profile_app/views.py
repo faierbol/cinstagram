@@ -159,9 +159,9 @@ def profile_post_likers(request, post_id):
     except ObjectDoesNotExist:
         post = None
 
-    # Get the likers
+    # Get the likers of the project
     try:
-        post_likes = UserPhotoLike.objects.all()
+        post_likes = UserPhotoLike.objects.filter(liked_photo=post)
     except ObjectDoesNotExist:
         post_likes = None
 
@@ -920,10 +920,151 @@ def other_users_profile_single_post_page(request, username, post_id):
     return render(request, "profile/other_users_post_page.html", data)
 
 
-def other_users_profile_post_likers(request, post_id):
+def other_users_profile_post_likers(request, username, post_id):
     """
+    This page showcases all of the likers of a given user post such as a photo
+    video, gallery ... etc.
+    """
+    # Deleting any sessions regarding top-tier type of users
+    # session.pop("programmer_username", None)  <-- these are flask change it
+    # session.pop("programmer_logged_in", None) <-- these are flask change it
+    # admin user session pop
+    # admin user session pop
 
-    """
+    # Get the current user
+    current_cinstagram_user_email = request.session["cinstagram_user_email"]
+    try:
+        current_user = CinstagramUser.objects.get(
+            email=current_cinstagram_user_email
+        )
+    except ObjectDoesNotExist:
+        current_user = None
+
+    # Get the current user settings
+    try:
+        current_user_settings = CinstagramUserSettings.objects.get(
+            settings_owner=current_user
+        )
+    except ObjectDoesNotExist:
+        current_user_settings = None
+
+    # Get the Other User
+    try:
+        other_user = CinstagramUser.objects.get(username=username)
+    except ObjectDoesNotExist:
+        other_user = None
+
+    # Get the Other User Settings
+    try:
+        other_user_settings = CinstagramUserSettings.objects.get(
+            settings_owner=other_user
+        )
+    except ObjectDoesNotExist:
+        other_user_settings = None
+
+    # Get the current post object
+    try:
+        post = UserPhoto.objects.get(id=post_id, user=other_user)
+    except ObjectDoesNotExist:
+        post = None
+
+    # Get the posts likers
+    try:
+        post_likes = UserPhotoLike.objects.filter(liked_photo=post)
+    except ObjectDoesNotExist:
+        post_likes = None
+
+    # Get the Followers/Followings of the Current user
+    try:
+        current_user_followings = UserFollowing.objects.filter(
+            follower_user=current_user,
+        )
+        accounts_current_user_following = []
+        for following in current_user_followings:
+            accounts_current_user_following.append(following.followed_user)
+    except ObjectDoesNotExist:
+        current_user_followings = None
+        accounts_current_user_following = []
+
+    # Follow Form processing
+    if request.POST.get("follow_submit_btn"):
+        hidden_user_id = request.POST.get("hidden_user_id")
+        hidden_user = CinstagramUser.objects.get(id=hidden_user_id)
+        hidden_user_settings = CinstagramUserSettings.objects.get(
+            settings_owner=hidden_user
+        )
+        # Check if the user already has a `follow` relationship with thecurrent
+        # user, if there is do nothing. If there is not create new relationship
+        try:
+            filtered_follower = UserFollowing.objects.get(
+                followed_id=hidden_user.id,
+                follower_id=current_user.id,
+            )
+        except ObjectDoesNotExist:
+            filtered_follower = None
+
+        if filtered_follower == None:
+            # new relationship
+            new_following_relationship = UserFollowing(
+                followed_id=hidden_user.id,
+                followed_user=hidden_user,
+                followed_user_settings=hidden_user_settings,
+                follower_id=current_user.id,
+                follower_user=current_user,
+                follower_user_settings=current_user_settings,
+            )
+            new_following_relationship.save()
+            return HttpResponseRedirect("/profile/" + str(other_user.username)
+                                        + "/posts/" + str(post_id) + "/likers/")
+        else:
+            # Do nothing since there is arelationship already
+            pass
+
+    # Un-Follow form processing
+    if request.POST.get("unfollow_submit_btn"):
+        hidden_user_id = request.POST.get("hidden_user_id")
+        hidden_user = CinstagramUser.objects.get(id=hidden_user_id)
+        hidden_user_settings = CinstagramUserSettings.objects.get(
+            settings_owner=hidden_user
+        )
+        # Check if the user already has a `follow` relationship with thecurrent
+        # user, if there is not do nothing. If there is  delete  relationship
+        try:
+            filtered_follower = UserFollowing.objects.get(
+                followed_id=hidden_user.id,
+                follower_id=current_user.id,
+            )
+        except ObjectDoesNotExist:
+            filtered_follower = None
+
+        if filtered_follower == None:
+            # do nothing since it does not exists
+            pass
+        else:
+            # delete the relationship
+            filtered_follower.delete()
+            return HttpResponseRedirect("/profile/" + str(other_user.username)
+                                        + "/posts/" + str(post_id) + "/likers/")
+
+    '''
+    SELF NOTE FOR FUTURE AT THE MOMENT I AM NOT IMPLEMENTING THE + BUTTON FORM
+    AT THE END OF THE PAGE FOR LOADING MORE DATA, ATM IT JUST LOADS EVERYTHING
+    THE TABLE HOLDS. BUT IN THE FUTURE I WILL CHANGE IT SINCE IT IS BAD FOR
+    LOADING EVERY ENTRY FROM THE DATA
+    '''
+
+    data = {
+        "current_user": current_user,
+        "current_user_settings": current_user_settings,
+        "other_user": other_user,
+        "other_user_settings": other_user_settings,
+        "post": post,
+        "post_likes": post_likes,
+        "current_user_followings": current_user_followings,
+        "accounts_current_user_following": accounts_current_user_following,
+    }
+
+    return render(request, "profile/other_users_likers.html", data)
 
 
 def other_users_profile_followers(request):
