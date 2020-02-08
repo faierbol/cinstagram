@@ -49,3 +49,4 @@ The second reason is that every developer will have the same chance to understan
 
 - [Version `1.10.0`](./version_docs/version-1.10.0.md)
 - [Version `1.12.0`](./version_docs/version-1.12.0.md)
+- [Version `1.13.0`](./version_docs/version-1.13.0.md)
