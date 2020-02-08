@@ -745,11 +745,11 @@ def other_users_profile_single_post_page(request, username, post_id):
 
     # Get the Other User Settings
     try:
-        pass
-    except ObjectDoesNotExist:
         other_user_settings = CinstagramUserSettings.objects.get(
             settings_owner=other_user
         )
+    except ObjectDoesNotExist:
+        other_user_settings = None
 
     # Get the current post object
     try:
@@ -769,15 +769,141 @@ def other_users_profile_single_post_page(request, username, post_id):
     except ObjectDoesNotExist:
         post_like_count = None
 
-    # Post Like form Validation
+    # Get the Acounts Current User is Following
+    try:
+        current_user_followings = UserFollowing.objects.filter(
+            follower_user=current_user,
+        )
+        accounts_current_user_following = []
+        for following in current_user_followings:
+            accounts_current_user_following.append(following.followed_user)
+    except ObjectDoesNotExist:
+        current_user_followings = None
+        accounts_current_user_following = []
 
-    # Post Bookmark From Validaiton
+    # Get the Accounts that Follow Current User
+    try:
+        accounts_following_current_user = UserFollowing.objects.filter(
+            followed_user=current_user,
+        )
+    except ObjectDoesNotExist:
+        accounts_following_current_user = None
 
-    # Post Comment form Validation
+    if request.POST.get("follow_submit_btn"):
+        hidden_user_id = request.POST.get("hidden_user_id")
+        hidden_user = CinstagramUser.objects.get(id=hidden_user_id)
+        hidden_user_settings = CinstagramUserSettings.objects.get(
+            settings_owner=hidden_user
+        )
+        # Check if the user already has a `follow` relationship with thecurrent
+        # user, if there is do nothing. If there is not create new relationship
+        # dont forget to add that a user cannot follow itself
+        try:
+            filtered_follower = UserFollowing.objects.get(
+                followed_id=hidden_user.id,
+                follower_id=current_user.id,
+            )
+        except ObjectDoesNotExist:
+            filtered_follower = None
 
-    # Other User Follow form Validation
+        if filtered_follower == None:
+            # new relationship
+            new_following_relationship = UserFollowing(
+                followed_id=hidden_user.id,
+                followed_user=hidden_user,
+                followed_user_settings=hidden_user_settings,
+                follower_id=current_user.id,
+                follower_user=current_user,
+                follower_user_settings=current_user_settings,
+            )
+            new_following_relationship.save()
+            return HttpResponseRedirect("/profile/" + str(other_user.username)
+                                        + "/posts/" + str(post_id) + "/")
+        else:
+            # Do nothing since there is arelationship already
+            pass
 
     # Other User Un-follow form Validation
+    if request.POST.get("unfollow_submit_btn"):
+        hidden_user_id = request.POST.get("hidden_user_id")
+        hidden_user = CinstagramUser.objects.get(id=hidden_user_id)
+        hidden_user_settings = CinstagramUserSettings.objects.get(
+            settings_owner=hidden_user
+        )
+        # Check if the user already has a `follow` relationship with thecurrent
+        # user, if there is not do nothing. If there is  delete  relationship
+        try:
+            filtered_follower = UserFollowing.objects.get(
+                followed_id=hidden_user.id,
+                follower_id=current_user.id,
+            )
+        except ObjectDoesNotExist:
+            filtered_follower = None
+
+        if filtered_follower == None:
+            # do nothing since it does not exists
+            pass
+        else:
+            # delete the relationship
+            filtered_follower.delete()
+            return HttpResponseRedirect("/profile/" + str(other_user.username)
+                                        + "/posts/" + str(post_id) + "/")
+
+    # Post Like form Validation
+    if request.POST.get("post_like_form_submit_btn"):
+        hidden_post_id = request.POST.get("hidden_post_id")
+        post = UserPhoto.objects.get(id=hidden_post_id)
+        # Check if the current use has already liked this picture before
+        # if she has, then do not like again since a photo can be only
+        # liked once by one person
+        try:
+            filtered_post_liker = UserPhotoLike.objects.filter(
+                like_owner=current_user
+            )
+        except ObjectDoesNotExist:
+            filtered_post_liker = None
+
+        if filtered_post_liker == None:
+            new_like = UserPhotoLike(like_owner=current_user, liked_photo=post)
+            new_like.save()
+        else:
+            pass  # cant like again
+
+    # Post Bookmark From Validaiton
+    if request.POST.get("post_bookmark_form_submit_btn"):
+        hidden_post_id = request.POST.get("hidden_post_id")
+        post = UserPhoto.objects.get(id=hidden_post_id)
+        # Check if the current user already bookmarked this picture
+        # if she has do not bookmark it again since it can only be
+        # bookmarked once by one person
+        try:
+            filtered_post_bookmarker = UserPhotoBookmark.objects.get(
+                bookmarked_photo=post
+            )
+        except ObjectDoesNotExist:
+            filtered_post_bookmarker = None
+
+        if filtered_post_bookmarker == None:
+            new_bookmark = UserPhotoBookmark(
+                bookmark_owner=current_user, bookmarked_photo=post
+            )
+            new_bookmark.save()
+        else:
+            pass  # cant bookmark again
+
+    # Post Comment form Validation
+    if request.POST.get("post_comment_form_submit_btn"):
+        hidden_post_id = request.POST.get("hidden_post_id")
+        comment_content = request.POST.get("comment_content")
+        post = UserPhoto.objects.get(id=hidden_post_id)
+        # Create a new comment for the photo
+        new_comment = UserPhotoComment(
+            comment_owner=current_user,
+            comment_owner_settings=current_user_settings,
+            commented_photo=post,
+            comment=comment_content
+        )
+        new_comment.save()
 
     data = {
         "current_user": current_user,
@@ -786,6 +912,9 @@ def other_users_profile_single_post_page(request, username, post_id):
         "other_user_settings": other_user_settings,
         "post": post,
         "post_comments": post_comments,
+        "current_user_followings": current_user_followings,
+        "accounts_current_user_following": accounts_current_user_following,
+        "accounts_following_current_user": accounts_following_current_user,
     }
 
     return render(request, "profile/other_users_post_page.html", data)

@@ -153,7 +153,7 @@
 
  background-position: center;
  background-repeat: no-repeat;
- background-size: contain;
+ background-size: cover;
  background-image: url("../../branding/profile_photo.jpg");
 }
 
@@ -204,7 +204,7 @@
 .post-left-side {
   height: 500px;
   background-color: black;
-  width: 50%;
+  width: 60%;
   display: inline-block;
   vertical-align: top;
   background-position: center;
@@ -214,7 +214,7 @@
 
 .post-right-side {
   height: auto;
-  width: 48%;
+  width: 38%;
   display: inline-block;
   vertical-align: top;
 }
