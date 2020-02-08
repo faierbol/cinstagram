@@ -91,10 +91,10 @@
     <!-- Profile Info -->
     <div class="home-profile-box">
       <a href="">
-        <img alt="profilePhoto" src="{% static 'branding/profile_photo.jpg' %}"/>
+        <img alt="profilePhoto" src="{{ current_user_settings.profile_photo.url }}"/>
         <div class="home-profile-box-info">
-          <h3>username</h3>
-          <h4>John Smith</h4>
+          <h3>{{ current_user.username }}</h3>
+          <h4>{{ current_user_settings.full_name }}</h4>
         </div>
       </a>
     </div>
@@ -124,54 +124,42 @@
       </div>
       <div class="home-suggestions-box-cell-container">
 
-        <div class="suggestion-cell">
-          <a href="">
-            <img alt="profile-photo" src="{% static 'branding/profile_photo.jpg' %}" />
-            <div class="suggestion-cell-info-part">
-              <h2>username</h2>
-              <h3>Recommended for You</h3>
-            </div>
-            <form>
-              <input type="submit" value="Follow"/>
-            </form>
-          </a>
-        </div><!-- e/ suggestion cell -->
+        {% for suggestion in suggested_accounts %}
+          <div class="suggestion-cell">
+            <a href="{% url 'other_users_profile_posts_page' suggestion.follower_user.username %}">
+              <img alt="profile-photo" src="{{ suggestion.follower_user_settings.profile_photo.url }}" />
+              <div class="suggestion-cell-info-part">
+                <h2>{{ suggestion.follower_user.username }}</h2>
+                <h3>This user follows you</h3>
+              </div>
 
-        <div class="suggestion-cell">
-          <a href="">
-            <img alt="profile-photo" src="{% static 'branding/profile_photo.jpg' %}" />
-            <div class="suggestion-cell-info-part">
-              <h2>username</h2>
-              <h3>Recommended for You</h3>
-            </div>
-            <form>
-              <input type="submit" value="Follow"/>
-            </form>
-          </a>
-        </div><!-- e/ suggestion cell -->
+              {% if suggestion.follower_user in accounts_current_user_following %}
+                <form method="POST" action="{% url 'home' %}">
+                  {% csrf_token %}
+                  <input type="hidden" value="{{ suggestion.follower_user.id }}" name="hidden_user_id" />
+                  <input type="submit" value="Following" name="unfollow_submit_btn"/>
+                </form>
+              {% else %}
+                <form method="POST" action="{% url 'home' %}">
+                  {% csrf_token %}
+                  <input type="hidden" value="{{ suggestion.follower_user.id }}" name="hidden_user_id" />
+                  <input type="submit" value="Follow" name="follow_submit_btn"/>
+                </form>
+              {% endif %}
 
-        <div class="suggestion-cell">
-          <a href="">
-            <img alt="profile-photo" src="{% static 'branding/profile_photo.jpg' %}" />
-            <div class="suggestion-cell-info-part">
-              <h2>username</h2>
-              <h3>Recommended for You</h3>
-            </div>
-            <form>
-              <input type="submit" value="Follow"/>
-            </form>
-          </a>
-        </div><!-- e/ suggestion cell -->
+            </a>
+          </div><!-- e/ suggestion cell -->
+        {% endfor %}
 
       </div>
     </div><!-- e/suggestions box -->
 
     <div class="right-nav-footer">
-      <a href="">ABOUT US</a>
-      <a href="">HELP</a>
-      <a href="">API</a>
-      <a href="">JOBS</a>
-      <a href="">LEGAL</a>
+      <a href="{% url 'about' %}">ABOUT US</a>
+      <a href="{% url 'help_centre_index' %}">HELP</a>
+      <a href="{% url 'api_web' %}">API</a>
+      <a href="{% url 'jobs' %}">JOBS</a>
+      <a href="{% url 'legal' %}">LEGAL</a>
     </div>
 
   </div><!-- e/home right side -->

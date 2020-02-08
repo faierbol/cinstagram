@@ -42,7 +42,7 @@ Documentation for Cinstagram can be found on the [`docs/` folder](./docs/)
 - [ ] Image Recognition
 - [x] Profile
 - [x] Profile Settings
-- [ ] Home
+- [x] Home
 - [ ] Search Indexes
 - [ ] Explore
 - [ ] Stories
