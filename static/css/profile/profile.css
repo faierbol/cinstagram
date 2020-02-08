@@ -77,6 +77,27 @@
   cursor: pointer;
 }
 
+.profile_right_part_other_user_profile_follow_form {
+  display: inline-block;
+}
+
+.profile_right_part_other_user_profile_follow_form input {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  color: black;
+  padding-left: 4px 8px;
+  border: 1px solid #EAEDED;
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 3px 8px;
+}
+
+.profile_right_part_other_user_profile_follow_form input:hover {
+  cursor: pointer;
+}
+
 .profile-card-information-right-part-middle {
   background-color: transparent;
   margin-bottom: 20px;
@@ -103,6 +124,8 @@
   display: block;
   margin-bottom: -25px;
 }
+
+
 
 .profile-card-navigation {
   border-top: 1px solid #EAEDED;

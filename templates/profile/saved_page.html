@@ -57,7 +57,7 @@
 
       <!-- after three posts always break -->
       <div class="grid-view-post-cell" style="background-image: url('{{ post.bookmarked_photo.photo.url }}');">
-        <a href="{% url 'profile_single_post_page' post.bookmarked_photo.id %}">
+        <a href="{% url 'other_users_profile_single_post_page' post.bookmarked_photo.user.username post.bookmarked_photo.id %}">
         <div class="post-cell-link-container">
           <span class="fa fa-heart">{{ all_bookmarked_posts_likes|get_key_value:post.id }}</span>
           <span class="fa fa-comment">{{ all_bookmarked_posts_comments|get_key_value:post.id }}</span>
