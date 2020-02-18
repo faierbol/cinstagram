@@ -70,15 +70,64 @@ def home(request):
         current_user_followings = None
         accounts_current_user_following = []
 
-    # Get Alerts Notifcations
-    try:
-        pass
-    except ObjectDoesNotExist:
-        pass
-
     # Following form Validation for suggested accounts
+    if request.POST.get("follow_submit_btn"):
+        hidden_user_id = request.POST.get("hidden_user_id")
+        hidden_user = CinstagramUser.objects.get(id=hidden_user_id)
+        hidden_user_settings = CinstagramUserSettings.objects.get(
+            settings_owner=hidden_user
+        )
+        # Check if the user already has a `follow` relationship with thecurrent
+        # user, if there is do nothing. If there is not create new relationship
+        try:
+            filtered_follower = UserFollowing.objects.get(
+                followed_id=hidden_user.id,
+                follower_id=current_user.id,
+            )
+        except ObjectDoesNotExist:
+            filtered_follower = None
+
+        if filtered_follower == None:
+            # new relationship
+            new_following_relationship = UserFollowing(
+                followed_id=hidden_user.id,
+                followed_user=hidden_user,
+                followed_user_settings=hidden_user_settings,
+                follower_id=current_user.id,
+                follower_user=current_user,
+                follower_user_settings=current_user_settings,
+            )
+            new_following_relationship.save()
+            return HttpResponseRedirect("/home/")
+        else:
+            # Do nothing since there is arelationship already
+            pass
 
     # Unfollowing form Validation for suggested accounts
+    if request.POST.get("unfollow_submit_btn"):
+        hidden_user_id = request.POST.get("hidden_user_id")
+        hidden_user = CinstagramUser.objects.get(id=hidden_user_id)
+        hidden_user_settings = CinstagramUserSettings.objects.get(
+            settings_owner=hidden_user
+        )
+        # Check if the user already has a `follow` relationship with thecurrent
+        # user, if there is not do nothing. If there is  delete  relationship
+        try:
+            filtered_follower = UserFollowing.objects.get(
+                followed_id=hidden_user.id,
+                follower_id=current_user.id,
+            )
+        except ObjectDoesNotExist:
+            filtered_follower = None
+
+        if filtered_follower == None:
+            # do nothing since it does not exists
+            pass
+        else:
+            # delete the relationship
+            filtered_follower.delete()
+            return HttpResponseRedirect("/home/")
+
 
     # Get All of the posts of the users that are followed by the current user
 
