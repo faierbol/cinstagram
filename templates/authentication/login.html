@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html>
 
@@ -50,6 +52,7 @@
         <img class="help-centre-top-nav-logo" src="../../branding/cinstagram_logo_text.png" alt="logo" />
         <p class="meta-signup-info">Log in to see photos and videos from your friends.</p>
         <form class="signup-login-content-card-signup-form" method="POST" action="{% url 'authentication_login' %}">
+            {% csrf_token %}
             <input class="login-form-input" type="text" placeholder="Email" name="email"/><br />
             <input class="login-form-input" type="password" placeholder="Password" name="password"/><br />
             <input type="submit" value="Log In" class="signup-form-submit-btn" name="login_submit_btn"/><br />
@@ -86,15 +89,6 @@
           <a href="https://github.com/demirantay/cinstagram#android--ios"><img src="{% static 'branding/ios-android/google-play-badge.png' %}" class="google-store-badge" alt="google-store-logo" /></a>
       </div>
     </div><!-- e/main card -->
-
-    <div class="signup-login-footer">
-      <a href="">ABOUT US</a>
-      <a href="">HELP</a>
-      <a href="">PRESS</a>
-      <a href="">API</a>
-      <a href="">JOBS</a>
-      <a href="">TERMS</a>
-    </div>
 
 
   </div><!-- e/container-->

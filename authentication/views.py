@@ -18,6 +18,7 @@ and add a an empty route `domainname.com/` that binds to authentication signup t
 
 """
 
+
 def authentication_signup(request):
     """
     auth_signup: is the page that seperates the curious noisy anon users
@@ -152,8 +153,35 @@ def authentication_login(request):
     return render(request, "authentication/login.html", data)
 
 
+def authentication_legal(request):
+
+    data = {
+
+    }
+
+    return render(request, "authentication/legal.html", data)
+
+
+def android_setup(request):
+
+    data = {
+
+    }
+
+    return render(request, "authentication/android_setup.html", data)
+
+
+def ios_setup(request):
+
+    data = {
+
+    }
+
+    return render(request, "authentication/ios_setup.html", data)
+
+
 # Thank you for signig up will be added
 
-# Setting up acount will be added
+# Initial Setting up acount will be added
 
 # Forgot password link will be added

@@ -20,14 +20,20 @@ def home(request):
     es and a feed of following accounts posts on the left side with their
     comments likes ... etc.
     """
+    # If the user is not logged in redirect it to the signup page
+    if request.session.get("cinstagram_user_logged_in") is None:
+        return HttpResponseRedirect("/auth/signup/")
+
     # Deleting any sessions regarding top-tier type of users
     # session.pop("programmer_username", None)  <-- these are flask change it
     # session.pop("programmer_logged_in", None) <-- these are flask change it
     # admin user session pop
     # admin user session pop
 
-    # Get the current user
+    # Get wanted user sessions
     current_cinstagram_user_email = request.session["cinstagram_user_email"]
+
+    # Get the current user
     try:
         current_user = CinstagramUser.objects.get(
             email=current_cinstagram_user_email

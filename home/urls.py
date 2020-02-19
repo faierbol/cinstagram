@@ -2,6 +2,8 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    # Chat Index
+    # home
+    path("", views.home, name="home"),
+    # home
     path("home/", views.home, name="home"),
 ]
