@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html>
 
@@ -29,13 +31,21 @@
   <link rel="stylesheet" type="text/css" href="" />
 
   <!-- specific css links -->
-  <link rel="stylesheet" type="text/css" href="v2-authentication_base.css" />
-  <link rel="stylesheet" type="text/css" href="v2-authentication_content_card.css" />
-  <link rel="stylesheet" type="text/css" href="v2-authentication_footer.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/authentication/signup_login_base.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/authentication/signup_login_content_card.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/authentication/signup_login_footer.css' %}" />
 
 
   <style>
-
+  {% if invalid_credentials == True %}
+    .signup-login-content-card-signup-form input {
+      border-color: red;
+    }
+  {% elif empty_credentials == True %}
+    .signup-login-content-card-signup-form input {
+      border-color: red;
+    }
+  {% endif %}
   </style>
 
 </head>
@@ -47,24 +57,13 @@
     <div class="signup-login-content-card">
 
       <div class="signup-login-content-card-signup-child-card">
-        <img class="help-centre-top-nav-logo" src="../../branding/cinstagram_logo_text.png" alt="logo" />
+        <img class="help-centre-top-nav-logo" src="{% static 'branding/cinstagram_logo_text.png' %}" alt="logo" />
         <p class="meta-signup-info">Log in to see photos and videos from your friends.</p>
         <form class="signup-login-content-card-signup-form" method="POST" action="{% url 'authentication_login' %}">
+            {% csrf_token %}
             <input class="login-form-input" type="text" placeholder="Email" name="email"/><br />
             <input class="login-form-input" type="password" placeholder="Password" name="password"/><br />
             <input type="submit" value="Log In" class="signup-form-submit-btn" name="login_submit_btn"/><br />
-        </form>
-
-        <!-- OR banner -->
-        <br />
-        <div class="or-banner-horizontal-line"></div>
-        <div class="or-banner-text">OR</div>
-        <div class="or-banner-horizontal-line"></div>
-        <br />
-
-        <!-- log in with facebook form -->
-        <form class="login-page-login-with-facebook-form" method="post">
-          <button type="submit" onclick="alert('Not implemented yet, will be added in the upcoming versions')"><span class="fa fa-facebook"></span> Log in with Facebook</button>
         </form>
 
         <br />
@@ -86,15 +85,6 @@
           <a href="https://github.com/demirantay/cinstagram#android--ios"><img src="{% static 'branding/ios-android/google-play-badge.png' %}" class="google-store-badge" alt="google-store-logo" /></a>
       </div>
     </div><!-- e/main card -->
-
-    <div class="signup-login-footer">
-      <a href="">ABOUT US</a>
-      <a href="">HELP</a>
-      <a href="">PRESS</a>
-      <a href="">API</a>
-      <a href="">JOBS</a>
-      <a href="">TERMS</a>
-    </div>
 
 
   </div><!-- e/container-->

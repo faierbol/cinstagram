@@ -9,6 +9,14 @@ from django.core.exceptions import ObjectDoesNotExist
 from .models import CinstagramUser
 from profile_settings.models import CinstagramUserSettings
 
+"""
+# fix redirecting! goes to singup page, on "" path if logged in
+# redirects to /home route
+
+ADD ANOTHER URL PATH /AUTH/SIGNUP/ AND bind it to authentication_Signup view again
+and add a an empty route `domainname.com/` that binds to authentication signup too
+
+"""
 
 def authentication_signup(request):
     """
