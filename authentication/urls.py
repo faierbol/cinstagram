@@ -12,9 +12,10 @@ urlpatterns = [
     path("help_docs/android_setup/", views.android_setup, name="android_setup"),
     # IOS Setup
     path("help_docs/ios_setup/", views.ios_setup, name="ios_setup"),
+    # Forgot Password
+    path("auth/forgot_password/", views.forgot_password, name="forgot_password"),
+    # Thank you, redirection Page
+
     # Initial Profile Settings
 
-    # Forgot Password
-
-    # Thank you, redirection Page
 ]

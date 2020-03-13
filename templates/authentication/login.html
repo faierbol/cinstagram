@@ -31,9 +31,9 @@
   <link rel="stylesheet" type="text/css" href="" />
 
   <!-- specific css links -->
-  <link rel="stylesheet" type="text/css" href="v2-authentication_base.css" />
-  <link rel="stylesheet" type="text/css" href="v2-authentication_content_card.css" />
-  <link rel="stylesheet" type="text/css" href="v2-authentication_footer.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/authentication/authentication_base.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/authentication/authentication_content_card.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/authentication/authentication_footer.css' %}" />
 
 
   <style>
@@ -49,7 +49,7 @@
     <div class="signup-login-content-card">
 
       <div class="signup-login-content-card-signup-child-card">
-        <img class="help-centre-top-nav-logo" src="../../branding/cinstagram_logo_text.png" alt="logo" />
+        <img class="help-centre-top-nav-logo" src="{% static 'branding/cinstagram_logo_text.png' %}" alt="logo" />
         <p class="meta-signup-info">Log in to see photos and videos from your friends.</p>
         <form class="signup-login-content-card-signup-form" method="POST" action="{% url 'authentication_login' %}">
             {% csrf_token %}
@@ -67,11 +67,12 @@
 
         <!-- log in with facebook form -->
         <form class="login-page-login-with-facebook-form" method="post">
+          {% csrf_token %}
           <button type="submit" onclick="alert('Not implemented yet, will be added in the upcoming versions')"><span class="fa fa-facebook"></span> Log in with Facebook</button>
         </form>
 
         <br />
-        <a href="" class="login-card-forgot-password-link">Forgot password?</a>
+        <a href="{% url 'forgot_password' %}" class="login-card-forgot-password-link">Forgot password?</a>
         <br />
         <br />
 
@@ -85,8 +86,8 @@
 
       <div class="signup-login-content-card-app-links">
           <p>Get the app.</p>
-          <a href="https://github.com/demirantay/cinstagram#android--ios"><img src="{% static 'branding/ios-android/ios-black-badge.png' %}" class="apple-store-badge" alt="apple-store-logo" /></a>
-          <a href="https://github.com/demirantay/cinstagram#android--ios"><img src="{% static 'branding/ios-android/google-play-badge.png' %}" class="google-store-badge" alt="google-store-logo" /></a>
+          <a href="{% url 'ios_setup' %}"><img src="{% static 'branding/ios-android/ios-black-badge.png' %}" class="apple-store-badge" alt="apple-store-logo" /></a>
+          <a href="{% url 'android_setup' %}"><img src="{% static 'branding/ios-android/google-play-badge.png' %}" class="google-store-badge" alt="google-store-logo" /></a>
       </div>
     </div><!-- e/main card -->
 
